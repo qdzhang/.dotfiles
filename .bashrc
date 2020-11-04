@@ -147,4 +147,5 @@ eval "$(rbenv init -)"
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 
 alias mu='micro'
-export MICRO_TRUECOLOR=1alias dotfiles='/usr/bin/git --git-dir=/home/qdzhang/.dotfiles/ --work-tree=/home/qdzhang'
+export MICRO_TRUECOLOR=1
+alias dotfiles='/usr/bin/git --git-dir=/home/qdzhang/.dotfiles/ --work-tree=/home/qdzhang'
