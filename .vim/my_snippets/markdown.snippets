@@ -1,0 +1,21 @@
+snippet kbd "HTML kbd tag"
+<kbd>$1</kbd>
+endsnippet
+
+snippet meta "Markdown metadata front matter" b
+---
+title: "$1"
+date: `!v strftime("%Y-%m-%d")` 
+description:
+tags: [$2]
+categories: [$3]
+series: []
+math: false
+markup: md
+draft: true
+---
+endsnippet
+
+snippet split "add <!--more-->"
+<!--more-->
+endsnippet

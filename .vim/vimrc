@@ -1,0 +1,172 @@
+call plug#begin('~/.vim/plugged')
+"Plug 'rakr/vim-one'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
+Plug 'nathanaelkane/vim-indent-guides'
+"Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax' 
+Plug 'octol/vim-cpp-enhanced-highlight'
+"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'jiangmiao/auto-pairs'
+Plug 'lervag/vimtex'
+Plug 'Shougo/echodoc.vim'
+
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'lifepillar/vim-mucomplete'
+if has('win32')
+    Plug 'autozimu/LanguageClient-neovim', {
+        \ 'branch': 'next',
+        \ 'do': 'powershell -executionpolicy bypass -File install.ps1',
+        \ }
+else
+    Plug 'autozimu/LanguageClient-neovim', {
+        \ 'branch': 'next',
+        \ 'do': 'bash install.sh',
+        \ }
+endif
+call plug#end()
+
+" lightline and bufferline setting
+let g:lightline = {
+    \ 'colorscheme': 'seoul256',
+    \ }
+let g:lightline.tabline          = {'left': [['buffers']], 'right': [['']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type   = {'buffers': 'tabsel'}
+let g:lightline#bufferline#filename_modifier = ':t'
+let g:lightline#bufferline#show_number  = 1
+"let g:lightline#bufferline#shorten_path = 0
+let g:lightline#bufferline#unnamed      = '[No Name]'
+
+" Indent guides settings
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+let g:pandoc#modules#disabled = ["folding"]
+
+" pandoc_syntax settings
+augroup pandoc_syntax
+    au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+augroup END
+
+" ----------------------------
+"  vimtex settings
+"  ---------------------------
+let g:vimtex_view_general_viewer = 'SumatraPDF'
+
+" UltiSnips and setting
+let g:UltiSnipsExpandTrigger="<f5>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "my_snippets"]
+
+"---------------------------------
+"echodoc settings
+"---------------------------------
+let g:echodoc#enable_at_startup = 1
+
+" ----------------------------------
+" MuComplate settings
+" ----------------------------------
+set completeopt+=menuone
+set completeopt+=noselect
+set shortmess+=c   " Shut off completion messages
+set belloff+=ctrlg " If Vim beeps during completion
+let g:mucomplete#chains = {}
+let g:mucomplete#chains.default = ['omni', 'ulti', 'path', 'keyn', 'dict', 'uspl']
+let g:mucomplete#enable_auto_at_startup = 1
+let g:mucomplete#completion_delay = 50
+let g:mucomplete#reopen_immediately = 0
+inoremap <silent> <expr> <plug>MyCR
+    \ mucomplete#ultisnips#expand_snippet("\<cr>")
+imap <cr> <plug>MyCR
+
+" fix conflict with auto pairs
+let g:AutoPairsMapCR = 0
+let g:AutoPairsMapSpace = 0
+imap <silent> <expr> <space> pumvisible()
+  \ ? "<space>"
+  \ : "<c-r>=AutoPairsSpace()<cr>"
+
+inoremap <silent> <expr> <plug>UltiExpand
+      \ mucomplete#ultisnips#expand_snippet("\<cr>")
+imap <plug>MyCR <plug>UltiExpand<plug>AutoPairsReturn
+imap <cr> <plug>MyCR
+
+" lsp settings
+set completeopt-=preview
+let g:LanguageClient_serverCommands = {
+    \ 'python': ['pyls'],
+    \ 'cpp': ['clangd'],
+    \ 'c': ['clangd'],
+    \ }
+
+" Basic settings
+syntax on
+"set background=dark
+"let g:one_allow_italics = 1
+colorscheme dracula
+set noshowmode
+set ignorecase
+set showcmd
+set hlsearch
+set mouse=a
+"set t_Co=256
+
+
+"set termguicolors
+
+
+filetype on
+set autoindent
+filetype indent on
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set softtabstop=4
+set number
+
+set cursorline
+"hi Visual gui=reverse guifg=Black guibg=Grey
+"highlight CursorLine ctermbg=242
+set ruler
+set backspace=2
+set fileformat=unix
+
+if has('gui_running')
+set guioptions-=e  "tab bar
+"set guioptions-=m  "menu bar
+set guioptions-=T  "toolbar
+set guioptions-=r  "scrollbar
+autocmd GUIEnter * set visualbell t_vb=
+endif
+
+set laststatus=2
+set showtabline=2
+
+set guifont=Monospace\ 16
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf-8,chinese,latin1
+set langmenu=en_US
+let $LANG = 'en_US.UTF-8'
+language messages en_US.utf-8
+
+set clipboard+=unnamed
+set ignorecase
+set smartcase
+set noerrorbells
+set visualbell
+set visualbell t_vb=
+set autoread
+
+set wildmenu wildmode=full 
+set wildchar=<Tab> wildcharm=<C-Z>
+
+"------------------------------------
+" key maps
+" -----------------------------------
+noremap <leader>/ :let @/ = ""<CR>
