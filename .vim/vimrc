@@ -12,6 +12,7 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'jiangmiao/auto-pairs'
 Plug 'lervag/vimtex'
 Plug 'Shougo/echodoc.vim'
+Plug 'jpalardy/vim-slime'
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -55,7 +56,8 @@ augroup END
 " ----------------------------
 "  vimtex settings
 "  ---------------------------
-let g:vimtex_view_general_viewer = 'SumatraPDF'
+"let g:vimtex_view_general_viewer = 'SumatraPDF'
+let g:tex_flavor = 'latex'
 
 " UltiSnips and setting
 let g:UltiSnipsExpandTrigger="<f5>"
@@ -104,6 +106,12 @@ let g:LanguageClient_serverCommands = {
     \ 'c': ['clangd'],
     \ }
 
+" vim-slime setting
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
+let g:slime_dont_ask_default = 1
+let g:slime_python_ipython = 1
+
 " Basic settings
 syntax on
 "set background=dark
@@ -129,6 +137,18 @@ set shiftwidth=4
 set expandtab
 set softtabstop=4
 set number
+
+if &term =~ "xterm"
+    let &t_SI = "\<Esc>[6 q"
+    let &t_SR = "\<Esc>[3 q"
+    let &t_EI = "\<Esc>[2 q"
+endif
+
+if exists('$TMUX')
+    let &t_SI .= "\e[6 q"
+    let &t_SR .= "\e[3 q"
+	let &t_EI .= "\e[2 q"
+endif
 
 set cursorline
 "hi Visual gui=reverse guifg=Black guibg=Grey

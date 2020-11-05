@@ -118,6 +118,7 @@ fi
 
 export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*');
 alias setproxy='export https_proxy="http://${hostip}:7890";export http_proxy="http://${hostip}:7890";export all_proxy="socks5://${hostip}:7891";'
+echo -ne "\e[2 q"
 
 GOPATH=$HOME/go
 function _update_ps1() {
