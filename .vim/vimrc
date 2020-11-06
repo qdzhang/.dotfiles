@@ -17,6 +17,10 @@ Plug 'jpalardy/vim-slime'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'lifepillar/vim-mucomplete'
+Plug 'justinmk/vim-dirvish'
+Plug 'liuchengxu/vista.vim'
+Plug '~/.fzf'
+Plug 'junegunn/fzf.vim'
 if has('win32')
     Plug 'autozimu/LanguageClient-neovim', {
         \ 'branch': 'next',
@@ -50,7 +54,7 @@ let g:pandoc#modules#disabled = ["folding"]
 
 " pandoc_syntax settings
 augroup pandoc_syntax
-    au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+    au! BufNewFile,BufFilePre,BufRead *.md set filetype=pandoc
 augroup END
 
 " ----------------------------
@@ -98,19 +102,36 @@ inoremap <silent> <expr> <plug>UltiExpand
 imap <plug>MyCR <plug>UltiExpand<plug>AutoPairsReturn
 imap <cr> <plug>MyCR
 
+" ------------
 " lsp settings
+" ------------
 set completeopt-=preview
 let g:LanguageClient_serverCommands = {
     \ 'python': ['pyls'],
     \ 'cpp': ['clangd'],
     \ 'c': ['clangd'],
+    \ 'go': ['~/go/bin/gopls']
     \ }
+
+" Run gofmt on save
+autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
+
+nmap <silent> <F5> <Plug>(lcn-menu)
+nmap <silent> <F2> <Plug>(lcn-rename)
+nmap <silent> K <Plug>(lcn-hover)
+nmap <silent> <F12> <Plug>(lcn-definition)
 
 " vim-slime setting
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
 let g:slime_dont_ask_default = 1
 let g:slime_python_ipython = 1
+
+" ------------
+" fzf settings
+" ------------
+nnoremap <silent> <leader>f :FZF<cr>
+nnoremap <silent> <leader>F :FZF ~<cr>
 
 " Basic settings
 syntax on
@@ -167,6 +188,7 @@ endif
 
 set laststatus=2
 set showtabline=2
+set signcolumn=yes
 
 set guifont=Monospace\ 16
 set fileencoding=utf-8

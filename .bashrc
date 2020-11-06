@@ -150,3 +150,5 @@ export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}
 alias mu='micro'
 export MICRO_TRUECOLOR=1
 alias dotfiles='/usr/bin/git --git-dir=/home/qdzhang/.dotfiles/ --work-tree=/home/qdzhang'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
