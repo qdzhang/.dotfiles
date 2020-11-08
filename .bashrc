@@ -121,6 +121,8 @@ alias setproxy='export https_proxy="http://${hostip}:7890";export http_proxy="ht
 echo -ne "\e[2 q"
 
 GOPATH=$HOME/go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 function _update_ps1() {
     PS1="$($GOPATH/bin/powerline-go -error $?)"
 }
@@ -152,3 +154,4 @@ export MICRO_TRUECOLOR=1
 alias dotfiles='/usr/bin/git --git-dir=/home/qdzhang/.dotfiles/ --work-tree=/home/qdzhang'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '

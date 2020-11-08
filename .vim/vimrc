@@ -17,7 +17,9 @@ Plug 'jpalardy/vim-slime'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'lifepillar/vim-mucomplete'
-Plug 'justinmk/vim-dirvish'
+"Plug 'justinmk/vim-dirvish'
+Plug 'vifm/vifm.vim'
+"Plug 'lambdalisue/fern.vim'
 Plug 'liuchengxu/vista.vim'
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
@@ -127,11 +129,27 @@ let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-o
 let g:slime_dont_ask_default = 1
 let g:slime_python_ipython = 1
 
+" -------------------
+"  Vista.vim settings
+" -------------------
+nnoremap <leader>v :Vista 
+nnoremap <leader>vq :Vista!<cr>
+nnoremap <leader>vf :Vista finder fzf:
+
+" --------------
+"  vifm settings
+" --------------
+let g:vifm_embed_term = 1
+let g:vifm_embed_split = 1
+
 " ------------
 " fzf settings
 " ------------
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 nnoremap <silent> <leader>f :FZF<cr>
 nnoremap <silent> <leader>F :FZF ~<cr>
+nnoremap <silent> <leader>rg :Rg<cr>
+nnoremap <silent> <leader>b :Buffers<cr>
 
 " Basic settings
 syntax on
@@ -173,7 +191,7 @@ endif
 
 set cursorline
 "hi Visual gui=reverse guifg=Black guibg=Grey
-"highlight CursorLine ctermbg=242
+"hnighlight CursorLine ctermbg=242
 set ruler
 set backspace=2
 set fileformat=unix
@@ -198,6 +216,11 @@ let $LANG = 'en_US.UTF-8'
 language messages en_US.utf-8
 
 set clipboard+=unnamed
+noremap <leader>p "*p
+noremap <leader>y "*y
+noremap <leader>P "+p
+noremap <leader>Y "+y
+
 set ignorecase
 set smartcase
 set noerrorbells
