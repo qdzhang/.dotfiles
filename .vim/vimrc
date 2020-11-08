@@ -21,6 +21,7 @@ Plug 'lifepillar/vim-mucomplete'
 Plug 'vifm/vifm.vim'
 "Plug 'lambdalisue/fern.vim'
 Plug 'liuchengxu/vista.vim'
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 if has('win32')
@@ -136,6 +137,11 @@ nnoremap <leader>v :Vista
 nnoremap <leader>vq :Vista!<cr>
 nnoremap <leader>vf :Vista finder fzf:
 
+"------------------
+" vim-clap settings
+"------------------
+nnoremap <leader>c :Clap
+
 " --------------
 "  vifm settings
 " --------------
@@ -146,6 +152,8 @@ let g:vifm_embed_split = 1
 " fzf settings
 " ------------
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+
 nnoremap <silent> <leader>f :FZF<cr>
 nnoremap <silent> <leader>F :FZF ~<cr>
 nnoremap <silent> <leader>rg :Rg<cr>
