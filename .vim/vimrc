@@ -10,6 +10,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'jiangmiao/auto-pairs'
+Plug 'preservim/nerdcommenter'
 Plug 'lervag/vimtex'
 Plug 'Shougo/echodoc.vim'
 Plug 'jpalardy/vim-slime'
@@ -21,6 +22,7 @@ Plug 'lifepillar/vim-mucomplete'
 Plug 'vifm/vifm.vim'
 "Plug 'lambdalisue/fern.vim'
 Plug 'liuchengxu/vista.vim'
+Plug 'voldikss/vim-floaterm'
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
@@ -119,10 +121,11 @@ let g:LanguageClient_serverCommands = {
 " Run gofmt on save
 autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
 
-nmap <silent> <F5> <Plug>(lcn-menu)
+nmap <silent> <leader>l <Plug>(lcn-menu)
 nmap <silent> <F2> <Plug>(lcn-rename)
 nmap <silent> K <Plug>(lcn-hover)
 nmap <silent> <F12> <Plug>(lcn-definition)
+nmap <silent> <S-F12> <Plug>(lcn-references)
 
 " vim-slime setting
 let g:slime_target = "tmux"
@@ -140,13 +143,28 @@ nnoremap <leader>vf :Vista finder fzf:
 "------------------
 " vim-clap settings
 "------------------
-nnoremap <leader>c :Clap
+let g:clap_theme = 'material_design_dark'
+let g:clap_provider_dotfiles = {
+      \ 'source': ['~/.vim/vimrc', '~/.bashrc', '~/.tmux.conf'],
+      \ 'sink': 'e',
+      \ }
+
+nnoremap <leader>c :Clap 
+
+" ------------------------
+"  NERD Commenter settings
+" ------------------------
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
 
 " --------------
 "  vifm settings
 " --------------
 let g:vifm_embed_term = 1
 let g:vifm_embed_split = 1
+noremap <leader>t :FloatermNew vifm<cr>
 
 " ------------
 " fzf settings
