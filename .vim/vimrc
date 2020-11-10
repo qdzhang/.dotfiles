@@ -41,7 +41,7 @@ call plug#end()
 
 " lightline and bufferline setting
 let g:lightline = {
-    \ 'colorscheme': 'seoul256',
+    \ 'colorscheme': 'darcula',
     \ }
 let g:lightline.tabline          = {'left': [['buffers']], 'right': [['']]}
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
@@ -145,7 +145,7 @@ nnoremap <leader>vf :Vista finder fzf:
 "------------------
 let g:clap_theme = 'material_design_dark'
 let g:clap_provider_dotfiles = {
-      \ 'source': ['~/.vim/vimrc', '~/.bashrc', '~/.tmux.conf'],
+      \ 'source': ['~/.vim/vimrc', '~/.config/nvim/init.vim', '~/.bashrc', '~/.tmux.conf'],
       \ 'sink': 'e',
       \ }
 
@@ -191,7 +191,11 @@ set mouse=a
 
 
 "set termguicolors
-
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
 filetype on
 set autoindent
