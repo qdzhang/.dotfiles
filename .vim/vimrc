@@ -4,7 +4,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 "Plug 'nathanaelkane/vim-indent-guides'
-Plug 'Yggdroot/indentLine' 
+"Plug 'Yggdroot/indentLine' 
 "Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': 'markdown' }
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['c', 'cpp'] }
@@ -15,6 +15,7 @@ Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'tpope/vim-commentary'
 Plug 'Shougo/echodoc.vim'
 Plug 'jpalardy/vim-slime'
+Plug 'haya14busa/is.vim'
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -221,6 +222,7 @@ if exists('$TMUX')
 endif
 
 set cursorline
+set cursorcolumn
 "hi Visual gui=reverse guifg=Black guibg=Grey
 "hnighlight CursorLine ctermbg=242
 set ruler

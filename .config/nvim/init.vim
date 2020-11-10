@@ -1,9 +1,11 @@
 call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'rakr/vim-one'
+Plug 'ajmwagar/vim-deus'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
-Plug 'nathanaelkane/vim-indent-guides'
+"Plug 'nathanaelkane/vim-indent-guides'
+"Plug 'Yggdroot/indentLine'
 "Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': 'markdown' }
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['c', 'cpp'] }
@@ -14,6 +16,7 @@ Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'tpope/vim-commentary'
 Plug 'Shougo/echodoc.vim'
 Plug 'jpalardy/vim-slime'
+Plug 'haya14busa/is.vim'
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -24,6 +27,7 @@ Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'ncm2/ncm2'
+Plug 'ncm2/ncm2-ultisnips'
 Plug 'roxma/nvim-yarp'
 if has('win32')
     Plug 'autozimu/LanguageClient-neovim', {
@@ -51,10 +55,10 @@ let g:lightline#bufferline#show_number  = 1
 let g:lightline#bufferline#unnamed      = '[No Name]'
 
 " Indent guides settings
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-let g:pandoc#modules#disabled = ["folding"]
+" let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_start_level = 2
+" let g:indent_guides_guide_size = 1
+" let g:pandoc#modules#disabled = ["folding"]
 
 " pandoc_syntax settings
 augroup pandoc_syntax
@@ -91,6 +95,7 @@ set completeopt=noinsert,menuone,noselect
 " suppress the annoying 'match x of y', 'The only match' and 'Pattern not
 " found' messages
 set shortmess+=c
+inoremap <expr> <CR> (pumvisible() ? "\<c-y>" : "\<CR>")
 
 " CTRL-C doesn't trigger the InsertLeave autocmd . map to <ESC> instead.
 inoremap <c-c> <ESC>
@@ -98,6 +103,7 @@ inoremap <c-c> <ESC>
 " Use <TAB> to select the popup menu:
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", 'n')
 
 " ------------
 " lsp settings
@@ -212,6 +218,7 @@ if exists('$TMUX')
 endif
 
 set cursorline
+set cursorcolumn
 "hi Visual gui=reverse guifg=Black guibg=Grey
 "hnighlight CursorLine ctermbg=242
 set ruler
