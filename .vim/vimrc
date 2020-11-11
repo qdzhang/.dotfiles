@@ -1,14 +1,9 @@
 call plug#begin('~/.vim/plugged')
-"Plug 'rakr/vim-one'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
-"Plug 'nathanaelkane/vim-indent-guides'
-"Plug 'Yggdroot/indentLine' 
-"Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': 'markdown' }
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['c', 'cpp'] }
-"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'dhruvasagar/vim-table-mode', { 'for': 'markdown' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'lervag/vimtex', { 'for': 'tex' }
@@ -17,28 +12,19 @@ Plug 'Shougo/echodoc.vim'
 Plug 'jpalardy/vim-slime'
 Plug 'haya14busa/is.vim'
 
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'lifepillar/vim-mucomplete'
-"Plug 'justinmk/vim-dirvish'
+Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
 Plug 'vifm/vifm.vim'
-"Plug 'lambdalisue/fern.vim'
 Plug 'liuchengxu/vista.vim'
 Plug 'voldikss/vim-floaterm'
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
-if has('win32')
-    Plug 'autozimu/LanguageClient-neovim', {
-        \ 'branch': 'next',
-        \ 'do': 'powershell -executionpolicy bypass -File install.ps1',
-        \ }
-else
-    Plug 'autozimu/LanguageClient-neovim', {
-        \ 'branch': 'next',
-        \ 'do': 'bash install.sh',
-        \ }
-endif
 call plug#end()
 
 " lightline and bufferline setting
@@ -53,11 +39,6 @@ let g:lightline#bufferline#show_number  = 1
 "let g:lightline#bufferline#shorten_path = 0
 let g:lightline#bufferline#unnamed      = '[No Name]'
 
-" Indent guides settings
-" let g:indent_guides_enable_on_vim_startup = 1
-" let g:indent_guides_start_level = 2
-" let g:indent_guides_guide_size = 1
-" let g:pandoc#modules#disabled = ["folding"]
 
 " pandoc_syntax settings
 augroup pandoc_syntax
@@ -81,53 +62,73 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "my_snippets"]
 "---------------------------------
 let g:echodoc#enable_at_startup = 1
 
-" ----------------------------------
-" MuComplate settings
-" ----------------------------------
-set completeopt+=menuone
-set completeopt+=noselect
-set shortmess+=c   " Shut off completion messages
-set belloff+=ctrlg " If Vim beeps during completion
-let g:mucomplete#chains = {}
-let g:mucomplete#chains.default = ['omni', 'ulti', 'path', 'keyn', 'dict', 'uspl']
-let g:mucomplete#enable_auto_at_startup = 1
-let g:mucomplete#completion_delay = 50
-let g:mucomplete#reopen_immediately = 0
-inoremap <silent> <expr> <plug>MyCR
-    \ mucomplete#ultisnips#expand_snippet("\<cr>")
-imap <cr> <plug>MyCR
+" ----------------
+" vim-lsp settings
+" ----------------
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 
-" fix conflict with auto pairs
-let g:AutoPairsMapCR = 0
-let g:AutoPairsMapSpace = 0
-imap <silent> <expr> <space> pumvisible()
-  \ ? "<space>"
-  \ : "<c-r>=AutoPairsSpace()<cr>"
+let g:lsp_signs_enabled = 1         " enable signs
+let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
 
-inoremap <silent> <expr> <plug>UltiExpand
-      \ mucomplete#ultisnips#expand_snippet("\<cr>")
-imap <plug>MyCR <plug>UltiExpand<plug>AutoPairsReturn
-imap <cr> <plug>MyCR
+if has('python3')
+    let g:UltiSnipsExpandTrigger="<cr>"
+    call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
+        \ 'name': 'ultisnips',
+        \ 'allowlist': ['*'],
+        \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
+        \ }))
+endif
 
-" ------------
-" lsp settings
-" ------------
-set completeopt-=preview
-let g:LanguageClient_serverCommands = {
-    \ 'python': ['pyls'],
-    \ 'cpp': ['clangd'],
-    \ 'c': ['clangd'],
-    \ 'go': ['~/go/bin/gopls']
-    \ }
+if executable('clangd')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'clangd',
+        \ 'cmd': {server_info->['clangd', '-background-index']},
+        \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+        \ })
+endif
 
-" Run gofmt on save
-autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
+if executable('pyls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'whitelist': ['python'],
+        \ 'workspace_config': {'pyls': {'plugins': {'pydocstyle': {'enabled': v:true}}}}
+        \ })
+endif
 
-nmap <silent> <leader>l <Plug>(lcn-menu)
-nmap <silent> <F2> <Plug>(lcn-rename)
-nmap <silent> K <Plug>(lcn-hover)
-nmap <silent> <F12> <Plug>(lcn-definition)
-nmap <silent> <S-F12> <Plug>(lcn-references)
+if executable('gopls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'gopls',
+        \ 'cmd': {server_info->['gopls']},
+        \ 'whitelist': ['go'],
+        \ })
+    autocmd BufWritePre *.go LspDocumentFormatSync
+endif
+
+function! s:on_lsp_buffer_enabled() abort
+    setlocal signcolumn=yes
+    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+    nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> gr <plug>(lsp-references)
+    nmap <buffer> gi <plug>(lsp-implementation)
+    nmap <buffer> gt <plug>(lsp-type-definition)
+    nmap <buffer> <leader>rn <plug>(lsp-rename)
+    nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
+    nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
+    nmap <buffer> K <plug>(lsp-hover)
+    nmap <buffer> <f2> <plug>(lsp-rename)
+    
+    " refer to doc to add more commands
+endfunction
+
+augroup lsp_install
+    au!
+    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
+
 
 " vim-slime setting
 let g:slime_target = "tmux"
