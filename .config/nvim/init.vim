@@ -22,7 +22,6 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'vifm/vifm.vim'
 Plug 'liuchengxu/vista.vim'
-Plug 'voldikss/vim-floaterm'
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
@@ -162,7 +161,7 @@ let g:NERDCommentEmptyLines = 1
 " --------------
 let g:vifm_embed_term = 1
 let g:vifm_embed_split = 1
-noremap <leader>t :FloatermNew vifm<cr>
+noremap <leader>t :Vifm<cr>
 
 " ------------
 " fzf settings
