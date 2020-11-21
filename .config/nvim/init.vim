@@ -17,6 +17,7 @@ Plug 'tpope/vim-commentary'
 Plug 'Shougo/echodoc.vim'
 Plug 'jpalardy/vim-slime'
 Plug 'haya14busa/is.vim'
+Plug 'nvim-treesitter/nvim-treesitter'
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -265,3 +266,13 @@ set wildchar=<Tab> wildcharm=<C-Z>
 noremap <leader>/ :let @/ = ""<CR>
 
 let g:python3_host_prog='/home/qdzhang/miniconda3/envs/neovim/bin/python'
+
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+-- Modules and its options go here
+highlight = { enable = true },
+incremental_selection = { enable = true },
+textobjects = { enable = true },
+}
+EOF
