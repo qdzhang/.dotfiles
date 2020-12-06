@@ -3,7 +3,8 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': 'markdown' }
-Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['c', 'cpp'] }
+" Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['c', 'cpp'] }
+Plug 'bfrg/vim-cpp-modern'
 Plug 'dhruvasagar/vim-table-mode', { 'for': 'markdown' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'lervag/vimtex', { 'for': 'tex' }
@@ -69,7 +70,8 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 
 let g:lsp_signs_enabled = 1         " enable signs
-let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
+" let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
+let g:lsp_diagnostics_float_cursor = 1
 
 if has('python3')
     call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
@@ -117,6 +119,7 @@ function! s:on_lsp_buffer_enabled() abort
     nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
     nmap <buffer> K <plug>(lsp-hover)
     nmap <buffer> <f2> <plug>(lsp-rename)
+    nmap <buffer> ld <plug>(lsp-document-diagnostics)
     
     " refer to doc to add more commands
 endfunction
