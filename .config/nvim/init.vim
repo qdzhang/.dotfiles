@@ -17,7 +17,7 @@ Plug 'tpope/vim-commentary'
 Plug 'Shougo/echodoc.vim'
 Plug 'jpalardy/vim-slime'
 Plug 'haya14busa/is.vim'
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -26,21 +26,25 @@ Plug 'liuchengxu/vista.vim'
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'ncm2/ncm2'
-Plug 'ncm2/ncm2-ultisnips'
-Plug 'roxma/nvim-yarp'
-if has('win32')
-    Plug 'autozimu/LanguageClient-neovim', {
-        \ 'branch': 'next',
-        \ 'do': 'powershell -executionpolicy bypass -File install.ps1',
-        \ }
-else
-    Plug 'autozimu/LanguageClient-neovim', {
-        \ 'branch': 'next',
-        \ 'do': 'bash install.sh',
-        \ }
-endif
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
+" Plug 'ncm2/ncm2'
+" Plug 'ncm2/ncm2-ultisnips'
+" Plug 'roxma/nvim-yarp'
+" if has('win32')
+"     Plug 'autozimu/LanguageClient-neovim', {
+"         \ 'branch': 'next',
+"         \ 'do': 'powershell -executionpolicy bypass -File install.ps1',
+"         \ }
+" else
+"     Plug 'autozimu/LanguageClient-neovim', {
+"         \ 'branch': 'next',
+"         \ 'do': 'bash install.sh',
+"         \ }
+" endif
 call plug#end()
+
+lua require("lsp")
 
 " lightline and bufferline setting
 let g:lightline = {
@@ -82,48 +86,75 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "my_snippets"]
 "---------------------------------
 let g:echodoc#enable_at_startup = 1
 
+" --------------------
+"  nvim-lsp settings
+" --------------------
+  nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
+  nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
+  nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
+  nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+  nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
+  nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
+  nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
+  nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
+  nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
+
+" completion-nvim settings
+" Use <Tab> and <S-Tab> to navigate through popup menu
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" Use completion-nvim in every buffer
+"autocmd BufEnter * lua require'completion'.on_attach()
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+
+" Avoid showing message extra message when using completion
+set shortmess+=c
+
+let g:completion_enable_snippet = 'UltiSnips'
+
 " -------------
 " ncm2 settings
 " -------------
 
-" enable ncm2 for all buffers
-autocmd BufEnter * call ncm2#enable_for_buffer()
+" " enable ncm2 for all buffers
+" autocmd BufEnter * call ncm2#enable_for_buffer()
 
-" IMPORTANT: :help Ncm2PopupOpen for more information
-set completeopt=noinsert,menuone,noselect
+" " IMPORTANT: :help Ncm2PopupOpen for more information
+" set completeopt=noinsert,menuone,noselect
 
-" suppress the annoying 'match x of y', 'The only match' and 'Pattern not
-" found' messages
-set shortmess+=c
-inoremap <expr> <CR> (pumvisible() ? "\<c-y>" : "\<CR>")
+" " suppress the annoying 'match x of y', 'The only match' and 'Pattern not
+" " found' messages
+" set shortmess+=c
+" inoremap <expr> <CR> (pumvisible() ? "\<c-y>" : "\<CR>")
 
-" CTRL-C doesn't trigger the InsertLeave autocmd . map to <ESC> instead.
-inoremap <c-c> <ESC>
+" " CTRL-C doesn't trigger the InsertLeave autocmd . map to <ESC> instead.
+" inoremap <c-c> <ESC>
 
-" Use <TAB> to select the popup menu:
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", 'n')
+" " Use <TAB> to select the popup menu:
+" inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", 'n')
 
 " ------------
 " lsp settings
 " ------------
-set completeopt-=preview
-let g:LanguageClient_serverCommands = {
-    \ 'python': ['pyls'],
-    \ 'cpp': ['clangd'],
-    \ 'c': ['clangd'],
-    \ 'go': ['~/go/bin/gopls']
-    \ }
+" set completeopt-=preview
+" let g:LanguageClient_serverCommands = {
+"     \ 'python': ['pyls'],
+"     \ 'cpp': ['clangd'],
+"     \ 'c': ['clangd'],
+"     \ 'go': ['~/go/bin/gopls']
+"     \ }
 
 " Run gofmt on save
-autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
+" autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
 
-nmap <silent> <leader>l <Plug>(lcn-menu)
-nmap <silent> <F2> <Plug>(lcn-rename)
-nmap <silent> K <Plug>(lcn-hover)
-nmap <silent> <F12> <Plug>(lcn-definition)
-nmap <silent> <S-F12> <Plug>(lcn-references)
+" nmap <silent> <leader>l <Plug>(lcn-menu)
+" nmap <silent> <F2> <Plug>(lcn-rename)
+" nmap <silent> K <Plug>(lcn-hover)
+" nmap <silent> <F12> <Plug>(lcn-definition)
+" nmap <silent> <S-F12> <Plug>(lcn-references)
 
 " vim-slime setting
 let g:slime_target = "tmux"
@@ -148,14 +179,6 @@ let g:clap_provider_dotfiles = {
       \ }
 
 nnoremap <leader>c :Clap 
-
-" ------------------------
-"  NERD Commenter settings
-" ------------------------
-" Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
-" Allow commenting and inverting empty lines (useful when commenting a region)
-let g:NERDCommentEmptyLines = 1
 
 " --------------
 "  vifm settings
