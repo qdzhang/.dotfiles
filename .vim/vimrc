@@ -149,7 +149,7 @@ nnoremap <leader>vf :Vista finder fzf:
 "------------------
 let g:clap_theme = 'material_design_dark'
 let g:clap_provider_dotfiles = {
-      \ 'source': ['~/.vim/vimrc', '~/.config/nvim/init.vim', '~/.bashrc', '~/.tmux.conf'],
+      \ 'source': ['~/.vim/vimrc', '~/.config/nvim/init.vim', '~/.bashrc', '~/.zshrc', '~/.tmux.conf'],
       \ 'sink': 'e',
       \ }
 
