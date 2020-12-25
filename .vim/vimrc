@@ -11,6 +11,7 @@ Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'tpope/vim-commentary'
 Plug 'Shougo/echodoc.vim'
 Plug 'jpalardy/vim-slime'
+Plug 'kassio/neoterm'
 Plug 'haya14busa/is.vim'
 
 Plug 'prabirshrestha/asyncomplete.vim'
@@ -23,6 +24,7 @@ Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
 Plug 'vifm/vifm.vim'
 Plug 'liuchengxu/vista.vim'
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 call plug#end()
@@ -154,6 +156,9 @@ let g:clap_provider_dotfiles = {
       \ }
 
 nnoremap <leader>c :Clap 
+
+" leaderf settings
+let g:Lf_WindowPosition = 'popup'
 
 " --------------
 "  vifm settings
