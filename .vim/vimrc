@@ -11,8 +11,9 @@ Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'tpope/vim-commentary'
 Plug 'Shougo/echodoc.vim'
 Plug 'jpalardy/vim-slime'
-Plug 'kassio/neoterm'
+" Plug 'kassio/neoterm'
 Plug 'haya14busa/is.vim'
+Plug 'cespare/vim-toml'
 
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/vim-lsp'
