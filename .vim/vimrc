@@ -14,6 +14,7 @@ Plug 'jpalardy/vim-slime'
 " Plug 'kassio/neoterm'
 Plug 'haya14busa/is.vim'
 Plug 'cespare/vim-toml'
+Plug 'wfxr/minimap.vim'
 
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/vim-lsp'
