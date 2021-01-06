@@ -15,6 +15,7 @@ Plug 'jpalardy/vim-slime'
 Plug 'haya14busa/is.vim'
 Plug 'cespare/vim-toml'
 Plug 'wfxr/minimap.vim'
+Plug 'glepnir/dashboard-nvim'
 
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/vim-lsp'
@@ -192,6 +193,20 @@ nnoremap <silent> <leader>f :FZF<cr>
 nnoremap <silent> <leader>F :FZF ~<cr>
 nnoremap <silent> <leader>rg :Rg<cr>
 nnoremap <silent> <leader>b :Buffers<cr>
+
+" --------------------
+"  dashboard settings
+" --------------------
+let g:dashboard_custom_header = [
+    \ '',
+    \ ' _   _   _____  ___  ___',
+    \ '| | | | |_   _| |  \/  |',
+    \ '| | | |   | |   | .  . |',
+    \ '| | | |   | |   | |\/| |',
+    \ '\ \_/ /  _| |_  | |  | |',
+    \ ' \___/   \___/  \_|  |_/',
+    \ '',
+    \ ]
 
 " Basic settings
 syntax on
