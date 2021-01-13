@@ -116,8 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*');
-alias setproxy='export https_proxy="http://${hostip}:7890";export http_proxy="http://${hostip}:7890";export all_proxy="socks5://${hostip}:7891";'
+# export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*');
+# alias setproxy='export https_proxy="http://${hostip}:7890";export http_proxy="http://${hostip}:7890";export all_proxy="socks5://${hostip}:7891";'
 echo -ne "\e[2 q"
 
 GOPATH=$HOME/go
@@ -144,8 +144,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
 
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 
