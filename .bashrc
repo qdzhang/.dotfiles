@@ -61,5 +61,7 @@ function parse_git_dirty {
 
 export PS1="\[\e[32m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\]: \[\e[37m\]\w\[\e[m\] \\$ \[\e[33m\]\`parse_git_branch\`\[\e[m\]\[\e[31m\]\`nonzero_return\`\[\e[m\] "
 
-alias dotfiles='/usr/bin/git --git-dir=/home/qdzhang/.dotfiles/ --work-tree=/home/qdzhang'
 # source ~/src/trueline/trueline.sh
+source /usr/share/fzf/key-bindings.bash
+source /usr/share/fzf/completion.bash
+export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '
