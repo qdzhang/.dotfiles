@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': 'markdown' }
@@ -14,7 +15,7 @@ Plug 'jpalardy/vim-slime'
 " Plug 'kassio/neoterm'
 Plug 'haya14busa/is.vim'
 Plug 'cespare/vim-toml'
-" Plug 'wfxr/minimap.vim'
+Plug 'wfxr/minimap.vim'
 Plug 'glepnir/dashboard-nvim'
 
 Plug 'prabirshrestha/asyncomplete.vim'
@@ -35,7 +36,7 @@ call plug#end()
 
 " lightline and bufferline setting
 let g:lightline = {
-    \ 'colorscheme': 'darcula',
+    \ 'colorscheme': 'seoul256',
     \ }
 let g:lightline.tabline          = {'left': [['buffers']], 'right': [['']]}
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
@@ -212,9 +213,9 @@ let g:dashboard_custom_header = [
 
 " Basic settings
 syntax on
-"set background=dark
+set background=dark
 "let g:one_allow_italics = 1
-colorscheme dracula
+colorscheme gruvbox
 set noshowmode
 set ignorecase
 set showcmd
@@ -262,7 +263,7 @@ set fileformat=unix
 
 if has('gui_running')
 set guioptions-=e  "tab bar
-"set guioptions-=m  "menu bar
+set guioptions-=m  "menu bar
 set guioptions-=T  "toolbar
 set guioptions-=r  "scrollbar
 autocmd GUIEnter * set visualbell t_vb=
@@ -272,7 +273,7 @@ set laststatus=2
 set showtabline=2
 set signcolumn=yes
 
-set guifont=Monospace\ 16
+set guifont=UbuntuMono\ Nerd\ Font\ 14
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,chinese,latin1
 set langmenu=en_US
