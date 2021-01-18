@@ -46,7 +46,6 @@ let g:lightline#bufferline#show_number  = 1
 "let g:lightline#bufferline#shorten_path = 0
 let g:lightline#bufferline#unnamed      = '[No Name]'
 
-
 " pandoc_syntax settings
 augroup pandoc_syntax
     au! BufNewFile,BufFilePre,BufRead *.md set filetype=pandoc
@@ -213,7 +212,7 @@ let g:dashboard_custom_header = [
 
 " Basic settings
 syntax on
-set background=dark
+set background=light
 "let g:one_allow_italics = 1
 colorscheme gruvbox
 set noshowmode
@@ -273,7 +272,7 @@ set laststatus=2
 set showtabline=2
 set signcolumn=yes
 
-set guifont=UbuntuMono\ Nerd\ Font\ 14
+set guifont=Monospace\ 14
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,chinese,latin1
 set langmenu=en_US
