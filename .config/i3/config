@@ -35,16 +35,16 @@ gaps inner 8
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock -- i3lock &
-exec ~/.config/i3/autolock/autolock
+exec ~/.config/i3/autolock/autolock &
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet &
 
-exec --no-startup-id fcitx5
-exec --no-startup-id udiskie --tray
-exec --no-startup-id feh --bg-max ~/Pictures/wallpaper/99836.jpg
-exec --no-startup-id dunst
+exec --no-startup-id fcitx5 &
+exec --no-startup-id udiskie --tray &
+exec --no-startup-id feh --bg-max ~/Pictures/wallpaper/99836.jpg &
+exec --no-startup-id dunst &
 
 # special programs settings
 for_window [class="GoldenDict"] floating enable border normal 2
