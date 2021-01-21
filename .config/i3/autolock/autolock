@@ -15,5 +15,5 @@ xidlehook \
     'xrandr --output "$PRIMARY_DISPLAY" --brightness 1' \
   `# Undim & lock after 10 more seconds` \
   --timer 10 \
-    'xrandr --output "$PRIMARY_DISPLAY" --brightness 1; i3lock -i ~/Pictures/wallpaper/1159160.png' \
+    'xrandr --output "$PRIMARY_DISPLAY" --brightness 1; ~/.config/i3/autolock/lock' \
     ''

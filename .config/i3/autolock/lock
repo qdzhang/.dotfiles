@@ -1,0 +1,5 @@
+#!/bin/bash
+
+B='#00000000'  # blank
+
+convert ~/Pictures/wallpaper/159160.png -resize $(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/') RGB:- | i3lock --insidecolor=$B --screen 1 --blur 5 --clock --indicator --timestr="%H:%M:%S" --datestr="%A, %m %Y" --keylayout 1 --raw $(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/'):rgb --image /dev/stdin
