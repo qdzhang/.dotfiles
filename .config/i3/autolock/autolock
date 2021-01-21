@@ -16,4 +16,9 @@ xidlehook \
   `# Undim & lock after 10 more seconds` \
   --timer 10 \
     'xrandr --output "$PRIMARY_DISPLAY" --brightness 1; ~/.config/i3/autolock/lock' \
+    '' \
+  `# Finally, suspend an hour after it locks` \
+  --timer 1200 \
+    'systemctl suspend' \
     ''
+
