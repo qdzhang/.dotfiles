@@ -1,5 +1,11 @@
-theme = "space-villain"
-icons = "awesome"
+[theme]
+name = "space-villain"
+[theme.overrides]
+idle_bg = "#3b4252"
+good_bg = "#5e81ac"
+
+[icons]
+name = "awesome5"
 
 [[block]]
 block = "networkmanager"
@@ -10,7 +16,7 @@ interface_name_include = []
 [[block]]
 block = "cpu"
 interval = 1
-format = "{barchart} {utilization}% {frequency}GHz"
+format = "{utilization}% {frequency}GHz"
 
 [[block]]
 block = "memory"
@@ -30,4 +36,5 @@ format = "%a %m/%d %R"
 [[block]]
 block = "battery"
 interval = 10
-format = "{percentage}% {time}"
+format = "{percentage}% "
+full_format = "{percentage}% "

@@ -8,7 +8,13 @@
 
 general {
         colors = true
-        interval = 5
+        interval = 3
+        #color_good = "#2AA198"
+        color_good = "#A3BE8C"
+        #color_bad = "#586E75"
+        color_bad = "#BF616A"
+        #color_degraded = "#DC322F"
+        color_degraded = "#B48EAD"
 }
 
 # order += "ipv6"
