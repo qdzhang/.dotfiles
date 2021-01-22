@@ -1,5 +1,5 @@
 [theme]
-name = "space-villain"
+name = "native"
 [theme.overrides]
 idle_bg = "#3b4252"
 good_bg = "#5e81ac"
