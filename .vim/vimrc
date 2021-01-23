@@ -26,7 +26,7 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
-Plug 'vifm/vifm.vim'
+" Plug 'vifm/vifm.vim'
 Plug 'liuchengxu/vista.vim'
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 "Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
@@ -181,9 +181,9 @@ nnoremap <leader>l :Leaderf
 " --------------
 "  vifm settings
 " --------------
-let g:vifm_embed_term = 1
-let g:vifm_embed_split = 1
-noremap <leader>t :Vifm<cr>
+" let g:vifm_embed_term = 1
+" let g:vifm_embed_split = 1
+" noremap <leader>t :Vifm<cr>
 
 " ------------
 " fzf settings
