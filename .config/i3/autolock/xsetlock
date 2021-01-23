@@ -1,3 +1,5 @@
 #!/bin/bash
 
 xset s activate
+
+sleep 1; xset dpms force off
