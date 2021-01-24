@@ -42,12 +42,14 @@ exec xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock
 exec --no-startup-id nm-applet &
 
 exec --no-startup-id fcitx5 &
+exec --no-startup-id copyq &
 exec --no-startup-id udiskie --tray &
 exec --no-startup-id feh --bg-max ~/Pictures/wallpaper/99836.jpg &
 exec --no-startup-id dunst &
 
 # special programs settings
 for_window [class="GoldenDict"] floating enable border normal 2
+for_window [class="copyq"] floating enable border normal 2
 
 # Use pactl to adjust volume in PulseAudio.
 # set $refresh_i3status killall -SIGUSR1 i3status
