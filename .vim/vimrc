@@ -17,6 +17,7 @@ Plug 'haya14busa/is.vim'
 Plug 'cespare/vim-toml'
 Plug 'wfxr/minimap.vim'
 Plug 'glepnir/dashboard-nvim'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/vim-lsp'
@@ -50,6 +51,9 @@ let g:lightline#bufferline#unnamed      = '[No Name]'
 augroup pandoc_syntax
     au! BufNewFile,BufFilePre,BufRead *.md set filetype=pandoc
 augroup END
+
+" Hexohkinase highlighters settings
+let g:Hexokinase_highlighters = [ 'backgroundfull' ]
 
 " ----------------------------
 "  vimtex settings
