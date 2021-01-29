@@ -5,3 +5,5 @@ alias dotfiles='/usr/bin/git --git-dir=/home/qdzhang/.dotfiles/ --work-tree=/hom
 alias mvi='mpv --config-dir=$HOME/.config/mvi'
 
 alias aur='auracle'
+
+alias mptv='mpv --script-opts=iptv=1'
