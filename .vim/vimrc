@@ -1,3 +1,6 @@
+unlet! skip_defaults_vim
+silent! source $VIMRUNTIME/defaults.vim
+
 call plug#begin('~/.vim/plugged')
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'morhetz/gruvbox'
@@ -249,6 +252,9 @@ if &term =~ "xterm"
     let &t_SR = "\<Esc>[3 q"
     let &t_EI = "\<Esc>[2 q"
 endif
+
+set ttimeout        " time out for key codes
+set ttimeoutlen=10 " wait up to 10ms after Esc for special key
 
 if exists('$TMUX')
     let &t_SI .= "\e[6 q"
