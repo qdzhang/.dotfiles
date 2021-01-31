@@ -16,3 +16,9 @@ append_path () {
             PATH="${PATH:+$PATH:}$1"
     esac
 }
+
+export PATH=$PATH:$HOME/.local/bin
+export MOZ_X11_EGL=1
+export EDITOR="vim"
+export XSECURELOCK_BLANK_DPMS_STATE=off
+export XSECURELOCK_COMPOSITE_OBSCURER=0
