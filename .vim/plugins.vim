@@ -30,5 +30,5 @@ Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
 Plug 'liuchengxu/vista.vim'
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 "Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-Plug '~/.fzf'
+Plug '/usr/bin/fzf'
 Plug 'junegunn/fzf.vim'
