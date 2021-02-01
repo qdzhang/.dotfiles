@@ -15,7 +15,7 @@ Plug 'jpalardy/vim-slime'
 Plug 'haya14busa/is.vim'
 Plug 'cespare/vim-toml'
 Plug 'wfxr/minimap.vim'
-Plug 'glepnir/dashboard-nvim'
+" Plug 'glepnir/dashboard-nvim'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 Plug 'prabirshrestha/asyncomplete.vim'

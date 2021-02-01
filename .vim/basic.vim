@@ -8,6 +8,7 @@ set ignorecase
 set showcmd
 set hlsearch
 set mouse=a
+set shortmess=I  "disable intro message
 "set t_Co=256
 
 
