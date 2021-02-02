@@ -1,6 +1,13 @@
 " lightline and bufferline setting
 let g:lightline = {
     \ 'colorscheme': 'seoul256',
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+    \ },
+    \ 'component_function': {
+    \   'gitbranch': 'FugitiveHead'
+    \ },
     \ }
 let g:lightline.tabline          = {'left': [['buffers']], 'right': [['']]}
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
