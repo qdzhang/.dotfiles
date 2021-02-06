@@ -17,6 +17,8 @@ Plug 'cespare/vim-toml'
 Plug 'wfxr/minimap.vim'
 " Plug 'glepnir/dashboard-nvim'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'eraserhd/parinfer-rust', {'do':
+        \  'cargo build --release'}
 
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
