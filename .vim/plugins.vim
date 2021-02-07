@@ -19,6 +19,7 @@ Plug 'wfxr/minimap.vim'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'eraserhd/parinfer-rust', {'do':
         \  'cargo build --release'}
+Plug 'justinmk/vim-sneak'
 
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
