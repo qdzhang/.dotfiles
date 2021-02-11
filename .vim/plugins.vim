@@ -38,3 +38,4 @@ Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 "Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug '/usr/bin/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'yegappan/mru'
