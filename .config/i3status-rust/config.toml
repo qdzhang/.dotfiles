@@ -16,7 +16,7 @@ interface_name_include = []
 [[block]]
 block = "cpu"
 interval = 1
-format = "{utilization}% {frequency}GHz"
+format = "{utilization}% {frequency}"
 
 [[block]]
 block = "memory"
@@ -30,7 +30,7 @@ step_width = 3
 
 [[block]]
 block = "time"
-interval = 60
+interval = 10
 format = "%a %m/%d %R"
 
 [[block]]
