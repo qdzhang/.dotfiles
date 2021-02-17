@@ -39,3 +39,6 @@ Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 Plug '/usr/bin/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'yegappan/mru'
+
+Plug 'HiPhish/info.vim'
+Plug 'lilydjwg/fcitx.vim', { 'branch': 'fcitx5', 'for': 'markdown' }
