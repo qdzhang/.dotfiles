@@ -42,3 +42,4 @@ Plug 'yegappan/mru'
 
 Plug 'HiPhish/info.vim'
 Plug 'lilydjwg/fcitx.vim', { 'branch': 'fcitx5', 'for': 'markdown' }
+Plug 'lambdalisue/fern.vim'
