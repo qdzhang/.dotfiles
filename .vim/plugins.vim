@@ -42,5 +42,8 @@ Plug 'yegappan/mru'
 
 Plug 'HiPhish/info.vim'
 Plug 'lilydjwg/fcitx.vim', { 'branch': 'fcitx5', 'for': 'markdown' }
+
 Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/fern-hijack.vim'
+Plug 'lambdalisue/fern-git-status.vim'
 Plug 'lambdalisue/reword.vim'
