@@ -23,6 +23,7 @@ Plug 'justinmk/vim-sneak'
 
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
+Plug 'mhinz/vim-signify'
 
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/vim-lsp'

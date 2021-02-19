@@ -39,6 +39,8 @@ endif
 set ttimeout        " time out for key codes
 set ttimeoutlen=10 " wait up to 10ms after Esc for special key
 
+set updatetime=250
+
 if exists('$TMUX')
     let &t_SI .= "\e[6 q"
     let &t_SR .= "\e[3 q"
