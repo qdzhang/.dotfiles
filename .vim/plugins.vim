@@ -6,7 +6,9 @@ Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': 'markdown' }
 " Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['c', 'cpp'] }
 " Plug 'bfrg/vim-cpp-modern'
 Plug 'dhruvasagar/vim-table-mode', { 'for': 'markdown' }
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
+Plug 'tmsvg/pear-tree'
+
 Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'tpope/vim-commentary'
 Plug 'Shougo/echodoc.vim'
