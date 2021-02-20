@@ -9,3 +9,4 @@ nnoremap <silent> <leader>f :FZF<cr>
 nnoremap <silent> <leader>F :FZF ~<cr>
 nnoremap <silent> <leader>rg :Rg<cr>
 nnoremap <silent> <leader>b :Buffers<cr>
+nnoremap <silent> <leader>m :FZFMru<cr>
