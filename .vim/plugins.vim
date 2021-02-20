@@ -1,11 +1,15 @@
 "------------------
 " Appearance
 "------------------
-Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'morhetz/gruvbox'
-Plug 'itchyny/lightline.vim'
-Plug 'mengelbrecht/lightline-bufferline'
+
+" Plug 'doums/barow'
+" Plug 'zefei/vim-wintabs'
+" Plug 'itchyny/lightline.vim'
+" Plug 'mengelbrecht/lightline-bufferline'
 " Plug 'glepnir/dashboard-nvim'
+" Plug 'rbong/vim-crystalline'
 
 "------------------
 " File types

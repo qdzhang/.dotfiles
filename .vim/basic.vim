@@ -55,30 +55,6 @@ set ruler
 set backspace=2
 set fileformat=unix
 
-" let g:currentmode={
-"        \ 'n'  : 'NORMAL ',
-"        \ 'v'  : 'VISUAL ',
-"        \ 'V'  : 'V·Line ',
-"        \ '' : 'V·Block ',
-"        \ 'i'  : 'INSERT ',
-"        \ 'R'  : 'R ',
-"        \ 'Rv' : 'V·Replace ',
-"        \ 'c'  : 'Command ',
-"        \}
-
-" function! s:statusline_expr()
-"   let sta = "%{toupper(g:currentmode[mode()])}"
-"   let mod = "%{&modified ? '[+] ' : !&modifiable ? '[x] ' : ''}"
-"   let ro  = "%{&readonly ? '[RO] ' : ''}"
-"   let ft  = "%{len(&filetype) ? '['.&filetype.'] ' : ''}"
-"   let fug = "%{exists('g:loaded_fugitive') ? fugitive#statusline() : ''}"
-"   let sep = ' %= '
-"   let pos = ' %-12(%l : %c%V%) '
-"   let pct = ' %P'
-
-"   return sta.'[%n] %f %<'.mod.ro.ft.fug.sep.pos.'%*'.pct
-" endfunction
-" let &statusline = s:statusline_expr()
 
 if has('gui_running')
 set guioptions-=e  "tab bar
