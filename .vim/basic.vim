@@ -87,6 +87,7 @@ set noerrorbells
 set visualbell
 set visualbell t_vb=
 set autoread
+set nofixeol
 
 set wildmenu wildmode=full 
 set wildchar=<Tab> wildcharm=<C-Z>
