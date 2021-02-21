@@ -1,8 +1,8 @@
 function! InsertStatuslineColor(mode)
   if a:mode == 'i'
-    hi statusline guibg=#98971a guifg=#504945
+    hi statusline guibg=#b8bb26 guifg=#504945
   elseif a:mode == 'r'
-    hi statusline guibg=#b16286 guifg=#504945
+    hi statusline guibg=#d3869b guifg=#504945
   elseif
     hi statusline guibg=#cc241d guifg=#504945
   endif
@@ -33,6 +33,18 @@ au InsertLeave * hi statusline guibg=#fbf1c7 guifg=#458588
 au CursorHold * call LeaveVisualStatuslineColor()
 
 hi statusline guibg=#fbf1c7 guifg=#458588
+
+" Change tabline color when current buffer is modified but not saved
+function! UnsavedTabline()
+if (&mod == 1)
+    hi TabLineSel guibg=#b57614 guifg=#fbf1c7 
+else
+    hi TabLineSel guibg=#504945 guifg=#fbf1c7 
+endif
+endfunction
+
+hi TabLineSel guibg=#504945 guifg=#fbf1c7 
+au CursorHold,CursorHoldI * call UnsavedTabline()
 
 " Formats the statusline
 set statusline=
