@@ -70,11 +70,12 @@ Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
 "------------------
 " Plug 'vifm/vifm.vim'
 Plug 'liuchengxu/vista.vim'
-Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+" Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 "Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug '/usr/bin/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'yegappan/mru'
+Plug 'tracyone/fzf-funky',{'on': 'FzfFunky'}
 
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-hijack.vim'

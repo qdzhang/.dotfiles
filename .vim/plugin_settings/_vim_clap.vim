@@ -8,4 +8,4 @@ let g:clap_theme = 'material_design_dark'
 "       \ 'description': 'Open some dotfile',
 "       \ }
 
-nnoremap <leader>c :Clap 
+" nnoremap <leader>c :Clap 

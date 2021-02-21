@@ -10,3 +10,10 @@ nnoremap <silent> <leader>F :FZF ~<cr>
 nnoremap <silent> <leader>rg :Rg<cr>
 nnoremap <silent> <leader>b :Buffers<cr>
 nnoremap <silent> <leader>m :FZFMru<cr>
+nnoremap <silent> <leader>c :Commands<cr>
+nnoremap <silent> <leader>l :BLines<cr>
+nnoremap <silent> <leader>L :Lines<cr>
+
+nnoremap <Leader>o :FzfFunky<Cr>
+" narrow the list down with a word under cursor
+nnoremap <Leader>O :execute 'FzfFunky ' . expand('<cword>')<Cr>
