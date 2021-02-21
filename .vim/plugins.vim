@@ -75,7 +75,7 @@ Plug 'liuchengxu/vista.vim'
 Plug '/usr/bin/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'yegappan/mru'
-Plug 'tracyone/fzf-funky',{'on': 'FzfFunky'}
+" Plug 'tracyone/fzf-funky',{'on': 'FzfFunky'}
 
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-hijack.vim'
