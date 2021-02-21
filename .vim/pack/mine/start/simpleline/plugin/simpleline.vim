@@ -43,7 +43,7 @@ set statusline+=%h      "help file flag
 set statusline+=%m      "modified flag
 set statusline+=\ %{ReadOnly()}
 " set statusline+=%r      "read only flag
-set statusline+=%{fugitive#statusline()}
+set statusline+=\ %{fugitive#statusline()}
 
 set statusline+=\ %=                        " align left
 set statusline+=[%{strlen(&fenc)?&fenc:'none'},  "file encoding
