@@ -46,6 +46,8 @@ Plug 'jpalardy/vim-slime'
 Plug 'HiPhish/info.vim'
 Plug 'lilydjwg/fcitx.vim', { 'branch': 'fcitx5', 'for': 'markdown' }
 
+Plug 'dstein64/vim-startuptime'
+
 "------------------
 " Git
 "------------------
