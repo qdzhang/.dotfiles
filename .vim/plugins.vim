@@ -3,6 +3,7 @@
 "------------------
 " Plug 'dracula/vim', { 'as': 'dracula' }
 " Plug 'morhetz/gruvbox'
+Plug 'lifepillar/vim-gruvbox8'
 
 " Plug 'doums/barow'
 " Plug 'zefei/vim-wintabs'
