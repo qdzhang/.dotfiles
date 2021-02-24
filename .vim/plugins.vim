@@ -2,7 +2,7 @@
 " Appearance
 "------------------
 " Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
 
 " Plug 'doums/barow'
 " Plug 'zefei/vim-wintabs'

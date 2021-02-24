@@ -1,16 +1,4 @@
 " Basic settings
-syntax on
-set background=dark
-"let g:one_allow_italics = 1
-colorscheme gruvbox
-set noshowmode
-set ignorecase
-set showcmd
-set hlsearch
-set mouse=a
-set shortmess=I  "disable intro message
-"set t_Co=256
-
 
 " set termguicolors
 if exists('+termguicolors')
@@ -18,6 +6,17 @@ if exists('+termguicolors')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
+
+syntax on
+set background=dark
+colorscheme gruvbox8
+set noshowmode
+set ignorecase
+set showcmd
+set hlsearch
+set mouse=a
+set shortmess=I  "disable intro message
+"set t_Co=256
 
 filetype on
 set autoindent
