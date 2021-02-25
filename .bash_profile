@@ -18,6 +18,7 @@ append_path () {
 }
 
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.emacs.d/bin
 export MOZ_X11_EGL=1
 export EDITOR="vim"
 export XSECURELOCK_BLANK_DPMS_STATE=off
