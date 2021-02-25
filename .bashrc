@@ -68,6 +68,3 @@ export PS1="\[\e[32m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\]: \[\e[37m\]\w\[\e[m\] \\$ 
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-  --color fg:#ebdbb2,bg:#282828,hl:#fabd2f,fg+:#ebdbb2,bg+:#3c3836,hl+:#fabd2f
-  --color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#83a598,marker:#fe8019,header:#665c54'
