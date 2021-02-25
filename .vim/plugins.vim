@@ -37,8 +37,8 @@ Plug 'haya14busa/is.vim'
 Plug 'wfxr/minimap.vim'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'Shougo/echodoc.vim'
-Plug 'eraserhd/parinfer-rust', {'do':
-        \  'cargo build --release'}
+" Plug 'eraserhd/parinfer-rust', {'do':
+"         \  'cargo build --release'}
 Plug 'justinmk/vim-sneak'
 
 Plug 'jpalardy/vim-slime'
