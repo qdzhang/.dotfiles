@@ -56,6 +56,7 @@ Plug 'dstein64/vim-win'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'mhinz/vim-signify'
+Plug 'sodapopcan/vim-twiggy'
 
 "------------------
 " Lsp and complete
@@ -63,6 +64,8 @@ Plug 'mhinz/vim-signify'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'mattn/vim-lsp-settings'
+
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 Plug 'SirVer/ultisnips'
