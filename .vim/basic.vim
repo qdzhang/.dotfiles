@@ -1,22 +1,12 @@
 " Basic settings
 
-" set termguicolors
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
-
 syntax on
-set background=dark
-colorscheme gruvbox8
 set noshowmode
 set ignorecase
 set showcmd
 set hlsearch
 set mouse=a
 set shortmess=I  "disable intro message
-"set t_Co=256
 
 filetype on
 set autoindent
@@ -48,8 +38,6 @@ endif
 
 set cursorline
 set cursorcolumn
-"hi Visual gui=reverse guifg=Black guibg=Grey
-"hnighlight CursorLine ctermbg=242
 set ruler
 set backspace=2
 set fileformat=unix

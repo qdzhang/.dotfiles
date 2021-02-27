@@ -1,9 +1,11 @@
 unlet! skip_defaults_vim
 silent! source $VIMRUNTIME/defaults.vim
 
+runtime! basic.vim
+
 call plug#begin('~/.vim/plugged')
 runtime! plugins.vim
 call plug#end()
 
 runtime! plugin_settings/*.vim
-runtime! basic.vim
+runtime! colorscheme.vim
