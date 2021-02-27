@@ -1,0 +1,8 @@
+{
+    "clangd.semanticHighlighting": true,
+    "snippets.ultisnips.directories": [
+      "UltiSnips",
+      "my_snippets"
+    ],
+    "suggest.noselect": false
+}

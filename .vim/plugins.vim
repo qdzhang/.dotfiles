@@ -61,16 +61,17 @@ Plug 'sodapopcan/vim-twiggy'
 "------------------
 " Lsp and complete
 "------------------
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'mattn/vim-lsp-settings'
+" Plug 'prabirshrestha/asyncomplete.vim'
+" Plug 'prabirshrestha/vim-lsp'
+" Plug 'prabirshrestha/asyncomplete-lsp.vim'
+" Plug 'mattn/vim-lsp-settings'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
+" Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
 
 "------------------
 " Search and grep
