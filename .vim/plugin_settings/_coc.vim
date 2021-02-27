@@ -57,6 +57,8 @@ nmap <leader>rn <Plug>(coc-rename)
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
 nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
+" Show all files
+nnoremap <silent><nowait> <space>f  :<C-u>CocList files<cr>
 " Show commands.
 nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.

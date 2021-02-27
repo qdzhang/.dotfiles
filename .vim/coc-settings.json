@@ -4,5 +4,7 @@
       "UltiSnips",
       "my_snippets"
     ],
-    "suggest.noselect": false
+    "suggest.noselect": false,
+    "list.source.files.args": ["--hidden", "--files"],
+	"list.source.files.excludePatterns": ["**/.git/**"]
 }
