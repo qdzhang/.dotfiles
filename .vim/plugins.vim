@@ -30,6 +30,7 @@ Plug 'tmsvg/pear-tree'
 
 Plug 'tpope/vim-commentary'
 Plug 'haya14busa/is.vim'
+Plug 'simnalamburt/vim-mundo'
 
 "------------------
 " Utils 
