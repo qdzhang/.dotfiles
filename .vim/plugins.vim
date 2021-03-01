@@ -46,7 +46,7 @@ Plug 'jpalardy/vim-slime'
 " Plug 'kassio/neoterm'
 
 Plug 'HiPhish/info.vim'
-Plug 'lilydjwg/fcitx.vim', { 'branch': 'fcitx5', 'for': 'markdown' }
+" Plug 'lilydjwg/fcitx.vim', { 'branch': 'fcitx5' }
 
 Plug 'dstein64/vim-startuptime'
 Plug 'dstein64/vim-win'
