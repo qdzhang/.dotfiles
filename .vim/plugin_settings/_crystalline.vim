@@ -6,7 +6,7 @@ if a:current
 else
   let l:s .= '%#CrystallineInactive#'
 endif
-let l:s .= ' %h%w%m%r '
+let l:s .= ' %f%h%w%m%r '
 if a:current
   let l:s .= '%{fugitive#head()}'
 endif
