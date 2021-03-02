@@ -10,7 +10,7 @@ Plug 'lifepillar/vim-gruvbox8'
 " Plug 'itchyny/lightline.vim'
 " Plug 'mengelbrecht/lightline-bufferline'
 " Plug 'glepnir/dashboard-nvim'
-" Plug 'rbong/vim-crystalline'
+Plug 'rbong/vim-crystalline'
 
 "------------------
 " File types
@@ -31,6 +31,8 @@ Plug 'tmsvg/pear-tree'
 Plug 'tpope/vim-commentary'
 Plug 'haya14busa/is.vim'
 Plug 'simnalamburt/vim-mundo'
+
+Plug 'andymass/vim-matchup'
 
 "------------------
 " Utils 
