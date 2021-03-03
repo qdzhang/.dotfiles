@@ -14,10 +14,11 @@ endif
 let l:s .= '%='
 if a:current
   let l:s .= ' %{&paste ?"PASTE ":""}%{&spell?"SPELL ":""}'
+  let l:s .= ' %{&ft} ' 
   let l:s .= crystalline#left_mode_sep('')
 endif
 if a:width > 30
-  let l:s .= ' %{&ft}[%{&fenc!=#""?&fenc:&enc}][%{&ff}] %l/%L %c%V %P '
+  let l:s .= ' %{&fenc!=#""?&fenc:&enc} | %{&ff} | %l/%L %c%V %P '
 else
   let l:s .= ' '
 endif
@@ -26,14 +27,21 @@ return l:s
 endfunction
 
 function! TabLine()
-  let l:vimlabel = has('nvim') ?  ' NVIM ' : ' VIM '
-  return crystalline#bufferline(2, len(l:vimlabel), 1) . '%=%#CrystallineTab# ' . l:vimlabel
+    return crystalline#bufferline(0, 0, 1)
 endfunction
 
 let g:crystalline_enable_sep = 1
+let g:crystalline_separators = ['', '']
+let g:crystalline_tab_separator = '|' 
 let g:crystalline_statusline_fn = 'StatusLine'
 let g:crystalline_tabline_fn = 'TabLine'
 let g:crystalline_theme = 'gruvbox'
+let g:crystalline_mode_labels = {
+            \ 'n': ' N ',
+            \ 'i': ' I ',
+            \ 'v': ' V ',
+            \ 'R': ' R '
+            \}
 
 set showtabline=2
 set guioptions-=e
