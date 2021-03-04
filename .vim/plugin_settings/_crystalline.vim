@@ -17,8 +17,8 @@ if a:current
   let l:s .= ' %{&ft} ' 
   let l:s .= crystalline#left_mode_sep('')
 endif
-if a:width > 30
-  let l:s .= ' %{&fenc!=#""?&fenc:&enc} | %{&ff} | %l/%L %c%V %P '
+if a:width > 40
+  let l:s .= ' %{&fenc!=#""?&fenc:&enc} | %{&ff} | %P %4l:%-3v '
 else
   let l:s .= ' '
 endif
