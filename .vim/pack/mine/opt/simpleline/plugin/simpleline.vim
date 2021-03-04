@@ -3,7 +3,7 @@ function! InsertStatuslineColor(mode)
     hi statusline guibg=#b8bb26 guifg=#504945
   elseif a:mode == 'r'
     hi statusline guibg=#d3869b guifg=#504945
-  elseif
+  else
     hi statusline guibg=#cc241d guifg=#504945
   endif
 endfunction
@@ -26,6 +26,7 @@ function! ReadOnly()
     return ''
   else
     return ''
+  endif
 endfunction
 
 au InsertEnter * call InsertStatuslineColor(v:insertmode)
