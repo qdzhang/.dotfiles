@@ -20,7 +20,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': 'markdown' }
 " Plug 'bfrg/vim-cpp-modern'
 Plug 'dhruvasagar/vim-table-mode', { 'for': 'markdown' }
 Plug 'lervag/vimtex', { 'for': 'tex' }
-Plug 'cespare/vim-toml'
+Plug 'sheerun/vim-polyglot'
 
 "------------------
 " Edit and move
