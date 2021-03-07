@@ -52,7 +52,10 @@ Plug 'HiPhish/info.vim'
 
 Plug 'dstein64/vim-startuptime'
 Plug 'dstein64/vim-win'
-Plug 'rlue/vim-barbaric'
+" Plug 'rlue/vim-barbaric'
+
+Plug 'ZSaberLv0/ZFVimIM'
+Plug 'ZSaberLv0/ZFVimJob'
 
 "------------------
 " Git
