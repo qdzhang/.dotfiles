@@ -1,0 +1,5 @@
+#!/bin/bash
+
+systemctl stop v2ray.service
+systemctl stop cgproxy.service
+echo "Proxy closed"

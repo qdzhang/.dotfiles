@@ -1,0 +1,4 @@
+#!/bin/sh
+# screenshot whole window
+
+import -window root $HOME/Pictures/Screenshots/$(date +%F_%H%M%S_%N).png

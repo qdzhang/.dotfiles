@@ -1,0 +1,5 @@
+#!/bin/bash
+
+systemctl start v2ray.service
+systemctl start cgproxy.service
+echo "Proxy opening"
