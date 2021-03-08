@@ -1,0 +1,6 @@
+#!/bin/bash
+# screenshot for select region
+
+slop=$(slop -f "%g") || exit 1
+read -r G < <(echo $slop)
+import -window root -crop $G $HOME/Pictures/Screenshots/$(date +%F_%H%M%S_%N).png
