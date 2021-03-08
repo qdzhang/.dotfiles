@@ -84,6 +84,13 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
 # key bindings
 #===================
 
+# screenshot and screen record
+bindsym --release Print exec --no-startup-id shot-active
+bindsym --release Control+Print exec --no-startup-id shot-select
+bindsym --release $mod+Print exec --no-startup-id shot-fullscreen
+
+bindsym --release Shift+Print exec --no-startup-id record
+
 set $Locker ~/.config/i3/autolock/xsetlock && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
