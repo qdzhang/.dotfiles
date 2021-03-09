@@ -56,6 +56,13 @@ Plug 'dstein64/vim-win'
 
 Plug 'ZSaberLv0/ZFVimIM'
 Plug 'ZSaberLv0/ZFVimJob'
+Plug 'qdzhang/ZFVimIM_xiaohe'
+
+if exists(':terminal')
+    if has('nvim-0.4.0') || has('patch-8.2.191')
+        Plug 'chengzeyi/multiterm.vim'
+    endif
+endif
 
 "------------------
 " Git

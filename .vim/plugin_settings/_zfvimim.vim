@@ -1,16 +1,3 @@
-function! s:myLocalDb()
-    let db = ZFVimIM_dbInit({
-                \   'name' : 'xhup',
-                \ })
-    call ZFVimIM_cloudRegister({
-                \   'mode' : 'local',
-                \   'dbId' : db['dbId'],
-                \   'repoPath' : '~/dev/vim/ZFVimIM_xiaohe',
-                \   'dbFile' : '/xhup.txt',
-                \ })
-endfunction
-autocmd User ZFVimIM_event_OnDbInit call s:myLocalDb()
-
 let g:ZFVimIM_symbolMap = {
             \   ' ' : [''],
             \   '`' : ['·'],
