@@ -52,6 +52,12 @@ endfunction
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 
+" Formatting selected code.
+xmap <leader>cf  <Plug>(coc-format-selected)
+nmap <leader>cf  <Plug>(coc-format-selected)
+xmap <leader>cff  <Plug>(coc-format)
+nmap <leader>cff  <Plug>(coc-format)
+
 " Mappings for CoCList
 " Show all diagnostics.
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
