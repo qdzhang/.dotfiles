@@ -10,7 +10,7 @@ Personal linux dotfiles
 - [i3-volume](https://github.com/hastinbe/i3-volume)
 - [light](https://github.com/haikarainen/light): Control backlights
 - [xsecurelock](https://github.com/google/xsecurelock): Lock screen
-- [dunst]( notification daemons provided by most desktop environments. It’s very customizable, isn’t dependent on any toolkits, and therefore ): Notification daemons
+- [dunst](https://dunst-project.org/): Notification daemons
 - termite
 - vim
 - mpv & [mpv-iptv](https://github.com/gthreepw00d/mpv-iptv) & [mpv-image-viewer](https://github.com/occivink/mpv-image-viewer)
