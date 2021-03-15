@@ -13,10 +13,11 @@ Personal linux dotfiles
 - [dunst]( notification daemons provided by most desktop environments. It’s very customizable, isn’t dependent on any toolkits, and therefore ): Notification daemons
 - termite
 - vim
-- mpv
+- mpv & [mpv-iptv](https://github.com/gthreepw00d/mpv-iptv) & [mpv-image-viewer](https://github.com/occivink/mpv-image-viewer)
 - rofi: Program launcher and some other usages
 - nm-applet: NetworkManager applet
 - blueman-applet: Bluetooth applet
 - copyq: Clipboard manager
 - udiskie & udisks2: Manipulate storage devices
 - feh: Wallpaper manager
+- ffmpeg & imagemagick: Screenshot and screen record
