@@ -18,6 +18,7 @@ set expandtab
 set softtabstop=4
 set number
 set rnu
+set colorcolumn=80
 
 if &term =~ "xterm"
     let &t_SI = "\<Esc>[6 q"
