@@ -2,4 +2,5 @@
 
 systemctl stop v2ray.service
 systemctl stop cgproxy.service
+killall qv2ray
 echo "Proxy closed"
