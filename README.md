@@ -20,4 +20,4 @@ Personal linux dotfiles
 - copyq: Clipboard manager
 - udiskie & udisks2: Manipulate storage devices
 - feh: Wallpaper manager
-- ffmpeg & imagemagick: Screenshot and screen record
+- ffmpeg & imagemagick & slop: Screenshot and screen record, and slop for selecting the region
