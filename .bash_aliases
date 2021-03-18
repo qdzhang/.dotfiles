@@ -7,3 +7,4 @@ alias mvi='mpv --config-dir=$HOME/.config/mvi'
 alias aur='auracle'
 
 alias mptv='mpv --script-opts=iptv=1'
+alias nv='nvim'
