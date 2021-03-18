@@ -29,3 +29,10 @@ Plug 'liuchengxu/vista.vim'
 Plug '/usr/bin/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'yegappan/mru'
+
+"------------------
+" Neovim only
+"------------------
+Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+Plug 'hoob3rt/lualine.nvim'
+" Plug 'ojroques/nvim-bufbar'
