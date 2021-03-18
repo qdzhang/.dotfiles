@@ -1,0 +1,1 @@
+/home/qdzhang/.vim/plugin_settings/_hexokinase_hightlighters.vim
