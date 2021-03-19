@@ -1,10 +1,15 @@
 {
     "clangd.semanticHighlighting": true,
     "snippets.ultisnips.directories": [
-      "UltiSnips",
-      "my_snippets"
+        "UltiSnips",
+        "my_snippets"
     ],
     "suggest.noselect": false,
-    "list.source.files.args": ["--hidden", "--files"],
-	"list.source.files.excludePatterns": ["**/.git/**"]
+    "list.source.files.args": [
+        "--hidden",
+        "--files"
+    ],
+    "list.source.files.excludePatterns": [
+        "**/.git/**"
+    ]
 }
