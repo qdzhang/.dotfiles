@@ -34,5 +34,7 @@ Plug 'yegappan/mru'
 " Neovim only
 "------------------
 Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
-Plug 'hoob3rt/lualine.nvim'
+" Plug 'hoob3rt/lualine.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim', {'branch': 'lua'}
+Plug 'b3nj5m1n/kommentary'
 " Plug 'ojroques/nvim-bufbar'
