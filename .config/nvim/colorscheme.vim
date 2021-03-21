@@ -6,4 +6,6 @@ if exists('+termguicolors')
 endif
 
 set background=dark
-colorscheme gruvbox8
+colorscheme nightfly
+" colorscheme zephyr
+" lua require('zephyr').get_zephyr_color()

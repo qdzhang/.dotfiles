@@ -42,6 +42,7 @@ Plug 'lambdalisue/reword.vim'
 "------------------
 Plug 'b3nj5m1n/kommentary'
 Plug 'gennaro-tedesco/nvim-peekup'
+Plug 'bluz71/vim-nightfly-guicolors'
 
 "-----------------
 " test
@@ -50,3 +51,6 @@ Plug 'gennaro-tedesco/nvim-peekup'
 " Plug 'hoob3rt/lualine.nvim'
 " Plug 'ojroques/nvim-bufbar'
 " Plug 'lukas-reineke/indent-blankline.nvim', {'branch': 'lua'}
+" Plug 'glepnir/zephyr-nvim'
+" Plug 'ishan9299/modus-theme-vim'
+" Plug 'Iron-E/nvim-highlite'
