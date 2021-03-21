@@ -42,7 +42,7 @@ Plug 'lambdalisue/reword.vim'
 "------------------
 Plug 'b3nj5m1n/kommentary'
 Plug 'gennaro-tedesco/nvim-peekup'
-Plug 'bluz71/vim-nightfly-guicolors'
+" Plug 'bluz71/vim-nightfly-guicolors'
 
 "-----------------
 " test
