@@ -25,8 +25,9 @@ Plug 'sheerun/vim-polyglot'
 "------------------
 " Edit and move
 "------------------
+" Use Coc-pairs as auto-pairs plugin
 " Plug 'jiangmiao/auto-pairs'
-Plug 'tmsvg/pear-tree'
+" Plug 'tmsvg/pear-tree'
 
 Plug 'tpope/vim-commentary'
 Plug 'haya14busa/is.vim'
