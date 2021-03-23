@@ -10,7 +10,8 @@ Plug 'lifepillar/vim-gruvbox8'
 " Plug 'itchyny/lightline.vim'
 " Plug 'mengelbrecht/lightline-bufferline'
 " Plug 'glepnir/dashboard-nvim'
-Plug 'rbong/vim-crystalline'
+" Plug 'rbong/vim-crystalline'
+Plug 'https://gitlab.com/maister/skyline.vim'
 
 "------------------
 " File types
@@ -55,9 +56,9 @@ Plug 'justinmk/vim-sneak'
 Plug 'dstein64/vim-win'
 " Plug 'rlue/vim-barbaric'
 
-Plug 'ZSaberLv0/ZFVimIM'
-Plug 'ZSaberLv0/ZFVimJob'
-Plug 'qdzhang/ZFVimIM_xiaohe'
+" Plug 'ZSaberLv0/ZFVimIM'
+" Plug 'ZSaberLv0/ZFVimJob'
+" Plug 'qdzhang/ZFVimIM_xiaohe'
 
 if exists(':terminal')
     if has('nvim-0.4.0') || has('patch-8.2.191')
