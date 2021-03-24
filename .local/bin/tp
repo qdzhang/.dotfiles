@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 systemctl start v2ray.service
 systemctl start cgproxy.service
