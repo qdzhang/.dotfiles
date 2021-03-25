@@ -24,3 +24,4 @@ export MOZ_X11_EGL=1
 export EDITOR="vim"
 export XSECURELOCK_BLANK_DPMS_STATE=off
 export XSECURELOCK_COMPOSITE_OBSCURER=0
+export GPG_TTY=$(tty)
