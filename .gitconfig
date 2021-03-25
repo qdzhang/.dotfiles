@@ -1,6 +1,7 @@
 [user]
 	name = qdzhang
 	email = qdzhangcn@gmail.com
+	signingkey = 2EA64EA4323ED6CD
 [core]
 	editor = 'vim'
     pager = delta
@@ -19,3 +20,8 @@
     commit-decoration-style = bold yellow box ul
     file-style = bold yellow ul
     file-decoration-style = none
+
+; [url "https://github.com.cnpmjs.org"]
+; 	insteadof = https://github.com
+[commit]
+	gpgsign = true
