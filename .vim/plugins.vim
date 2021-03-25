@@ -36,6 +36,8 @@ Plug 'simnalamburt/vim-mundo'
 
 Plug 'andymass/vim-matchup'
 
+Plug 'stefandtw/quickfix-reflector.vim'
+
 "------------------
 " Utils 
 "------------------
@@ -45,6 +47,7 @@ Plug 'Shougo/echodoc.vim'
 " Plug 'eraserhd/parinfer-rust', {'do':
 "         \  'cargo build --release'}
 Plug 'justinmk/vim-sneak'
+Plug 'junegunn/vim-peekaboo'
 
 " Plug 'jpalardy/vim-slime'
 " Plug 'kassio/neoterm'
@@ -53,6 +56,7 @@ Plug 'justinmk/vim-sneak'
 " Plug 'lilydjwg/fcitx.vim', { 'branch': 'fcitx5' }
 
 " Plug 'dstein64/vim-startuptime'
+" Plug 'tweekmonster/startuptime.vim'
 Plug 'dstein64/vim-win'
 " Plug 'rlue/vim-barbaric'
 
