@@ -9,6 +9,7 @@
 	tool = vimdiff
 [alias]
 	d = difftool
+	cs = commit -S
 [difftool]
 	prompt = false
 [interactive]
