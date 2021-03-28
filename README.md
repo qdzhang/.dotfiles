@@ -13,6 +13,7 @@ Personal linux dotfiles
 - [dunst](https://dunst-project.org/): Notification daemons
 - termite
 - vim
+- [gitstatus](https://github.com/romkatv/gitstatus): A fast shell git prompt
 - mpv & [mpv-iptv](https://github.com/gthreepw00d/mpv-iptv) & [mpv-image-viewer](https://github.com/occivink/mpv-image-viewer)
 - rofi: Program launcher and some other usages
 - nm-applet: NetworkManager applet
