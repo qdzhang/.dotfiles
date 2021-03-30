@@ -19,3 +19,9 @@ export GPG_TTY=$(tty)
 source ~/gitstatus/gitstatus.prompt.sh
 
 PS1='\[\e[32m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\]: \[\e[37m\]\w\[\e[m\] ${GITSTATUS_PROMPT}\n\$ '
+
+# Eternal bash history
+export HISTFILESIZE=
+export HISTSIZE=
+export HISTFILE=~/.bash_eternal_history
+shopt -s histappend
