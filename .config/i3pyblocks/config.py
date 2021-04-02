@@ -216,9 +216,10 @@ async def main():
     # https://developer.gnome.org/pango/stable/pango-Markup.html
     await runner.register_block(
         datetime.DateTimeBlock(
-            format_time=utils.pango_markup(" %T", font_weight="bold"),
-            format_date=utils.pango_markup(" %a, %d/%m", font_weight="light"),
-            default_state={"markup": types.MarkupText.PANGO},
+            format_time=utils.pango_markup("  %T ", font_weight="light"),
+            format_date=utils.pango_markup("  %a, %d/%m ", font_weight="light"),
+            default_state={"markup": types.MarkupText.PANGO,
+                           "background": "#5e81ac"},
         )
     )
 
