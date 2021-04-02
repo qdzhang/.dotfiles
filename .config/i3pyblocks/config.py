@@ -77,7 +77,7 @@ async def main():
     # )
 
     await runner.register_block(
-        ps.CpuPercentBlock(format=" {percent}%"),
+        ps.CpuPercentBlock(format="{icon}"),
     )
 
     # Load only makes sense depending of the number of CPUs installed in
