@@ -14,11 +14,25 @@ else
     sudo pacman -S rsync
 fi
 
+echo "============ Rsync begins =============================>"
 rsync --recursive --verbose --exclude '.git' tempdotfiles/ $HOME/
 rm -r tempdotfiles/
+echo "============ Rsync ends ===============================>"
 
 echo "============ Configure dotfiles git repo =============>"
 
-source $HOME/.bashrc
-dotfiles config --local status.showUntrackedFiles no
+if alias dotfiles 2>/dev/null; then 
+    dotfiles config --local status.showUntrackedFiles no
+else 
+    echo "Configure git repo manually:"
+    cat << "EOF"
+   +--------------------------------------------------------+
+   |                                                        |
+   |  source .bashrc                                        |
+   |  dotfiles config --local status.showUntrackedFiles no  |
+   |                                                        |
+   +--------------------------------------------------------+
+EOF
+fi
+
 echo "=========== Everything is finished ===================="
