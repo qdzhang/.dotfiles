@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# Use git bare repository to manage dotfiles
+
+git clone --separate-git-dir=$HOME/.dotfiles git@github.com:qdzhang/.dotfiles.git tempdotfiles
+
+echo "============ Git respository is cloned ===============>"
+echo "============ Use rsync to move dotfiles ==============>"
+
+if pacman -Qi rsync > /dev/null; then
+    echo "You have installed rsync"
+else
+    echo "You should install rsync to move the dotfiles to proper positions"
+    sudo pacman -S rsync
+fi
+
+rsync --recursive --verbose --exclude '.git' tempdotfiles/ $HOME/
+rm -r tempdotfiles/
+
+echo "============ Configure dotfiles git repo =============>"
+
+source $HOME/.bashrc
+dotfiles config --local status.showUntrackedFiles no
+echo "=========== Everything is finished ===================="
