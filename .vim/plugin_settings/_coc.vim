@@ -55,8 +55,10 @@ nmap <leader>rn <Plug>(coc-rename)
 " Formatting selected code.
 xmap <leader>cf  <Plug>(coc-format-selected)
 nmap <leader>cf  <Plug>(coc-format-selected)
-xmap <leader>cff  <Plug>(coc-format)
-nmap <leader>cff  <Plug>(coc-format)
+xmap <leader>cc  <Plug>(coc-format)
+nmap <leader>cc  <Plug>(coc-format)
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+let g:coc_filetype_map = {'pandoc': 'markdown'}
 
 " Mappings for CoCList
 " Show all diagnostics.
