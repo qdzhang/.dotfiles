@@ -21,20 +21,10 @@ snippet split "add <!--more-->"
 <!--more-->
 endsnippet
 
-snippet '(?<!\\)([0-9])([0-9])tb' "new table" r
-$1`!p 
-x=match.group(1)
-y=match.group(2)
-row1=""
-row2="" 
-for i in range(int(x)):
-    row1+="| "
-    row2+="|:-:"
-row1+="|\n"
-row2+="|\n"
-out=row1+row2+int(y)*row1
-snip.rv=out
-`$0
+snippet 'tb' "new table" r
+| $1 | $2 |
+|----|----|
+| $3 | $4 |
 endsnippet
 
 snippet 100days "100days to offload"
