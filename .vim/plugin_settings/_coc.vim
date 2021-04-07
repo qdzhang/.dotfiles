@@ -1,3 +1,13 @@
+let g:coc_global_extensions = [
+      \'coc-json', 
+      \'coc-vimlsp',
+      \'coc-snippets',
+      \'coc-prettier',
+      \'coc-pairs',
+      \'coc-lists',
+      \'coc-sh'
+      \]
+
 " use <cr> for comfirm completion 
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
