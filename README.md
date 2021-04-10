@@ -23,3 +23,4 @@ Personal linux dotfiles
 - udiskie & udisks2: Manipulate storage devices
 - feh: Wallpaper manager
 - ffmpeg & imagemagick & slop: Screenshot and screen record, and slop for selecting the region
+- [xcolor](https://github.com/Soft/xcolor): x11 color picker
