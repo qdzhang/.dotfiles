@@ -41,15 +41,13 @@ set cursorline
 set cursorcolumn
 set ruler
 set backspace=2
-set fileformat=unix
-
 
 if has('gui_running')
-set guioptions-=e  "tab bar
-set guioptions-=m  "menu bar
-set guioptions-=T  "toolbar
-set guioptions-=r  "scrollbar
-autocmd GUIEnter * set visualbell t_vb=
+    set guioptions-=e  "tab bar
+    set guioptions-=m  "menu bar
+    set guioptions-=T  "toolbar
+    set guioptions-=r  "scrollbar
+    autocmd GUIEnter * set visualbell t_vb=
 endif
 
 set laststatus=2
@@ -57,7 +55,15 @@ set showtabline=2
 set signcolumn=yes
 
 set guifont=Monospace\ 14
-set fileencoding=utf-8
+
+" Use Vim as manpager. There are some errors when set fileformat and fileencoding for
+" unmodifiable files, such as man pages.
+" https://www.reddit.com/r/vim/comments/morzue/vim_has_a_native_plugin_that_allows_you_to_turn/
+if &modifiable
+    set fileformat=unix
+    set fileencoding=utf-8
+endif
+
 set fileencodings=ucs-bom,utf-8,chinese,latin1
 set langmenu=en_US
 let $LANG = 'en_US.UTF-8'
