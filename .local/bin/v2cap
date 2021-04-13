@@ -1,3 +1,5 @@
 #!/bin/sh
 
 setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/bin/v2ray
+
+echo "Finished."
