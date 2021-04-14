@@ -14,11 +14,11 @@ filetype indent on
 filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
-set expandtab
-set softtabstop=4
 set number
 set rnu
 set colorcolumn=80
+
+set list listchars=tab:→\ ,extends:›,precedes:‹,nbsp:·,trail:·
 
 if &term =~ "xterm"
     let &t_SI = "\<Esc>[6 q"
@@ -34,7 +34,7 @@ set updatetime=250
 if exists('$TMUX')
     let &t_SI .= "\e[6 q"
     let &t_SR .= "\e[3 q"
-	let &t_EI .= "\e[2 q"
+    let &t_EI .= "\e[2 q"
 endif
 
 set cursorline

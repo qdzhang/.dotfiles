@@ -23,6 +23,8 @@ Plug 'dhruvasagar/vim-table-mode', {'for': ['markdown', 'pandoc']}
 Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'sheerun/vim-polyglot'
 
+Plug 'editorconfig/editorconfig-vim'
+
 "------------------
 " Edit and move
 "------------------
@@ -59,7 +61,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 " Plug 'lilydjwg/fcitx.vim', { 'branch': 'fcitx5' }
 
 " Plug 'dstein64/vim-startuptime'
-" Plug 'tweekmonster/startuptime.vim'
+Plug 'tweekmonster/startuptime.vim'
 Plug 'dstein64/vim-win'
 " Plug 'rlue/vim-barbaric'
 

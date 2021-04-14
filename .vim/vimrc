@@ -2,6 +2,7 @@ unlet! skip_defaults_vim
 silent! source $VIMRUNTIME/defaults.vim
 
 runtime! basic.vim
+runtime! before.vim
 
 call plug#begin('~/.vim/plugged')
 runtime! plugins.vim
