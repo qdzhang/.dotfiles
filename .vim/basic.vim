@@ -14,6 +14,8 @@ filetype indent on
 filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
+set expandtab
 set number
 set rnu
 set colorcolumn=80
