@@ -112,12 +112,15 @@ bindsym $mod+BackSpace mode "$mode_system"
 
 ## Manual management of external displays
 # Set the shortcuts and what they do
-set $mode_display Ext Screen (v) VGA ON, (h) HDMI ON, (x) VGA OFF, (y) HDMI OFF
+set $mode_display Ext Screen (d) DP-1 ON, (f) DP-2 ON, (g) DP-3 ON, (x) DP-1 OFF, (c) DP-2 OFF, (v) DP-3 OFF
 mode "$mode_display" {
-    bindsym v exec --no-startup-id xrandr --output VGA1 --auto --right-of LVDS1, mode "default"
-    bindsym h exec --no-startup-id xrandr --output HDMI1 --auto --right-of LVDS1, mode "default"
-    bindsym x exec --no-startup-id xrandr --output VGA1 --auto --off, mode "default"
-    bindsym y exec --no-startup-id xrandr --output HDMI1 --auto --off, mode "default"
+    bindsym d exec --no-startup-id xrandr --output DP-1 --auto --right-of eDP-1, mode "default"
+    bindsym f exec --no-startup-id xrandr --output DP-2 --auto --right-of eDP-1, mode "default"
+    bindsym g exec --no-startup-id xrandr --output DP-3 --auto --right-of eDP-1, mode "default"
+
+    bindsym x exec --no-startup-id xrandr --output DP-1 --auto --off, mode "default"
+    bindsym c exec --no-startup-id xrandr --output DP-2 --auto --off, mode "default"
+    bindsym v exec --no-startup-id xrandr --output DP-3 --auto --off, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -125,6 +128,9 @@ mode "$mode_display" {
 }
 # Declare here the shortcut to bring the display selection menu
 bindsym $mod+x mode "$mode_display"
+
+# Move current workspace to right external output
+bindsym $mod+p move workspace to output right
 
 # change focus
 bindsym $mod+j focus left
