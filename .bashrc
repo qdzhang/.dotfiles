@@ -22,6 +22,7 @@ PS1='\[\e[32m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\]: \[\e[37m\]\w\[\e[m\] ${GITSTATUS
 
 # https://www.reddit.com/r/vim/comments/morzue/vim_has_a_native_plugin_that_allows_you_to_turn/gu607ur?utm_source=share&utm_medium=web2x&context=3
 export MANPAGER="vim -M +MANPAGER --not-a-term -"
+export MANWIDTH=80
 
 # Eternal bash history
 export HISTFILESIZE=

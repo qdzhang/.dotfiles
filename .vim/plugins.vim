@@ -75,6 +75,8 @@ if exists(':terminal')
     endif
 endif
 
+Plug 'vim-utils/vim-man'
+
 "------------------
 " Git
 "------------------
