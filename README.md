@@ -24,3 +24,7 @@ Personal linux dotfiles
 - feh: Wallpaper manager
 - ffmpeg & imagemagick & slop: Screenshot and screen record, and slop for selecting the region
 - [xcolor](https://github.com/Soft/xcolor): x11 color picker
+- xarchiver: Archives handler
+- PCManFM-Qt: File manager
+- rsync
+- aria2 & axel & wget: Download utilities
