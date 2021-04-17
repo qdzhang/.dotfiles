@@ -29,3 +29,5 @@ export HISTFILESIZE=
 export HISTSIZE=
 export HISTFILE=~/.bash_eternal_history
 shopt -s histappend
+
+export EDITOR="vim"
