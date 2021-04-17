@@ -10,6 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $mod2 Mod1
 
 # disable window titlebars and set no window border
 for_window [class=".*"] border pixel 0
@@ -44,7 +45,7 @@ exec --no-startup-id nm-applet &
 exec --no-startup-id blueman-applet &
 
 exec --no-startup-id fcitx5 &
-exec --no-startup-id copyq &
+exec --no-startup-id clipcatd &
 
 exec --no-startup-id udiskie --tray &
 exec --no-startup-id feh --bg-max ~/Pictures/wallpaper/99836.jpg &
@@ -52,7 +53,6 @@ exec --no-startup-id dunst &
 
 # special programs settings
 for_window [class="GoldenDict"] floating enable border normal 2
-for_window [class="copyq"] floating enable border normal 2
 
 # Use pactl to adjust volume in PulseAudio.
 # set $refresh_i3status killall -SIGUSR1 i3status
@@ -79,6 +79,8 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# Use rofi and clipcat(https://github.com/xrelkd/clipcat) to manage X.org clipboard
+bindsym $mod2+grave exec clipcat-menu
 
 #===================
 # key bindings
