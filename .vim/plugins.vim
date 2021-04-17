@@ -21,7 +21,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': 'markdown' }
 " Plug 'bfrg/vim-cpp-modern'
 Plug 'dhruvasagar/vim-table-mode', {'for': ['markdown', 'pandoc']}
 Plug 'lervag/vimtex', { 'for': 'tex' }
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 
 " Plug 'editorconfig/editorconfig-vim'
 
