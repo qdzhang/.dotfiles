@@ -1,6 +1,7 @@
 " This file contains basic Vim settings and mappings
 
 " Basic settings {{{
+" ==================
 
 syntax on
 set noshowmode
@@ -103,9 +104,12 @@ set nofixeol
 set wildmenu wildmode=full 
 set wildchar=<Tab> wildcharm=<C-Z>
 
+set foldmethod=marker
+
 " }}}
 
 " Key mappings {{{
+" ================
 
 noremap <leader>/ :let @/ = ""<CR>
 
