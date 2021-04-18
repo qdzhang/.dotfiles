@@ -1,5 +1,4 @@
-"------------------
-" Appearance
+" Appearance {{{
 "------------------
 " Plug 'dracula/vim', { 'as': 'dracula' }
 " Plug 'morhetz/gruvbox'
@@ -13,8 +12,9 @@
 " Plug 'rbong/vim-crystalline'
 Plug 'https://gitlab.com/maister/skyline.vim'
 
-"------------------
-" File types
+" }}}
+
+" File types {{{
 "------------------
 Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': 'markdown' }
 " Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['c', 'cpp'] }
@@ -23,10 +23,9 @@ Plug 'dhruvasagar/vim-table-mode', {'for': ['markdown', 'pandoc']}
 Plug 'lervag/vimtex', { 'for': 'tex' }
 " Plug 'sheerun/vim-polyglot'
 
-" Plug 'editorconfig/editorconfig-vim'
+" }}}
 
-"------------------
-" Edit and move
+" Edit and move {{{
 "------------------
 " Use Coc-pairs as auto-pairs plugin
 " Plug 'jiangmiao/auto-pairs'
@@ -40,8 +39,9 @@ Plug 'andymass/vim-matchup'
 
 Plug 'stefandtw/quickfix-reflector.vim'
 
-"------------------
-" Utils 
+" }}}
+
+" Utils {{{
 "------------------
 Plug 'wfxr/minimap.vim'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
@@ -77,17 +77,21 @@ endif
 
 Plug 'vim-utils/vim-man'
 
-"------------------
-" Git
+" Plug 'editorconfig/editorconfig-vim'
+
+" }}}
+
+" Git {{{
 "------------------
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'mhinz/vim-signify'
 Plug 'sodapopcan/vim-twiggy'
 
-"------------------
-" Lsp and complete
-"------------------
+" }}}
+
+" Lsp and complete {{{
+"---------------------
 " Plug 'prabirshrestha/asyncomplete.vim'
 " Plug 'prabirshrestha/vim-lsp'
 " Plug 'prabirshrestha/asyncomplete-lsp.vim'
@@ -100,8 +104,9 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'honza/vim-snippets'
 " Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
 
-"------------------
-" Search and grep
+" }}}
+
+" Search and grep {{{
 "------------------
 " Plug 'vifm/vifm.vim'
 Plug 'liuchengxu/vista.vim'
@@ -112,9 +117,15 @@ Plug 'junegunn/fzf.vim'
 Plug 'yegappan/mru'
 " Plug 'tracyone/fzf-funky',{'on': 'FzfFunky'}
 
+" }}}
+
+" File explorer {{{
+"-------------------
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-hijack.vim'
 Plug 'lambdalisue/fern-git-status.vim'
 Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/reword.vim'
+
+" }}}

@@ -1,4 +1,6 @@
-" Basic settings
+" This file contains basic Vim settings and mappings
+
+" Basic settings {{{
 
 syntax on
 set noshowmode
@@ -11,7 +13,6 @@ filetype on
 set autoindent
 filetype indent on
 filetype plugin indent on
-
 
 augroup vimStartup
     au!
@@ -32,11 +33,10 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set number
-set rnu
+set relativenumber
 set colorcolumn=80
 
 set list listchars=tab:→\ ,extends:›,precedes:‹,nbsp:·,trail:·
-
 
 if has('reltime')
     set incsearch
@@ -92,12 +92,6 @@ set langmenu=en_US
 let $LANG = 'en_US.UTF-8'
 language messages en_US.utf-8
 
-set clipboard+=unnamed
-noremap <leader>p "*p
-noremap <leader>y "*y
-noremap <leader>P "+p
-noremap <leader>Y "+y
-
 set ignorecase
 set smartcase
 set noerrorbells
@@ -109,7 +103,16 @@ set nofixeol
 set wildmenu wildmode=full 
 set wildchar=<Tab> wildcharm=<C-Z>
 
-"------------------------------------
-" key maps
-" -----------------------------------
+" }}}
+
+" Key mappings {{{
+
 noremap <leader>/ :let @/ = ""<CR>
+
+set clipboard+=unnamed
+noremap <leader>p "*p
+noremap <leader>y "*y
+noremap <leader>P "+p
+noremap <leader>Y "+y
+
+" }}}
