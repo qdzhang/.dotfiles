@@ -16,13 +16,13 @@ Plug 'https://gitlab.com/maister/skyline.vim'
 
 " File types {{{
 "------------------
-Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': 'markdown' }
+" Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': 'markdown' }
 " Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['c', 'cpp'] }
 " Plug 'bfrg/vim-cpp-modern'
 Plug 'dhruvasagar/vim-table-mode', {'for': ['markdown', 'pandoc']}
 Plug 'lervag/vimtex', { 'for': 'tex' }
 " Plug 'sheerun/vim-polyglot'
-
+Plug 'SidOfc/mkdx', { 'for': 'markdown' }
 " }}}
 
 " Edit and move {{{
@@ -51,7 +51,7 @@ Plug 'Shougo/echodoc.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'junegunn/vim-peekaboo'
 
-Plug 'mzlogin/vim-markdown-toc', {'for': ['markdown', 'pandoc']}
+" Plug 'mzlogin/vim-markdown-toc', {'for': ['markdown', 'pandoc']}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug', 'pandoc']}
 
 " Plug 'jpalardy/vim-slime'
