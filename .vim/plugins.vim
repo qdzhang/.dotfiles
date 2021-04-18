@@ -114,7 +114,7 @@ Plug 'liuchengxu/vista.vim'
 "Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug '/usr/bin/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'yegappan/mru'
+" Plug 'yegappan/mru'
 " Plug 'tracyone/fzf-funky',{'on': 'FzfFunky'}
 
 " }}}

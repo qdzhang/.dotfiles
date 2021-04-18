@@ -71,6 +71,8 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:coc_filetype_map = {'pandoc': 'markdown'}
 
 " Mappings for CoCList
+nnoremap <silent><nowait> <space><space>  :<C-u>CocList<cr>
+nnoremap <silent><nowait> <space>m  :<C-u>CocList mru<cr>
 " Show all diagnostics.
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
