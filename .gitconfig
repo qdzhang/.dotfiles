@@ -9,6 +9,7 @@
 	tool = vimdiff
 [alias]
 	d = difftool
+    ds = diff --staged
 	cs = commit -S
 [difftool]
 	prompt = false
