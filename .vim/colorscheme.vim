@@ -6,5 +6,6 @@ if exists('+termguicolors')
 endif
 
 set background=dark
-colorscheme photon
+colorscheme gruvbox8
+" colorscheme photon
 " colorscheme tender
