@@ -68,6 +68,10 @@ nmap <leader>cf  <Plug>(coc-format-selected)
 xmap <leader>cc  <Plug>(coc-format)
 nmap <leader>cc  <Plug>(coc-format)
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+
 let g:coc_filetype_map = {'pandoc': 'markdown'}
 
 " Mappings for CoCList

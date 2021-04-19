@@ -9,6 +9,7 @@ nnoremap <silent> <leader>f :FZF<cr>
 nnoremap <silent> <leader>F :FZF ~<cr>
 nnoremap <silent> <leader>rg :Rg<cr>
 nnoremap <silent> <leader>b :Buffers<cr>
+nnoremap <silent> <leader>m :History<cr>
 nnoremap <silent> <leader>c :Commands<cr>
 nnoremap <silent> <leader>l :BLines<cr>
 nnoremap <silent> <leader>L :Lines<cr>
