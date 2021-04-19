@@ -29,10 +29,13 @@ augroup vimStartup
 
 augroup END
 
-set tabstop=4
+" How to set tabstop
+" https://www.reddit.com/r/vim/wiki/tabstop
+set tabstop=8
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+
 set number
 set relativenumber
 set colorcolumn=80

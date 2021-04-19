@@ -1,5 +1,6 @@
 runtime! basic.vim
-runtime! before.vim
+" Some settings should be loaded before plugins loading
+" runtime! before.vim
 
 call plug#begin('~/.vim/plugged')
 runtime! plugins.vim
