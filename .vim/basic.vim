@@ -122,4 +122,7 @@ noremap <leader>y "*y
 noremap <leader>P "+p
 noremap <leader>Y "+y
 
+" Change to Directory of Current file
+command CDC cd %:p:h
+
 " }}}
