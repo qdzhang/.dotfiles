@@ -41,6 +41,10 @@ Plug 'stefandtw/quickfix-reflector.vim'
 
 " }}}
 
+" Compile and run {{{
+Plug 'tpope/vim-dispatch'
+" }}}
+
 " Utils {{{
 "------------------
 Plug 'wfxr/minimap.vim'
