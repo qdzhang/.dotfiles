@@ -4,3 +4,4 @@ setlocal softtabstop=2
 setlocal expandtab
 
 let b:dispatch = "node %"
+compiler node
