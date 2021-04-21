@@ -9,12 +9,25 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Show an ascii art when bash start
+# cat << "EOF"
+#  _______
+# < Hello >
+#  -------
+#        \   ^__^
+#         \  (oo)\_______
+#            (__)\       )\/\
+#                ||----w |
+#                ||     ||
+# EOF
+
 # PS1='[\u@\h \W]\$ '
 
 # source ~/src/trueline/trueline.sh
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
-export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '
+# export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '
+export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!{node_modules/**,.git/**}"'
 export GPG_TTY=$(tty)
 source ~/gitstatus/gitstatus.prompt.sh
 
