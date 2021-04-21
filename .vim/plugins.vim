@@ -38,6 +38,7 @@ Plug 'simnalamburt/vim-mundo'
 Plug 'andymass/vim-matchup'
 
 Plug 'stefandtw/quickfix-reflector.vim'
+Plug 'machakann/vim-sandwich'
 
 " }}}
 
