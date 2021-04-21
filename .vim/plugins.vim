@@ -60,6 +60,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 
 " Plug 'jpalardy/vim-slime'
 " Plug 'kassio/neoterm'
+Plug 'axvr/zepl.vim'
 
 " Plug 'HiPhish/info.vim'
 " Plug 'lilydjwg/fcitx.vim', { 'branch': 'fcitx5' }
