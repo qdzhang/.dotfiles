@@ -15,6 +15,8 @@ Personal linux dotfiles
 - pavucontrol: Audio control
 - termite
 - vim
+- [auracle](https://github.com/falconindy/auracle): Simple AUR helper
+- [delta](https://github.com/dandavison/delta): A viewer for git and diff output 
 - [gitstatus](https://github.com/romkatv/gitstatus): A fast shell git prompt
 - mpv & [mpv-iptv](https://github.com/gthreepw00d/mpv-iptv) & [mpv-image-viewer](https://github.com/occivink/mpv-image-viewer)
 - rofi: Program launcher and some other usages
@@ -27,5 +29,6 @@ Personal linux dotfiles
 - [xcolor](https://github.com/Soft/xcolor): x11 color picker
 - xarchiver: Archives handler
 - PCManFM-Qt: File manager
+- [trash-cli](https://github.com/andreafrancia/trash-cli): Trash manager for cli
 - rsync
 - aria2 & axel & wget: Download utilities
