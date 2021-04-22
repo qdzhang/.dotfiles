@@ -1,18 +1,18 @@
 [user]
-	name = qdzhang
-	email = qdzhangcn@gmail.com
-	signingkey = 2EA64EA4323ED6CD
+    name = qdzhang
+    email = qdzhangcn@gmail.com
+    signingkey = 2EA64EA4323ED6CD
 [core]
-	editor = 'vim'
+    editor = 'vim'
     pager = delta
 [diff]
-	tool = vimdiff
+    tool = vimdiff
 [alias]
-	d = difftool
+    d = difftool
     ds = diff --staged
-	cs = commit -S
+    cs = commit -S
 [difftool]
-	prompt = false
+    prompt = false
 [interactive]
     diffFilter = delta --color-only
 [delta]
@@ -24,6 +24,6 @@
     file-decoration-style = none
 
 ; [url "https://github.com.cnpmjs.org"]
-; 	insteadof = https://github.com
+;   insteadof = https://github.com
 [commit]
-	gpgsign = true
+    gpgsign = true
