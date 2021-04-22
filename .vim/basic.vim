@@ -129,4 +129,15 @@ noremap <leader>Y "+y
 " Change to Directory of Current file
 command CDC cd %:p:h
 
+" Toggle quickfix
+function! ToggleQuickFix()
+    if empty(filter(getwininfo(), 'v:val.quickfix'))
+        copen
+    else
+        cclose
+    endif
+endfunction
+
+nnoremap <F2> :call ToggleQuickFix()<cr>
+
 " }}}
