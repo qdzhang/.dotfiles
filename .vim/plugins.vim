@@ -32,7 +32,8 @@ Plug 'SidOfc/mkdx', { 'for': 'markdown' }
 " Plug 'tmsvg/pear-tree'
 
 Plug 'tpope/vim-commentary'
-Plug 'haya14busa/is.vim'
+" Plug 'haya14busa/is.vim'
+Plug 'haya14busa/incsearch.vim'
 Plug 'simnalamburt/vim-mundo'
 
 Plug 'andymass/vim-matchup'
@@ -117,8 +118,8 @@ Plug 'honza/vim-snippets'
 "------------------
 " Plug 'vifm/vifm.vim'
 Plug 'liuchengxu/vista.vim'
-" Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
-"Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+" Plug 'liuchengxu/vim-clap', { 'do': { -> clap#installer#force_download() } }
+" Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug '/usr/bin/fzf'
 Plug 'junegunn/fzf.vim'
 " Plug 'yegappan/mru'
