@@ -36,7 +36,8 @@ let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
 nnoremap <silent> <leader>f :Files<cr>
 nnoremap <silent> <leader>F :Files ~<cr>
 nnoremap <silent> <leader>rg :Rg<cr>
-nnoremap <silent> <leader>rr :RG<cr>
+nnoremap <silent> <leader>rt :RG<cr>
+nnoremap <leader>rr :RgRaw 
 nnoremap <silent> <leader>b :Buffers<cr>
 nnoremap <silent> <leader>m :History<cr>
 nnoremap <silent> <leader>c :Commands<cr>
