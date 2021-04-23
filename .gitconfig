@@ -4,7 +4,7 @@
     signingkey = 2EA64EA4323ED6CD
 [core]
     editor = 'vim'
-    pager = delta --diff-so-fancy
+    pager = delta
 [diff]
     tool = vimdiff
 [alias]
