@@ -32,3 +32,4 @@ Personal linux dotfiles
 - [trash-cli](https://github.com/andreafrancia/trash-cli): Trash manager for cli
 - rsync
 - aria2 & axel & wget: Download utilities
+- [boxes](https://github.com/ascii-boxes/boxes): Command line ASCII boxes
