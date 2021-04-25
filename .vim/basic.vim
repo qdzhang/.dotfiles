@@ -69,19 +69,9 @@ set cursorcolumn
 set ruler
 set backspace=2
 
-if has('gui_running')
-    set guioptions-=e  "tab bar
-    set guioptions-=m  "menu bar
-    set guioptions-=T  "toolbar
-    set guioptions-=r  "scrollbar
-    autocmd GUIEnter * set visualbell t_vb=
-endif
-
 set laststatus=2
 set showtabline=2
 set signcolumn=yes
-
-set guifont=Monospace\ 14
 
 " Use Vim as manpager. There are some errors when set fileformat and fileencoding for
 " unmodifiable files, such as man pages.
@@ -111,6 +101,19 @@ set foldmethod=marker
 
 if has('nvim-0.3.2') || has("patch-8.1.0360")
     set diffopt=filler,internal,algorithm:histogram,indent-heuristic
+endif
+
+" }}}
+
+" Gvim settings {{{
+" =================
+if has('gui_running')
+    set guioptions-=e  "tab bar
+    set guioptions-=m  "menu bar
+    set guioptions-=T  "toolbar
+    set guioptions-=r  "scrollbar
+    set guifont=Sarasa\ Mono\ SC\ 14
+    autocmd GUIEnter * set visualbell t_vb=
 endif
 
 " }}}
