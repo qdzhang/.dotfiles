@@ -1,7 +1,7 @@
 [options]
-#allow_bold = true
+allow_bold = true
 #audible_bell = false
-#bold_is_bright = true
+bold_is_bright = true
 #cell_height_scale = 1.0
 #cell_width_scale = 1.0
 #clickable_url = true
@@ -9,8 +9,9 @@
 # font = JetBrainsMono Nerd Font Mono 14
 # font = Sarasa Mono SC 14
 # font = BlexMono Nerd Font 14
-font = Monoid Nerd Font Mono 12
+# font = Monoid Nerd Font Mono 13
 # font = Inconsolata Nerd Font Mono 15
+font = monospace 14
 # font = JuliaMono 14
 #fullscreen = true
 #icon_name = terminal

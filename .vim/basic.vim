@@ -112,7 +112,7 @@ if has('gui_running')
     set guioptions-=m  "menu bar
     set guioptions-=T  "toolbar
     set guioptions-=r  "scrollbar
-    set guifont=Sarasa\ Mono\ SC\ 14
+    set guifont=monospace\ 14
     autocmd GUIEnter * set visualbell t_vb=
 endif
 
