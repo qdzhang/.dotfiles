@@ -161,9 +161,9 @@ local fileformat = (function()
     return function(bufnr)
         local icon
         if vim.bo[bufnr].fileformat == 'unix' then
-            icon = is_mac and '' or 'ﱦ'
+            icon = is_mac and 'unix' or 'unix'
         else
-            icon = ''
+            icon = 'dos'
         end
         if bufnr == 0 then
             return '%#StatusLineFormat#' .. icon .. '%#StatusLine#'
