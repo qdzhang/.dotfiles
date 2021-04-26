@@ -118,6 +118,32 @@ endif
 
 " }}}
 
+" Built-in terminal settings {{{
+"===============================
+
+" Use Ctrl+b to enter terminal normal mode
+" Use i or a to enter terminal mode
+tnoremap <c-b> <c-\><c-n>
+
+" Add the ability to scroll with mouse in terminal mode
+" https://github.com/vim/vim/issues/2490
+function! ExitNormalMode()
+    unmap <buffer> <silent> <RightMouse>
+    call feedkeys("a")
+endfunction
+
+function! EnterNormalMode()
+    if &buftype == 'terminal' && mode('') == 't'
+        call feedkeys("\<c-w>N")
+        call feedkeys("\<c-y>")
+        map <buffer> <silent> <RightMouse> :call ExitNormalMode()<CR>
+    endif
+endfunction
+
+tmap <silent> <ScrollWheelUp> <c-w>:call EnterNormalMode()<CR>
+
+" }}}
+
 " Key mappings {{{
 " ================
 
