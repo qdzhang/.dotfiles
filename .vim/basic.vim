@@ -3,6 +3,7 @@
 " Basic settings {{{
 " ==================
 
+set guioptions=M
 syntax on
 set noshowmode
 set ignorecase
@@ -147,6 +148,15 @@ tmap <silent> <ScrollWheelUp> <c-w>:call EnterNormalMode()<CR>
 " Key mappings {{{
 " ================
 
+let maplocalleader = ','
+
+" Quick edit and source vimrc
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>ee :vsplit ~/.vim/basic.vim<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Clear search pattern register
+" See details in :help quote_/
 noremap <leader>/ :let @/ = ""<CR>
 
 set clipboard+=unnamed
@@ -155,7 +165,7 @@ noremap <leader>y "*y
 noremap <leader>P "+p
 noremap <leader>Y "+y
 
-" Change to Directory of Current file
+" Change to Directory of Current file {{{2
 command CDC cd %:p:h
 
 " Toggle quickfix
@@ -167,6 +177,14 @@ function! ToggleQuickFix()
     endif
 endfunction
 
+" }}}
+
 nnoremap <F2> :call ToggleQuickFix()<cr>
+
+" Convert the current word to uppercase in insert mode
+" This map avoid holding shift when enter uppercase word
+inoremap <c-u> <esc>viwUi
+" Same map but in normal mode
+nnoremap <c-u> viwU
 
 " }}}
