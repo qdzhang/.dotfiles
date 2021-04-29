@@ -183,8 +183,8 @@ nnoremap <F2> :call ToggleQuickFix()<cr>
 
 " Convert the current word to uppercase in insert mode
 " This map avoid holding shift when enter uppercase word
-inoremap <c-u> <esc>viwUi
+inoremap <c-u> <esc>viwUea
 " Same map but in normal mode
-nnoremap <c-u> viwU
+nnoremap <c-u> viwUe
 
 " }}}
