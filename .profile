@@ -6,6 +6,7 @@
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.emacs.d/bin
 export PATH=$PATH:$HOME/.npm_global/bin
+export PATH=$PATH:$HOME/.cargo/bin
 
 export MOZ_X11_EGL=1
 export XSECURELOCK_BLANK_DPMS_STATE=off
