@@ -46,7 +46,6 @@ exec --no-startup-id blueman-applet &
 
 exec --no-startup-id fcitx5 &
 
-exec_always --no-startup-id killall clipcatd
 exec_always --no-startup-id clipcatd &
 
 exec --no-startup-id udiskie --tray &
