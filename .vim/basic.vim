@@ -150,11 +150,6 @@ tmap <silent> <ScrollWheelUp> <c-w>:call EnterNormalMode()<CR>
 
 let maplocalleader = ','
 
-" Quick edit and source vimrc
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>ee :vsplit ~/.vim/basic.vim<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
-
 " Clear search pattern register
 " See details in :help quote_/
 noremap <leader>/ :let @/ = ""<CR>

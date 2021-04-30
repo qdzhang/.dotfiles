@@ -22,7 +22,9 @@ command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 " https://github.com/junegunn/fzf/commit/c60ed1758315f0d993fbcbf04459944c87e19a48
 
 "--------------------------------------------------------------------------
-" Force to use vim8 built-in terminal, and fzf will respect vim colorscheme
+" https://github.com/junegunn/fzf/blob/master/README-VIM.md#fzf-inside-terminal-buffer
+" Only in the following cases, fzf will start in a built-in terminal buffer
+" Force to use vim8 built-in terminal, thus fzf will respect vim colorscheme
 " For details, see: https://github.com/junegunn/fzf/issues/1860
 " The issue is not closed yet, the options will be implemented later
 "--------------------------------------------------------------------------
@@ -32,6 +34,14 @@ command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.4, 'relative': v:true, 'yoffset': 1, 'border': 'top' } }
 let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
 
+" Custom commands to open vimrc and other dotfiles in a split buffer
+command! Dotfiles call fzf#run(fzf#wrap(
+      \ {'source': ['~/.vim/basic.vim', '~/.vim/plugins.vim', '~/.vim/colorscheme.vim', '~/.vim/vimrc'],
+      \ 'sink':  'vertical botright split'}
+      \ ))
+
+nnoremap <silent> <leader>ee :Dotfiles<cr>
+nnoremap <leader>es :source %<cr>
 
 nnoremap <silent> <leader>f :Files<cr>
 nnoremap <silent> <leader>F :Files ~<cr>
