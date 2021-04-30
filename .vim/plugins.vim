@@ -56,7 +56,7 @@ Plug 'Shougo/echodoc.vim'
 " Plug 'eraserhd/parinfer-rust', {'do':
 "         \  'cargo build --release'}
 Plug 'justinmk/vim-sneak'
-Plug 'junegunn/vim-peekaboo'
+" Plug 'junegunn/vim-peekaboo'
 
 " Plug 'mzlogin/vim-markdown-toc', {'for': ['markdown', 'pandoc']}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug', 'pandoc']}
@@ -125,6 +125,8 @@ Plug 'junegunn/fzf.vim'
 " Plug 'yegappan/mru'
 " Plug 'tracyone/fzf-funky',{'on': 'FzfFunky'}
 
+Plug 'markonm/traces.vim'
+
 " }}}
 
 " File explorer {{{
@@ -134,6 +136,6 @@ Plug 'lambdalisue/fern-hijack.vim'
 Plug 'lambdalisue/fern-git-status.vim'
 " Plug 'lambdalisue/nerdfont.vim'
 " Plug 'lambdalisue/fern-renderer-nerdfont.vim'
-Plug 'lambdalisue/reword.vim'
+" Plug 'lambdalisue/reword.vim'
 
 " }}}
