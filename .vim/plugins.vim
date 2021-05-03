@@ -23,6 +23,7 @@ Plug 'dhruvasagar/vim-table-mode', {'for': ['markdown', 'pandoc']}
 Plug 'lervag/vimtex', { 'for': 'tex' }
 " Plug 'sheerun/vim-polyglot'
 Plug 'SidOfc/mkdx', { 'for': 'markdown' }
+Plug 'wlangstroth/vim-racket'
 " }}}
 
 " Edit and move {{{
