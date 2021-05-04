@@ -15,5 +15,6 @@
   ],
   "list.source.grep.command": "rg",
   "list.source.grep.args": ["--smart-case"],
-  "list.source.words.defaultOptions": ["--interactive", "--ignore-case"]
+  "list.source.words.defaultOptions": ["--interactive", "--ignore-case"],
+  "pairs.disableLanguages": ["racket", "scheme", "lisp"]
 }

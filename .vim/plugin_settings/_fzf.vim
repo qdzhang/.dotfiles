@@ -36,7 +36,7 @@ let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
 
 " Custom commands to open vimrc and other dotfiles in a split buffer
 command! Dotfiles call fzf#run(fzf#wrap(
-      \ {'source': ['~/.vim/basic.vim', '~/.vim/plugins.vim', '~/.vim/colorscheme.vim', '~/.vim/vimrc'],
+      \ {'source': ['~/.vim/basic.vim', '~/.vim/plugins.vim', '~/.vim/colorscheme.vim', '~/.vim/vimrc', '~/.vim/coc-settings.json'],
       \ 'sink':  'vertical botright split'}
       \ ))
 
