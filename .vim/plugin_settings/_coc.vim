@@ -75,23 +75,23 @@ command! -nargs=0 Format :call CocAction('format')
 let g:coc_filetype_map = {'pandoc': 'markdown'}
 
 " Mappings for CoCList
-nnoremap <silent><nowait> <space><space>  :<C-u>CocList<cr>
-nnoremap <silent><nowait> <space>m  :<C-u>CocList mru<cr>
+nnoremap <silent><nowait> <Bslash><Bslash>  :<C-u>CocList<cr>
+nnoremap <silent><nowait> <Bslash>m  :<C-u>CocList mru<cr>
 " Show all diagnostics.
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <Bslash>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
+nnoremap <silent><nowait> <Bslash>e  :<C-u>CocList extensions<cr>
 " Show all files
-nnoremap <silent><nowait> <space>f  :<C-u>CocList files<cr>
+nnoremap <silent><nowait> <Bslash>f  :<C-u>CocList files<cr>
 " Show commands.
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent><nowait> <Bslash>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent><nowait> <Bslash>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> <Bslash>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
+nnoremap <silent><nowait> <Bslash>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
+nnoremap <silent><nowait> <Bslash>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+nnoremap <silent><nowait> <Bslash>p  :<C-u>CocListResume<CR>

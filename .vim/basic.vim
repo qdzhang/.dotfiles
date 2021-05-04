@@ -148,7 +148,8 @@ tmap <silent> <ScrollWheelUp> <c-w>:call EnterNormalMode()<CR>
 " Key mappings {{{
 " ================
 
-let maplocalleader = ','
+let mapleader = "\<Space>"
+let maplocalleader = ","
 
 " Clear search pattern register
 " See details in :help quote_/
