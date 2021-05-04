@@ -11,9 +11,8 @@ EnumerateGroupForwardKeys=
 EnumerateGroupBackwardKeys=
 
 [Hotkey/TriggerKeys]
-0=Shift+space
-1=Zenkaku_Hankaku
-2=Hangul
+0=Zenkaku_Hankaku
+1=Hangul
 
 [Hotkey/EnumerateForwardKeys]
 0=Control+Shift_L
