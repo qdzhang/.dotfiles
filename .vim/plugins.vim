@@ -24,8 +24,9 @@ Plug 'lervag/vimtex', { 'for': 'tex' }
 " Plug 'sheerun/vim-polyglot'
 Plug 'SidOfc/mkdx', { 'for': 'markdown' }
 Plug 'wlangstroth/vim-racket'
-Plug 'kovisoft/paredit'
-" Plug 'kovisoft/slimv'
+" Plug 'kovisoft/paredit'
+Plug 'eraserhd/parinfer-rust', {'do':
+        \  'cargo build --release'}
 " }}}
 
 " Edit and move {{{
