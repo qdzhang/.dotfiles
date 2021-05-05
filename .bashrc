@@ -44,3 +44,4 @@ export HISTFILE=~/.bash_eternal_history
 shopt -s histappend
 
 export EDITOR="vim"
+eval "$(rbenv init -)"
