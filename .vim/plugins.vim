@@ -45,10 +45,12 @@ Plug 'andymass/vim-matchup'
 Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'machakann/vim-sandwich'
 Plug 'chrisbra/NrrwRgn'
+Plug 'tpope/vim-endwise'
 
 " }}}
 
 " Compile and run {{{
+"--------------------
 Plug 'tpope/vim-dispatch'
 " }}}
 
