@@ -183,6 +183,6 @@ inoremap <c-u> <esc>viwUea
 " Same map but in normal mode
 nnoremap <c-u> viwUe
 
-nnoremap " :reg<cr>
+nnoremap <leader>re :reg<cr>
 
 " }}}
