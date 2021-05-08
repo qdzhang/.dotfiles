@@ -45,7 +45,10 @@ Plug 'andymass/vim-matchup'
 Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'machakann/vim-sandwich'
 Plug 'chrisbra/NrrwRgn'
-Plug 'tpope/vim-endwise'
+
+" Vim-endwise conflicts with some plugins using <CR> to complete source
+" Such as coc.nvim, ultisnips
+" Plug 'tpope/vim-endwise'
 
 " }}}
 
