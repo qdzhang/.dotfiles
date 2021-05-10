@@ -1,0 +1,4 @@
+clear mod1
+clear shift
+add mod1 = Alt_L Shift_R Meta_L
+add shift = Shift_L Alt_R
