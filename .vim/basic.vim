@@ -184,5 +184,6 @@ inoremap <c-u> <esc>viwUea
 nnoremap <c-u> viwUe
 
 nnoremap <leader>re :reg<cr>
+nnoremap <leader>vt :vertical 
 
 " }}}

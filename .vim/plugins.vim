@@ -25,8 +25,6 @@ Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'SidOfc/mkdx', { 'for': 'markdown' }
 Plug 'wlangstroth/vim-racket'
 " Plug 'kovisoft/paredit'
-Plug 'eraserhd/parinfer-rust', {'do':
-        \  'cargo build --release'}
 " }}}
 
 " Edit and move {{{
@@ -62,8 +60,8 @@ Plug 'tpope/vim-dispatch'
 Plug 'wfxr/minimap.vim'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'Shougo/echodoc.vim'
-" Plug 'eraserhd/parinfer-rust', {'do':
-"         \  'cargo build --release'}
+Plug 'eraserhd/parinfer-rust', {'do':
+        \  'cargo build --release'}
 Plug 'justinmk/vim-sneak'
 " Plug 'junegunn/vim-peekaboo'
 
