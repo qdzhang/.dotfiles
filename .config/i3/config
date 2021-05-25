@@ -57,6 +57,8 @@ for_window [class="GoldenDict"] floating enable border normal 2
 for_window [class="Xarchiver"] floating enable border normal 2
 for_window [window_role="pop-up"] floating enable border normal 2
 for_window [window_role="task_dialog"] floating enable border normal 2
+for_window [window_role="Dialog"] floating enable border normal 2
+for_window [window_role="GtkFileChooserDialog"] floating enable border normal 2
 for_window [window_role="Organizer"] floating enable border normal 2  # firefox library
 for_window [window_role=floating_term] floating enable
 
