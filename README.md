@@ -29,7 +29,9 @@ Personal linux dotfiles
 - [xcolor](https://github.com/Soft/xcolor): x11 color picker
 - xarchiver: Archives handler
 - PCManFM-Qt: File manager
+- Oxygen icons: Add icons for GUI file manager
 - [trash-cli](https://github.com/andreafrancia/trash-cli): Trash manager for cli
 - rsync
 - aria2 & axel & wget: Download utilities
 - [boxes](https://github.com/ascii-boxes/boxes): Command line ASCII boxes
+- [qView](https://github.com/jurplel/qView): Simple image viewer
