@@ -40,7 +40,7 @@ exec xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-# exec --no-startup-id picom --config ~/.config/picom/picom.conf &
+exec --no-startup-id picom --config ~/.config/picom/picom.conf &
 exec --no-startup-id nm-applet &
 exec --no-startup-id blueman-applet &
 
