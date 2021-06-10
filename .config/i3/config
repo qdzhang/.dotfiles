@@ -40,7 +40,7 @@ exec xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id picom --config ~/.config/picom/picom.conf &
+# exec --no-startup-id picom --config ~/.config/picom/picom.conf &
 exec --no-startup-id nm-applet &
 exec --no-startup-id blueman-applet &
 
@@ -49,7 +49,7 @@ exec --no-startup-id fcitx5 &
 exec_always --no-startup-id clipcatd &
 
 exec --no-startup-id udiskie --tray &
-exec --no-startup-id feh --bg-max ~/Pictures/wallpaper/99836.jpg &
+exec --no-startup-id feh --bg-max ~/Pictures/wallpaper/u49cjyw80ty61-scaled.jpg &
 exec --no-startup-id dunst &
 
 # special programs settings
@@ -58,6 +58,7 @@ for_window [class="Xarchiver"] floating enable border normal 2
 for_window [window_role="pop-up"] floating enable border normal 2
 for_window [window_role="task_dialog"] floating enable border normal 2
 for_window [window_role="Dialog"] floating enable border normal 2
+for_window [window_role="About"] floating enable border normal 2
 for_window [window_role="GtkFileChooserDialog"] floating enable border normal 2
 for_window [window_role="Organizer"] floating enable border normal 2  # firefox library
 for_window [window_role=floating_term] floating enable

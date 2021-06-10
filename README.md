@@ -5,7 +5,7 @@ Personal linux dotfiles
 ## Dependencies
 
 - [i3-gaps](https://github.com/Airblader/i3)
-- [picom](https://github.com/yshui/picom)
+- ~~[picom]~~(https://github.com/yshui/picom) Working with some driver version may cause screen blurring
 - [i3status-rust](https://github.com/greshake/i3status-rust)
 - [i3pyblocks](https://github.com/thiagokokada/i3pyblocks)
 - [i3-volume](https://github.com/hastinbe/i3-volume)
