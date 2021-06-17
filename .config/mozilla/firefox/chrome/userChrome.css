@@ -12,7 +12,7 @@ menupopup > menuitem, menupopup > menu {
 /* Adjust tab corner shape, optionally remove space below tabs */
 
 #tabbrowser-tabs {
-    --user-tab-rounding: 4px;
+    --user-tab-rounding: 0px;
 }
 @media (-moz-proton) {
     .tab-background {
