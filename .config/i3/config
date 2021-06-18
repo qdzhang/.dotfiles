@@ -53,7 +53,7 @@ exec --no-startup-id feh --bg-max ~/Pictures/wallpaper/u49cjyw80ty61-scaled.jpg 
 exec --no-startup-id dunst &
 
 # special programs settings
-for_window [class="GoldenDict"] floating enable border normal 2
+for_window [class="GoldenDict"] floating enable border normal 2 move scratchpad
 for_window [class="Xarchiver"] floating enable border normal 2
 for_window [instance="dosbox"] floating enable border normal 2
 for_window [instance="speedcrunch"] floating enable border normal 2
@@ -86,6 +86,9 @@ for_window [title="dropdown-terminal"] move scratchpad
 for_window [title="dropdown-terminal"] border pixel 3
 bindsym $mod+u [instance=termite] scratchpad show; move position center
 bindsym $mod+Shift+u exec i3-sensible-terminal --title 'dropdown-terminal'
+
+
+bindsym $mod+g [class="GoldenDict"] scratchpad show
 
 
 bindsym $mod+m exec emacs
