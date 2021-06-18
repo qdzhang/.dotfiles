@@ -35,3 +35,4 @@ Personal linux dotfiles
 - aria2 & axel & wget: Download utilities
 - [boxes](https://github.com/ascii-boxes/boxes): Command line ASCII boxes
 - [qView](https://github.com/jurplel/qView): Simple image viewer
+- jq: Commandline JSON processor
