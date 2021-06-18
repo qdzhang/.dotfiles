@@ -55,6 +55,8 @@ exec --no-startup-id dunst &
 # special programs settings
 for_window [class="GoldenDict"] floating enable border normal 2
 for_window [class="Xarchiver"] floating enable border normal 2
+for_window [instance="dosbox"] floating enable border normal 2
+for_window [instance="speedcrunch"] floating enable border normal 2
 for_window [window_role="pop-up"] floating enable border normal 2
 for_window [window_role="task_dialog"] floating enable border normal 2
 for_window [window_role="Dialog"] floating enable border normal 2
@@ -76,6 +78,15 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+Return exec i3-sensible-terminal --role floating_term
+
+# Dropdown Terminal
+for_window [title="dropdown-terminal"] floating enable
+for_window [title="dropdown-terminal"] resize set 1500 700
+for_window [title="dropdown-terminal"] move scratchpad
+for_window [title="dropdown-terminal"] border pixel 3
+bindsym $mod+u [instance=termite] scratchpad show; move position center
+bindsym $mod+Shift+u exec i3-sensible-terminal --title 'dropdown-terminal'
+
 
 bindsym $mod+m exec emacs
 
@@ -105,6 +116,22 @@ bindsym --release $mod+Print exec --no-startup-id shot-fullscreen
 
 bindsym --release Shift+Print exec --no-startup-id record
 bindsym --release Control+Shift+Print exec killall ffmpeg
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
+# Show scratchpad in rofi
+bindsym $mod+o exec --no-startup-id i3-show-scratchpad-windows
+
+bindsym $mod+Tab mode "Cycle scratchpad"; scratchpad show
+mode "Cycle scratchpad"{
+  bindsym $mod+Tab scratchpad show; scratchpad show
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
 
 set $Locker ~/.config/i3/autolock/xsetlock && sleep 1
 

@@ -1,0 +1,7 @@
+#!/bin/sh
+# https://www.reddit.com/r/i3wm/comments/lcff6r/little_tool_to_list_the_scratchpad_contents_can/
+
+i3-msg -t get_tree | jq '.nodes[] | .nodes[] | .nodes[] | select(.name=="__i3_scratch") | .floating_nodes[] | .nodes[] | [.window,.name]' | \
+sed '/^[][]*$/d' | sed '/,$/{N;s/\n//}' | tr -d "\"" | sed 's/,/ -/g' | sed 's/^[[:space:]]//g'  | \
+rofi -dmenu -p "i3 Scratchpad" | \
+perl -nE 'my($id) = split("-");  $id =~ tr/ //d; if($id){say $id}' | xargs -i{} i3-msg "[id=\""{}"\"] scratchpad show"
