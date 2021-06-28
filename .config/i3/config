@@ -84,7 +84,7 @@ for_window [title="dropdown-terminal"] floating enable
 for_window [title="dropdown-terminal"] resize set 1500 700
 for_window [title="dropdown-terminal"] move scratchpad
 for_window [title="dropdown-terminal"] border pixel 3
-bindsym $mod+u [instance=termite] scratchpad show; move position center
+bindsym $mod+u [instance=urxvt] scratchpad show; move position center
 bindsym $mod+Shift+u exec i3-sensible-terminal --title 'dropdown-terminal'
 
 
