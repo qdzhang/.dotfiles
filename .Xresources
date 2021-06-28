@@ -1,1 +1,3 @@
 Xft.dpi: 110
+
+#include ".Xresources.d/urxvt"

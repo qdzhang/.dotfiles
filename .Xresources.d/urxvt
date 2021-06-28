@@ -1,0 +1,102 @@
+! URxvt
+
+! General settings
+URxvt.saveLines: 2000
+URxvt.scrollBar: False
+URxvt.scrollstyle: rxvt
+URxvt.termName: xterm-256color
+URxvt.urgentOnBell: True
+URxvt.cursorBlink: True
+
+URxvt.transparent: true
+URxvt.shading: 15
+urxvt*depth: 32
+urxvt*background: rgba:0020/0200/0200/c800
+
+URxvt.inputMethod: fcitx5
+URxvt.preeditType: OverTheSpot
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+! Extensions
+URxvt.perl-ext-common: default,clipboard,keyboard-select,matcher,resize-font
+URxvt.urlLauncher: xdg-open
+URxvt.urlButton: 1
+URxvt.underlineURLs: True
+URxvt.matcher.button: 1 
+
+URxvt.copyCommand:  xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+
+! Keybindings
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.clipboard.autocopy: true
+
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.keysym.M-u: matcher:select
+URxvt.keysym.C-Delete: perl:matcher:last
+URxvt.keysym.M-Delete: perl:matcher:list
+
+URxvt.keysym.C-minus:     resize-font:smaller
+URxvt.keysym.C-plus:      resize-font:bigger
+URxvt.keysym.C-equal:     resize-font:reset
+URxvt.keysym.C-question:  resize-font:show
+
+! Fonts
+! https://github.com/powerline/fonts/issues/176
+
+#define font1         JetBrainsMono Nerd Font Mono
+#define font2         Sarasa Mono SC
+#define font3         DejaVu Sans Mono
+#define font4         Noto Sans Mono CJK SC
+
+URxvt*letterSpace: 0
+URxvt*font:           xft:font1:size=14, xft:font2:size=14:minspace=false, xft:font3:size=14,xft:font4:size=14
+URxvt*boldFont:       xft:font1:bold:size=14, xft:font2:size=14:minspace=False,xft:font3:size=14,xft:font4:size=14
+URxvt*italicFont:     xft:font1:italic:size=14, xft:font2:size=14:minspace=False,xft:font3:size=14,xft:font4:size=14
+URxvt*boldItalicFont: xft:font1:bold:italic:size=14, xft:font2:size=14:minspace=False, xft:font3:size=14, xft:font4:size=14
+
+URxvt.allow_bold: true
+URxvt.letterSpace: 0
+
+!! Colorscheme
+
+! special
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #c5c8c6
+
+! black
+*.color0:       #1d1f21
+*.color8:       #969896
+
+! red
+*.color1:       #cc6666
+*.color9:       #cc6666
+
+! green
+*.color2:       #b5bd68
+*.color10:      #b5bd68
+
+! yellow
+*.color3:       #f0c674
+*.color11:      #f0c674
+
+! blue
+*.color4:       #81a2be
+*.color12:      #81a2be
+
+! magenta
+*.color5:       #b294bb
+*.color13:      #b294bb
+
+! cyan
+*.color6:       #8abeb7
+*.color14:      #8abeb7
+
+! white
+*.color7:       #c5c8c6
+*.color15:      #ffffff

@@ -1,0 +1,21 @@
+XTerm.termName: xterm-256color
+XTerm.vt100.locale: false
+XTerm.vt100.utf8: true
+
+XTerm.vt100.metaSendsEscape: true
+
+XTerm.vt100.backarrowKey: false
+XTerm.ttyModes: erase ^?
+XTerm.vt100.saveLines: 4096
+
+xterm*faceName: JetBrainsMono Nerd Font Mono
+xterm*faceSize: 14
+
+xterm*background: #2e3440
+xterm*foreground: #FFFFFF
+ 
+xterm*scrollBar: false
+xterm*rightScrollBar: false
+
+Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
