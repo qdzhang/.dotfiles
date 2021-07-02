@@ -50,3 +50,8 @@ menupopup > menuitem, menupopup > menu {
  --tab-min-height: 30px !important;
 }
 #TabsToolbar {height: var(--tab-min-height) !important;}
+
+#tabbrowser-tabs tab[class*=" identity-color"] .tab-content{
+  border-top: solid 0.3em;
+  border-color: var(--identity-icon-color);
+}
