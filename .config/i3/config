@@ -63,6 +63,7 @@ for_window [window_role="Dialog"] floating enable border normal 2
 for_window [window_role="About"] floating enable border normal 2
 for_window [window_role="GtkFileChooserDialog"] floating enable border normal 2
 for_window [window_role="Organizer"] floating enable border normal 2  # firefox library
+for_window [window_role="webconsole"] floating enable border normal 2  # firefox devtools
 for_window [window_role=floating_term] floating enable
 
 # Use pactl to adjust volume in PulseAudio.
