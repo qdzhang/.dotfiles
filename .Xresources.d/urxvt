@@ -8,11 +8,6 @@ URxvt.termName: xterm-256color
 URxvt.urgentOnBell: True
 URxvt.cursorBlink: True
 
-URxvt.transparent: true
-URxvt.shading: 15
-urxvt*depth: 32
-urxvt*background: rgba:0020/0200/0200/c800
-
 URxvt.inputMethod: fcitx5
 URxvt.preeditType: OverTheSpot
 
