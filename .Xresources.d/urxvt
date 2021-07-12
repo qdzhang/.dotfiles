@@ -15,11 +15,7 @@ URxvt.iso14755: false
 URxvt.iso14755_52: false
 
 ! Extensions
-URxvt.perl-ext-common: default,clipboard,keyboard-select,matcher,resize-font
-URxvt.urlLauncher: xdg-open
-URxvt.urlButton: 1
-URxvt.underlineURLs: True
-URxvt.matcher.button: 1 
+URxvt.perl-ext-common: default,clipboard,keyboard-select,matcher,resize-font,url-select
 
 URxvt.copyCommand:  xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
@@ -31,9 +27,16 @@ URxvt.clipboard.autocopy: true
 
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-s: perl:keyboard-select:search
-URxvt.keysym.M-u: matcher:select
+! URxvt.keysym.M-u: matcher:select
 URxvt.keysym.C-Delete: perl:matcher:last
 URxvt.keysym.M-Delete: perl:matcher:list
+
+! url-select perl script settings
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.autocopy: true
+URxvt.url-select.launcher: xdg-open
+URxvt.url-select.underline: true
+URxvt.url-select.button: 1
 
 URxvt.keysym.C-minus:     resize-font:smaller
 URxvt.keysym.C-plus:      resize-font:bigger
