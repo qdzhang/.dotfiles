@@ -1,0 +1,10 @@
+* Arch linux packages backup
+
+Follow [[https://wiki.archlinux.org/title/Migrate_installation_to_new_hardware][Arch wiki]]
+
+- ~pkglist.txt~ contains installed packages from repositories and ~pkglist_aur.txt~ contains installed packages from aur
+- Use packages-refresh to refresh the current installed packages
+- Use following command to install packages in new machine. Before this, remember to add [[https://github.com/archlinuxcn/repo][archlinuxcn repository]]
+#+begin_src bash
+pacman -S --needed - < pkglist.txt
+#+end_src

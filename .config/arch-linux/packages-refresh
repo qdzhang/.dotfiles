@@ -1,0 +1,6 @@
+#!/bin/sh
+
+pacman -Qqen > pkglist.txt
+echo "pkglist.txt refreshing... done"
+pacman -Qqem > pkglist_aur.txt
+echo "pkglist_aur.txt refreshing... done"
