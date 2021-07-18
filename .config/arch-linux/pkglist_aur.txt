@@ -5,5 +5,4 @@ fcitx5-skin-arc
 git-delta-bin
 neovim-nightly-bin
 rbenv
-termite
 ttf-juliamono
