@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Show all emacs daemon buffers
+# https://blog.lambda.cx/posts/emacs-buffers-to-stdout/
+
+emacs --batch \
+      --eval "(require 'server)" \
+      --eval "(mapc #'princ
+                    (read (server-eval-at \"server\"
+                             '(prin1-to-string (mapcar (lambda (buffer)
+                                                           (format \"%s\\n\" buffer))
+                                                       (buffer-list))))))" \
+      2>/dev/null
