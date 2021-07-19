@@ -9,6 +9,3 @@ alias aur='auracle'
 
 alias mptv='mpv --script-opts=iptv=1'
 alias nv='nvim'
-
-alias ec='emacsclient -c'
-alias et='emacsclient --tty'
