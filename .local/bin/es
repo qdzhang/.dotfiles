@@ -22,9 +22,13 @@ if [ "t" == "$(server_ok)" ]; then
   # wasn't removing emacs from ALT-TAB on mac
   # emacsclient -e "(server-force-delete)"
   emacsclient -e '(kill-emacs)'
-elif [ "t" == "$(server_tty_ok)" ]; then
+else
+  echo "Emacs server not running"
+fi
+
+if [ "t" == "$(server_tty_ok)" ]; then
   echo "Shutting down Emacs tty server"
   emacsclient -s emacstty -e '(kill-emacs)'
 else
-  echo "Emacs server not running"
+  echo "Emacs tty server not running"
 fi
