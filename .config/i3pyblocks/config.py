@@ -216,8 +216,8 @@ async def main():
     # https://developer.gnome.org/pango/stable/pango-Markup.html
     await runner.register_block(
         datetime.DateTimeBlock(
-            format_time=utils.pango_markup("  %H:%M ", font_weight="light", color="#ffd523"),
-            format_date=utils.pango_markup("  %a %m-%d ", font_weight="light", color="#93d9a3"),
+            format_time=utils.pango_markup("  %H:%M ", font_weight="light", color="#ebcb8b"),
+            format_date=utils.pango_markup("  %a %m-%d ", font_weight="light", color="#a3be8c"),
             default_state={"markup": types.MarkupText.PANGO},
         )
     )
