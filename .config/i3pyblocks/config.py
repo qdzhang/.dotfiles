@@ -10,6 +10,7 @@ from i3pyblocks import Runner, types, utils
 from i3pyblocks.blocks import (  # shell,
     datetime,
     inotify,
+    i3ipc,
     ps,
     pulse,
 )
@@ -34,7 +35,7 @@ async def main():
     # Show the current i3 focused window title
     # Using `.format()` (https://pyformat.info/) to limit the number of
     # characters to 41
-    # await runner.register_block(i3ipc.WindowTitleBlock(format=" {window_title:.41s}"))
+    await runner.register_block(i3ipc.WindowTitleBlock(format=" {window_title:.81s}"))
 
     # Show the current network speed for either en* (ethernet) or wl* devices
     # Limiting the interface name to only 2 characters since it can get quite
@@ -44,6 +45,12 @@ async def main():
             format_up=" {interface:.2s}:  {upload}  {download}",
             format_down="",
             interface_regex="en*|wl*",
+            colors=
+            {
+                0: "#bd93f9",
+                1 * types.IECUnit.MiB: "#f1fa8c",
+                4 * types.IECUnit.MiB: "#ff5555",
+            }
         )
     )
 
@@ -106,6 +113,11 @@ async def main():
                 25: "",
                 50: "",
                 75: "",
+            },
+            colors={
+                0: "000000",
+                10: "#FF0000",
+                25: "#50fa7b",
             },
         )
     )
@@ -172,16 +184,16 @@ async def main():
     # there is no backlight
     # We set to empty instead, so when no backlight is available (i.e.
     # desktop), we hide this block
-    await runner.register_block(
-        inotify.BacklightBlock(
-            format=" {percent:.0f}%",
-            format_no_backlight="",
-            command_on_click={
-                types.MouseButton.SCROLL_UP: "light -A 5%",
-                types.MouseButton.SCROLL_DOWN: "light -U 5",
-            },
-        )
-    )
+    # await runner.register_block(
+    #     inotify.BacklightBlock(
+    #         format=" {percent:.0f}%",
+    #         format_no_backlight="",
+    #         command_on_click={
+    #             types.MouseButton.SCROLL_UP: "light -A 5%",
+    #             types.MouseButton.SCROLL_DOWN: "light -U 5",
+    #         },
+    #     )
+    # )
 
     # `signals` allows us to send multiple signals that this block will
     # listen and do something
@@ -192,6 +204,11 @@ async def main():
         pulse.PulseAudioBlock(
             format=" {volume:.0f}%",
             format_mute=" mute",
+            color_mute="#ff5555",
+            colors= {
+                0: "#f1fa8c",
+                20: "#bd93f9",
+            },
         ),
         signals=(signal.SIGUSR1, signal.SIGUSR2),
     )
@@ -216,8 +233,8 @@ async def main():
     # https://developer.gnome.org/pango/stable/pango-Markup.html
     await runner.register_block(
         datetime.DateTimeBlock(
-            format_time=utils.pango_markup("  %H:%M ", font_weight="light", color="#ebcb8b"),
-            format_date=utils.pango_markup("  %a %m-%d ", font_weight="light", color="#a3be8c"),
+            format_time=utils.pango_markup(" %a/%m/%d %H:%M ", font_weight="light", color="#ffb86c"),
+            format_date=utils.pango_markup(" %a/%m/%d %H:%M ", font_weight="light", color="#ffb86c"),
             default_state={"markup": types.MarkupText.PANGO},
         )
     )
