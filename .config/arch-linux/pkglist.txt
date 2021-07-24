@@ -37,6 +37,7 @@ fzf
 gcc
 gdb
 git
+git-delta
 go
 goldendict
 groff
@@ -82,6 +83,7 @@ openssh
 otf-symbola
 oxygen-icons
 p7zip
+pandoc-bin
 patch
 pavucontrol
 pcmanfm-qt
@@ -126,6 +128,7 @@ visual-studio-code-bin
 vulkan-intel
 wget
 which
+wkhtmltopdf
 xarchiver
 xclip
 xcolor
