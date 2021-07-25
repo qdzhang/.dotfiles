@@ -32,24 +32,33 @@ async def main():
     # Create a Runner instance, so we can register the modules
     runner = Runner()
 
+    # Dracula theme colors
+    d_color_cyan = "#8be9fd"
+    d_color_green = "#50fa7b"
+    d_color_orange = "#ffb86c"
+    d_color_pink  = "#ff79c6"
+    d_color_purple = "#bd93f9"
+    d_color_red = "#ff5555"
+    d_color_yellow = "#f1fa8c"
+
     # Show the current i3 focused window title
     # Using `.format()` (https://pyformat.info/) to limit the number of
     # characters to 41
-    await runner.register_block(i3ipc.WindowTitleBlock(format=" {window_title:.81s}"))
+    await runner.register_block(i3ipc.WindowTitleBlock(format=" {window_title:.41s}"))
 
     # Show the current network speed for either en* (ethernet) or wl* devices
     # Limiting the interface name to only 2 characters since it can get quite
     # verbose
     await runner.register_block(
         ps.NetworkSpeedBlock(
-            format_up=" {interface:.2s}:  {upload}  {download}",
+            format_up=" {interface:.2s}↑{upload}↓{download}",
             format_down="",
             interface_regex="en*|wl*",
             colors=
             {
-                0: "#bd93f9",
-                1 * types.IECUnit.MiB: "#f1fa8c",
-                4 * types.IECUnit.MiB: "#ff5555",
+                0: d_color_purple,
+                1 * types.IECUnit.MiB: d_color_yellow,
+                4 * types.IECUnit.MiB: d_color_red,
             }
         )
     )
@@ -65,7 +74,14 @@ async def main():
     #         )
     #     )
 
-    await runner.register_block(ps.VirtualMemoryBlock(format="{icon}"))
+    await runner.register_block(
+            ps.VirtualMemoryBlock(
+                format="M {icon}",
+                colors = {
+                    0: d_color_cyan,
+                    75: d_color_yellow,
+                    90: d_color_red,
+                }))
 
     # Using custom icons to show the temperature visually
     # So when the temperature is above 75,  is shown, when it is above 50,
@@ -84,8 +100,13 @@ async def main():
     # )
 
     await runner.register_block(
-        ps.CpuPercentBlock(format="{icon}"),
-    )
+            ps.CpuPercentBlock(
+                format = "C {icon}",
+                colors = {
+                    0: d_color_cyan,
+                    75: d_color_yellow,
+                    90: d_color_red,
+                }))
 
     # Load only makes sense depending of the number of CPUs installed in
     # machine, so get the number of CPUs here and calculate the color mapping
@@ -116,8 +137,8 @@ async def main():
             },
             colors={
                 0: "000000",
-                10: "#FF0000",
-                25: "#50fa7b",
+                10: d_color_red,
+                25: d_color_green,
             },
         )
     )
@@ -204,10 +225,10 @@ async def main():
         pulse.PulseAudioBlock(
             format=" {volume:.0f}%",
             format_mute=" mute",
-            color_mute="#ff5555",
+            color_mute= d_color_red,
             colors= {
-                0: "#f1fa8c",
-                20: "#bd93f9",
+                0: d_color_yellow,
+                20: d_color_purple,
             },
         ),
         signals=(signal.SIGUSR1, signal.SIGUSR2),
@@ -233,8 +254,8 @@ async def main():
     # https://developer.gnome.org/pango/stable/pango-Markup.html
     await runner.register_block(
         datetime.DateTimeBlock(
-            format_time=utils.pango_markup(" %a/%m/%d %H:%M ", font_weight="light", color="#ffb86c"),
-            format_date=utils.pango_markup(" %a/%m/%d %H:%M ", font_weight="light", color="#ffb86c"),
+            format_time=utils.pango_markup("%a/%m/%d %H:%M", font_weight="light", color=d_color_orange),
+            format_date=utils.pango_markup("%a/%m/%d %H:%M", font_weight="light", color=d_color_orange),
             default_state={"markup": types.MarkupText.PANGO},
         )
     )
