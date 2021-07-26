@@ -52,6 +52,8 @@ exec --no-startup-id udiskie --tray &
 exec --no-startup-id feh --bg-max ~/Pictures/wallpaper/u49cjyw80ty61-scaled.jpg &
 exec --no-startup-id dunst &
 
+exec emacs &
+
 # special programs settings
 for_window [class="GoldenDict"] floating enable border normal 2 move scratchpad
 for_window [class="Xarchiver"] floating enable border normal 2
@@ -82,17 +84,22 @@ bindsym $mod+Shift+Return exec i3-sensible-terminal --role floating_term
 
 # Dropdown Terminal
 for_window [title="dropdown-terminal"] floating enable
-for_window [title="dropdown-terminal"] resize set 1500 700
 for_window [title="dropdown-terminal"] move scratchpad
 for_window [title="dropdown-terminal"] border pixel 3
-bindsym $mod+u [instance=urxvt] scratchpad show; move position center
-bindsym $mod+Shift+u exec i3-sensible-terminal --title 'dropdown-terminal'
+# Use absolute position to put `dropdown-terminal` on the top of window, full width
+# for_window [title="dropdown-terminal"] move absolute position 0px 0px, resize set 1920px 500px
+# Use relative position to put `dropdown-terminal` on the top of window, full width, and more flexible
+for_window [title="dropdown-terminal"] resize set 100ppt 50ppt, move position 0 24
+bindsym $mod+u [instance=urxvt] scratchpad show
+bindsym $mod+Shift+u exec urxvt -bg rgba:0000/0000/0000/c800 --depth 32 --title 'dropdown-terminal'
 
+# Open an emacs instance and move it to scratchpad.
+# Use this method instead of opening emacs daemon in terminal
+exec --no-startup-id  "sleep 2; i3-msg '[instance=emacs] mark emacsscratchpad, move scratchpad'"
+bindsym $mod+m [con_mark="^emacsscratchpad$"] scratchpad show
 
-bindsym $mod+d [class="GoldenDict"] scratchpad show
-
-
-bindsym $mod+m exec emacs
+# `emacs-scratchpad` is a script than open an emacs instance and move it to scratchpad, like preceding emacs autostart command
+bindsym $mod+Shift+m exec emacs-i3-scratchpad
 bindsym $mod+z exec gtk-launch emacsclient.desktop
 
 # kill focused window
@@ -113,6 +120,8 @@ bindsym $mod2+grave exec clipcat-menu
 #===================
 # key bindings
 #===================
+
+bindsym $mod+d [class="GoldenDict"] scratchpad show
 
 # screenshot and screen record
 bindsym --release Print exec --no-startup-id shot-active
