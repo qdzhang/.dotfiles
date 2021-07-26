@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Open an emacs instant and move it to i3 scratchpad
+
+emacs &
+sleep 2
+i3-msg '[instance=emacs] mark emacsscratchpad, move scratchpad'
