@@ -13,7 +13,13 @@ set $mod Mod4
 set $mod2 Mod1
 
 # disable window titlebars and set no window border
-for_window [class=".*"] border pixel 0
+# Now I am using i3-wm, having window border is easier to recognize the different window
+# And also, this approach is deprecated
+# https://gist.github.com/lirenlin/9892945#gistcomment-3604348
+# To show titlebars, replace `pixel` with `normal`
+default_border pixel 2
+default_floating_border pixel 2
+hide_edge_borders smart
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -24,7 +30,7 @@ font pango:Sarasa Mono SC 13
 font pango:Sarasa Mono SC 13
 
 # gaps settings
-gaps inner 8
+# gaps inner 8
 
 #=================
 # auto start
@@ -357,7 +363,7 @@ bar {
         # status_command i3status
 
         colors {
-            background #282A36
+            background #1c1d25
             statusline #F8F8F2
             separator  #44475A
 
