@@ -6,7 +6,10 @@ from pathlib import Path
 
 import psutil
 
-from i3pyblocks import Runner, types, utils
+from i3ipc import Event, Connection
+from i3ipc import aio as i3ipc_aio
+
+from i3pyblocks import Runner, types, utils, blocks
 from i3pyblocks.blocks import (  # shell,
     datetime,
     inotify,
@@ -28,6 +31,55 @@ def partitions(excludes=("/boot", "/nix/store")):
     return [p for p in partitions if p.mountpoint not in excludes]
 
 
+class GetEmacsScratchpad(blocks.Block):
+    '''
+    Show whether emacs is running in scratchpad
+    '''
+    def __init__(
+        self,
+        format: str = "{window_title:.81s}",
+        colors = ["#ffffff", "#ff79c6"],
+        **kwargs,
+    ):
+        super().__init__(**kwargs)
+        self.format = format
+        self.colors = colors
+
+    async def update_title(self, connection, *_):
+        marks = await connection.get_marks()
+        show_text = "No emacs"
+        color=self.colors[0]
+
+        for mark in marks:
+            if (mark == "emacsscratchpad"):
+                show_text = "Ɛmacs"
+                color=self.colors[1]
+
+        self.update(
+            self.ex_format(
+                self.format,
+                window_title=(show_text),
+            ),
+            color=color,
+        )
+
+    async def start(self) -> None:
+        connection = i3ipc_aio.Connection(auto_reconnect=True)
+
+        await connection.connect()
+
+        connection.on(Event.WORKSPACE_FOCUS, self.update_title)
+        connection.on(Event.WINDOW_CLOSE, self.update_title)
+        connection.on(Event.WINDOW_TITLE, self.update_title)
+        connection.on(Event.WINDOW_FOCUS, self.update_title)
+
+        try:
+            await self.update_title(connection)
+            await connection.main()
+        except Exception as e:
+            self.exception(e)
+
+
 async def main():
     # Create a Runner instance, so we can register the modules
     runner = Runner()
@@ -45,6 +97,7 @@ async def main():
     # Using `.format()` (https://pyformat.info/) to limit the number of
     # characters to 41
     await runner.register_block(i3ipc.WindowTitleBlock(format=" {window_title:.41s}"))
+    await runner.register_block(GetEmacsScratchpad(colors=[d_color_red,d_color_pink]))
 
     # Show the current network speed for either en* (ethernet) or wl* devices
     # Limiting the interface name to only 2 characters since it can get quite
