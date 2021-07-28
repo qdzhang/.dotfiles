@@ -50,10 +50,9 @@ class GetEmacsScratchpad(blocks.Block):
         show_text = "No emacs"
         color=self.colors[0]
 
-        for mark in marks:
-            if (mark == "emacsscratchpad"):
-                show_text = "Ɛmacs"
-                color=self.colors[1]
+        if "emacsscratchpad" in marks:
+            show_text = "Ɛmacs"
+            color=self.colors[1]
 
         self.update(
             self.ex_format(
