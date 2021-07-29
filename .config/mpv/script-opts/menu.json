@@ -4,6 +4,10 @@
     "command": ["quit"]
   },
   {
+    "label": "Reset speed to normal",
+    "command": ["set", "speed", "1.0"]
+  },
+  {
     "label": "Increase brightness",
     "command": ["add", "brightness", "1"],
     "keep_open": true
