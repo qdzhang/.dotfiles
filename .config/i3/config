@@ -73,6 +73,8 @@ for_window [window_role="GtkFileChooserDialog"] floating enable border normal 2
 for_window [window_role="Organizer"] floating enable border normal 2  # firefox library
 for_window [window_role="webconsole"] floating enable border normal 2  # firefox devtools
 for_window [window_role=floating_term] floating enable
+for_window [class="mpv"] floating enable move position center
+for_window [class="qView"] floating enable resize set 50ppt 50ppt move position center
 
 # Use pactl to adjust volume in PulseAudio.
 # set $refresh_i3status killall -SIGUSR1 i3status
