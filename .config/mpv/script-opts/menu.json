@@ -1,0 +1,20 @@
+[
+  {
+    "label": "Simply quit mpv",
+    "command": ["quit"]
+  },
+  {
+    "label": "Increase brightness",
+    "command": ["add", "brightness", "1"],
+    "keep_open": true
+  },
+  {
+    "label": "Decrease brightness",
+    "command": ["add", "brightness", "-1"],
+    "keep_open": true
+  },
+  {
+    "label": "Reset brightness",
+    "command": ["set", "brightness", "0"],
+  }
+]
