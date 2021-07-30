@@ -5,3 +5,5 @@
 emacs &
 sleep 2
 i3-msg '[instance=emacs] mark emacsscratchpad, move scratchpad'
+
+notify-send 'Emacs opened in scratchpad'
