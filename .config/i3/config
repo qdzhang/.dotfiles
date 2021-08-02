@@ -52,7 +52,7 @@ exec --no-startup-id blueman-applet &
 
 exec --no-startup-id fcitx5 &
 
-exec_always --no-startup-id clipcatd &
+exec_always --no-startup-id ~/.config/i3/autostart/autostart-clipcat.sh
 
 exec --no-startup-id udiskie --tray &
 exec --no-startup-id feh --bg-max ~/Pictures/wallpaper/u49cjyw80ty61-scaled.jpg &
@@ -146,7 +146,7 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # Show scratchpad in rofi
-bindsym $mod+o exec --no-startup-id i3-show-scratchpad-windows
+bindsym $mod+l exec --no-startup-id i3-show-scratchpad-windows
 
 bindsym $mod+Tab mode "Cycle scratchpad"; scratchpad show
 mode "Cycle scratchpad"{
@@ -213,10 +213,10 @@ bindsym $mod+c mode "$clone_display"
 bindsym $mod+p move workspace to output right
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+# bindsym $mod+j focus left
+# bindsym $mod+k focus down
+# bindsym $mod+l focus up
+# bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
