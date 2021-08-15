@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# https://blog.meain.io/2021/offline-markdown-preview/
+# https://github.com/meain/dotfiles/blob/master/scripts/.bin/markdown-preview
+# on-change is on https://github.com/meain/on-change
+
+set -e
+
+filename="/tmp/$(xxd -l2 -ps /dev/urandom).html"
+cat ~/.local/datafiles/pandoc-github-template.html > "$filename" && firefox "$filename"
+on-change "$1" "pandoc --no-highlight --template ~/.local/datafiles/pandoc-github-template.html  --output \"$filename\" -f gfm -t html5 --metadata title=\"$1 - Preview\" \"$1\""
