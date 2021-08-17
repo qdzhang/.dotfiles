@@ -51,7 +51,14 @@ menupopup > menuitem, menupopup > menu {
 }
 #TabsToolbar {height: var(--tab-min-height) !important;}
 
-#tabbrowser-tabs tab[class*=" identity-color"] .tab-content{
-  border-top: solid 0.3em;
-  border-color: var(--identity-icon-color);
+
+/* Container color bar visibility */
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
+    margin: 0px max(calc(var(--user-tab-rounding) - 3px), 0px) !important;
 }
+
+/* Move container color bar to bottom of tab */
+
+/* .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line { */
+/*     margin-top: calc(var(--tab-min-height) - 2px) !important; */
+/* } */
