@@ -219,4 +219,9 @@
     children:   [ prompt,entry,case-indicator ];
 }
 
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
 // vim: ft=css
