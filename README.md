@@ -4,17 +4,18 @@ Personal linux dotfiles
 
 ## Dependencies
 
-- [i3-gaps](https://github.com/Airblader/i3)
+- ~~[i3-gaps]~~Changed to [i3-wm](https://github.com/i3/i3)
 - [picom](https://github.com/yshui/picom)
-- [i3status-rust](https://github.com/greshake/i3status-rust)
+- ~~[i3status-rust]~~(https://github.com/greshake/i3status-rust)
 - [i3pyblocks](https://github.com/thiagokokada/i3pyblocks)
 - [i3-volume](https://github.com/hastinbe/i3-volume)
 - [light](https://github.com/haikarainen/light): Control backlights
 - [xsecurelock](https://github.com/google/xsecurelock): Lock screen
 - [dunst](https://dunst-project.org/): Notification daemons
 - pavucontrol: Audio control
-- termite
+- ~~termite~~ Obsolete. Changed to urxvt
 - vim
+- Emacs with evil! The configurations are [here](https://github.com/qdzhang/.emacs.d)
 - [auracle](https://github.com/falconindy/auracle): Simple AUR helper
 - [delta](https://github.com/dandavison/delta): A viewer for git and diff output 
 - [gitstatus](https://github.com/romkatv/gitstatus): A fast shell git prompt
