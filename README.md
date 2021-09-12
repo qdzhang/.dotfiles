@@ -4,9 +4,9 @@ Personal linux dotfiles
 
 ## Dependencies
 
-- ~~[i3-gaps]~~Changed to [i3-wm](https://github.com/i3/i3)
+- ~~[i3-gaps]~~ Changed to [i3-wm](https://github.com/i3/i3)
 - [picom](https://github.com/yshui/picom)
-- ~~[i3status-rust]~~(https://github.com/greshake/i3status-rust)
+- ~~[i3status-rust](https://github.com/greshake/i3status-rust)~~
 - [i3pyblocks](https://github.com/thiagokokada/i3pyblocks)
 - [i3-volume](https://github.com/hastinbe/i3-volume)
 - [light](https://github.com/haikarainen/light): Control backlights
