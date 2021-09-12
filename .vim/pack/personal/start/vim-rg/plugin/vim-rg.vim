@@ -145,5 +145,5 @@ fun! s:RgShowRoot()
   endif
 endfun
 
-command! -nargs=? -complete=file Rg :call s:Rg(<q-args>)
+command! -nargs=? -complete=file RgRaw :call s:Rg(<q-args>)
 command! -nargs=? -complete=file RgRoot :call s:RgShowRoot()
