@@ -9,3 +9,7 @@ alias aur='auracle'
 
 alias mptv='mpv --script-opts=iptv=1'
 alias nv='nvim'
+
+alias magit='ec -e "(magit-status \"$(pwd)\")"'
+
+alias pmpv='prime-run mpv'
