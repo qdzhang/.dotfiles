@@ -4,7 +4,7 @@
 #
 
 export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$HOME/.emacs.d/bin
+# export PATH=$PATH:$HOME/.emacs.d/bin
 export PATH=$PATH:$HOME/.npm_global/bin
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/go/bin
