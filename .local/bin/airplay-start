@@ -6,4 +6,4 @@ echo "avahi-deomon service is started"
 
 echo "uxplay is starting..." | boxes -d stone
 
-uxplay
+xset s off -dpms && uxplay
