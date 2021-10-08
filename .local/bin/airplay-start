@@ -1,7 +1,7 @@
 #!/bin/sh
 # Start uxplay to use airplay in ios
 
-sudo systemctl start avahi-daemon.service
+systemctl start avahi-daemon
 echo "avahi-deomon service is started"
 
 echo "uxplay is starting..." | boxes -d stone

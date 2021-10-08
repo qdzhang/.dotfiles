@@ -1,7 +1,7 @@
 #!/bin/sh
 # Stop uxplay and avahi-daemon service
 
-sudo systemctl stop avahi-daemon.service
+systemctl stop avahi-daemon
 
 echo "uxplay is stoping..." | boxes -d stone
 
