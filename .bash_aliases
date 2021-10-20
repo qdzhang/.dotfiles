@@ -13,3 +13,5 @@ alias nv='nvim'
 alias magit='ec -e "(magit-status \"$(pwd)\")"'
 
 alias pmpv='prime-run mpv'
+
+alias px='proxychains'
