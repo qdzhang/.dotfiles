@@ -1,0 +1,24 @@
+*mangle
+:clash -
+:clash-self -
+:filter-direct -
+-A PREROUTING -p tcp -j clash
+-A PREROUTING -p udp -j clash
+-A OUTPUT -p tcp -j clash-self
+-A OUTPUT -p udp -j clash-self
+-A clash -j filter-direct
+-A clash -p tcp -j TPROXY --on-port 7893 --tproxy-mark 1
+-A clash -p udp -j TPROXY --on-port 7893 --tproxy-mark 1
+-A clash-self -j filter-direct
+-A clash-self -m cgroup --path "noproxy.slice" -j ACCEPT
+-A clash-self -j MARK --set-mark 1
+-A filter-direct -d 0.0.0.0/8 -j ACCEPT
+-A filter-direct -d 10.0.0.0/8 -j ACCEPT
+-A filter-direct -d 127.0.0.0/8 -j ACCEPT
+-A filter-direct -d 169.254.0.0/16 -j ACCEPT
+-A filter-direct -d 172.16.0.0/12 -j ACCEPT
+-A filter-direct -d 192.168.0.0/16 -j ACCEPT
+-A filter-direct -d 224.0.0.0/4 -j ACCEPT
+-A filter-direct -d 240.0.0.0/4 -j ACCEPT
+COMMIT
+

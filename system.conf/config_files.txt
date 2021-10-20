@@ -1,0 +1,9 @@
+/etc/NetworkManager/NetworkManager.conf
+/etc/NetworkManager/conf.d/
+/etc/NetworkManager/dnsmasq.d/
+/etc/dnsmasq.conf
+/etc/iptables/iptables.rules.pacsave
+/etc/nftables.conf
+/etc/nftables/private.nft
+/etc/pacman.conf
+/etc/makepkg.conf
