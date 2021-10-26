@@ -1,0 +1,4 @@
+#!/bin/sh
+# Use ip.sb to test geoip
+
+curl -s -k https://api.ip.sb/geoip | jq '.'
