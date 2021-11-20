@@ -1,7 +1,12 @@
+auracle-git
 boxes
+cgproxy-git
 clipcat
 code-minimap
 fcitx5-skin-arc
-neovim-nightly-bin
+libwm-git
+otf-symbola
 rbenv
 ttf-juliamono
+visual-studio-code-bin
+wmutils-git
