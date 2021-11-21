@@ -114,7 +114,12 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+g exec --no-startup-id rofi -show drun
+# bindsym $mod+g exec --no-startup-id rofi -show drun
+
+# Replace rofi with fzf launching in a floating terminal window
+bindsym $mod+g exec --no-startup-id urxvt --title 'fzf-menu' -e sh -c 'i3-dmenu-desktop --dmenu=fzf'
+for_window [title="fzf-menu"] floating enable
+
 bindsym $mod+o exec --no-startup-id rofi -show power-menu -modi "power-menu:rofi-power-menu --no-symbols" -lines 6
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec rofi -modi drun,run -show drun
@@ -130,6 +135,7 @@ bindsym $mod2+grave exec clipcat-menu
 #===================
 
 bindsym $mod+d [class="GoldenDict"] scratchpad show
+bindsym $mod+Shift+d exec goldendict &
 
 # screenshot and screen record
 bindsym --release Print exec --no-startup-id shot-active
