@@ -45,3 +45,7 @@ shopt -s histappend
 
 export EDITOR="vim"
 eval "$(rbenv init -)"
+
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
