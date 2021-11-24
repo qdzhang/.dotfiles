@@ -19,14 +19,14 @@ function fman() {
 # https://einverne.github.io/post/2019/08/fzf-usage.html
 fcd() {
   local dir
-  dir=$(fd --follow --type directory | fzf +m) &&
+  dir=$(fd --follow --hidden --type directory | fzf +m) &&
   cd "$dir"
 }
 
 # Use fzf to show directories under current dir, and goto it
 fls() {
   local dir
-  dir=$(fd --follow --prune --type directory | fzf +m) &&
+  dir=$(fd --follow --hidden --prune --type directory | fzf +m) &&
   cd "$dir"
 }
 
