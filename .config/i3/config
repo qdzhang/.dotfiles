@@ -107,18 +107,19 @@ bindsym $mod+m [con_mark="^emacsscratchpad$"] scratchpad show
 
 # `emacs-scratchpad` is a script than open an emacs instance and move it to scratchpad, like preceding emacs autostart command
 bindsym $mod+Shift+m exec emacs-i3-scratchpad
-bindsym $mod+z exec gtk-launch emacsclient.desktop
+# bindsym $mod+z exec gtk-launch emacsclient.desktop
+bindsym $mod+z exec ec
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
-# bindsym $mod+g exec --no-startup-id rofi -show drun
+bindsym $mod+g exec --no-startup-id rofi -show drun
 
 # Replace rofi with fzf launching in a floating terminal window
-bindsym $mod+g exec --no-startup-id urxvt --title 'fzf-menu' -e sh -c 'i3-dmenu-desktop --dmenu=fzf'
-for_window [title="fzf-menu"] floating enable
+# bindsym $mod+g exec --no-startup-id urxvt --title 'fzf-menu' -e sh -c 'i3-dmenu-desktop --dmenu=fzf'
+# for_window [title="fzf-menu"] floating enable
 
 bindsym $mod+o exec --no-startup-id rofi -show power-menu -modi "power-menu:rofi-power-menu --no-symbols" -lines 6
 # A more modern dmenu replacement is rofi:
