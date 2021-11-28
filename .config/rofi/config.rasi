@@ -1,6 +1,7 @@
 configuration {
-    theme: "dracula";
     font: "Sarasa Mono SC 16";
     width: 33;
     location: 2;
 }
+
+@theme "dracula"
