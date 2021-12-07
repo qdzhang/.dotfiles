@@ -51,6 +51,11 @@ menupopup > menuitem, menupopup > menu {
 }
 #TabsToolbar {height: var(--tab-min-height) !important;}
 
+/* hide tabs tool bar, and open a tab as window, use rofi to fuzzy search all tabs*/
+/* #TabsToolbar { */
+/*   visibility: collapse !important; */
+/* } */
+
 
 /* Container color bar visibility */
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
