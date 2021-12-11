@@ -257,16 +257,16 @@ async def main():
     # there is no backlight
     # We set to empty instead, so when no backlight is available (i.e.
     # desktop), we hide this block
-    # await runner.register_block(
-    #     inotify.BacklightBlock(
-    #         format=" {percent:.0f}%",
-    #         format_no_backlight="",
-    #         command_on_click={
-    #             types.MouseButton.SCROLL_UP: "light -A 5%",
-    #             types.MouseButton.SCROLL_DOWN: "light -U 5",
-    #         },
-    #     )
-    # )
+    await runner.register_block(
+        inotify.BacklightBlock(
+            format=" {percent:.0f}%",
+            format_no_backlight="",
+            command_on_click={
+                types.MouseButton.SCROLL_UP: "light -A 5%",
+                types.MouseButton.SCROLL_DOWN: "light -U 5",
+            },
+        )
+    )
 
     # `signals` allows us to send multiple signals that this block will
     # listen and do something
