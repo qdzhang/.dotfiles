@@ -47,19 +47,19 @@ URxvt.keysym.C-question:  resize-font:show
 ! https://github.com/powerline/fonts/issues/176
 
 ! #define font1         JetBrainsMono Nerd Font Mono
-#define font1         xos4 Terminus
+! #define font1         xos4 Terminus
+#define font1         IBM Plex Mono
 #define font2         Sarasa Mono SC
 #define font3         DejaVu Sans Mono
 #define font4         Noto Sans Mono CJK SC
 
-URxvt*letterSpace: 0
-URxvt*font:           xft:font1:size=18, xft:font2:size=18:minspace=false, xft:font3:size=18,xft:font4:size=18
-URxvt*boldFont:       xft:font1:bold:size=18, xft:font2:size=18:minspace=False,xft:font3:size=18,xft:font4:size=18
-URxvt*italicFont:     xft:font1:italic:size=18, xft:font2:size=18:minspace=False,xft:font3:size=18,xft:font4:size=18
-URxvt*boldItalicFont: xft:font1:bold:italic:size=18, xft:font2:size=18:minspace=False, xft:font3:size=18, xft:font4:size=18
+URxvt*letterSpace: -1
+URxvt*font:           xft:font1:size=15, xft:font2:size=15:minspace=false, xft:font3:size=15,xft:font4:size=15
+URxvt*boldFont:       xft:font1:bold:size=15, xft:font2:size=15:minspace=False,xft:font3:size=15,xft:font4:size=15
+URxvt*italicFont:     xft:font1:italic:size=15, xft:font2:size=15:minspace=False,xft:font3:size=15,xft:font4:size=15
+URxvt*boldItalicFont: xft:font1:bold:italic:size=15, xft:font2:size=15:minspace=False, xft:font3:size=15, xft:font4:size=15
 
 URxvt.allow_bold: true
-URxvt.letterSpace: 0
 
 !! Colorscheme
 
