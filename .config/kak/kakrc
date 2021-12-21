@@ -44,8 +44,9 @@ hook global WinDisplay .* enable-auto-pairs
 map global user b ':enter-buffers-mode<ret>'              -docstring 'buffers…'
 map global user B ':enter-user-mode -lock buffers<ret>'   -docstring 'buffers (lock)…'
 
-hook global WinDisplay .* info-buffers
+# hook global WinDisplay .* info-buffers
 
+alias global bi info-buffers
 alias global bd delete-buffer
 alias global bf buffer-first
 alias global bl buffer-last
@@ -59,4 +60,4 @@ set-option global luar_interpreter luajit
 
 require-module peneira
 map global user f ':peneira-files<ret>' -docstring 'fuzzy files'
-map global user l ':peneira-lines<ret>' -docstring 'fuzzy lines'
+map global user n ':peneira-lines<ret>' -docstring 'fuzzy lines'
