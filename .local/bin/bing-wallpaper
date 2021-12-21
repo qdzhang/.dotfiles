@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+# A simple script to get Bing wallpaper and set it as desktop wallpaper using feh
+
+wallpaper_dir=~/Pictures/wallpaper/bing/
+
+if [ -d $wallpaper_dir ]; then
+	echo "Bing wallpaper directory exists."
+else
+	echo "Bing wallpaper directory does not exist. Creating..."
+	mkdir -p $wallpaper_dir
+	echo "Done."
+fi
+
+cd $wallpaper_dir
+
+# Random number
+# index_seed="$(shuf -i 0-7 -n 1)"
+# If seed is 0, the picture is Bing' photo of the day
+index_seed=0
+
+rurl_esult="$(curl --location --request GET 'http://www.bing.com/HPImageArchive.aspx?idx='$index_seed'&n=1&format=js' --header 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36' | grep -o '"url":"[^"]*"' | sed -e 's/"url":"/https:\/\/cn.bing.com/' | sed -e 's/"//' | sed -e 's/1920x1080/UHD/g')"
+
+file_seed="$(date +%s)"
+curl $rurl_esult -o wallpaper_$file_seed.jpg >/dev/null
+
+localpath=~/Pictures/wallpaper/bing/wallpaper_$file_seed.jpg
+notify-send "The wallpaper is located in $localpath"
+
+notify-send "Setting wallpaper ..."
+feh --bg-max $localpath
+notify-send "Done."

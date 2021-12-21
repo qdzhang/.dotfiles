@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# This script add user execute mode to a file
+# depends on `lsmode` script
+
+file=$1
+prevmode=$(lsmode $file)
+chmod u+x $file
+nowmode=$(lsmode $file)
+echo "$file from $prevmode -> $nowmode"
