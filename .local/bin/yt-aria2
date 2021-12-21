@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# A simple wrapper for yt-dlp to use aria2 to download videos
+
+yt-dlp --write-auto-sub --add-metadata --downloader aria2c $1

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# Random selet a picture in Bing directory to set as wallpaper
+
+wallpaper_dir=~/Pictures/wallpaper/bing/
+cd $wallpaper_dir
+
+selected_pic=$(find -type f | shuf -n 1)
+
+notify-send "Random setting wallpaper ..."
+feh --bg-max $selected_pic
+notify-send "Done."
