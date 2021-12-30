@@ -1,12 +1,8 @@
 auracle-git
 boxes
-cgproxy-git
 clipcat
 code-minimap
-fcitx5-skin-arc
-libwm-git
+gitstatus
 otf-symbola
 rbenv
-ttf-juliamono
 visual-studio-code-bin
-wmutils-git

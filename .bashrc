@@ -29,7 +29,7 @@ source /usr/share/fzf/completion.bash
 # export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!{node_modules/**,.git/**}"'
 export GPG_TTY=$(tty)
-source ~/gitstatus/gitstatus.prompt.sh
+source /usr/share/gitstatus/gitstatus.prompt.sh
 
 PS1='\[\e[32m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\]: \[\e[37m\]\w\[\e[m\] ${GITSTATUS_PROMPT}\n\$ '
 

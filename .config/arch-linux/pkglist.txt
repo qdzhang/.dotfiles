@@ -1,3 +1,4 @@
+aegisub
 alsa-utils
 archlinuxcn-keyring
 aria2
@@ -6,6 +7,7 @@ automake
 axel
 base
 bc
+bear
 bind
 binutils
 bison
@@ -15,6 +17,7 @@ bluez-utils
 bridge-utils
 calibre
 ccls
+cgproxy-git
 clash
 clash-geoip
 cmake
@@ -24,7 +27,7 @@ dmidecode
 dnsmasq
 dunst
 efibootmgr
-emacs-git
+emacs
 fakeroot
 fcitx5
 fcitx5-configtool
@@ -42,6 +45,7 @@ gcc
 gdb
 git
 git-delta
+global
 go
 goldendict
 groff
@@ -49,6 +53,7 @@ grub
 gvfs
 gvim
 htop
+hunspell-en_us
 i3-wm
 i3blocks
 i3lock-color
@@ -62,6 +67,8 @@ java11-openjfx
 jdk-openjdk
 jdk11-openjdk
 jq
+kak-lsp
+kakoune
 libtool
 libva-intel-driver
 libva-utils
@@ -74,8 +81,10 @@ linux-headers
 linux-lts
 linux-lts-headers
 llpp
+luajit
 m4
 make
+man-pages
 mesa
 mesa-demos
 miniserve
@@ -92,6 +101,7 @@ npm
 ntfs-3g
 nvidia-dkms
 nvidia-prime
+obs-studio
 openbsd-netcat
 openssh
 oxygen-icons
@@ -123,6 +133,7 @@ rsync
 rustup
 rxvt-unicode
 sbcl
+shfmt
 slop
 smartmontools
 speedcrunch
@@ -134,6 +145,7 @@ trash-cli
 tree-sitter
 ttf-dejavu
 ttf-font-awesome
+ttf-ibm-plex
 ttf-inconsolata
 ttf-lxgw-wenkai
 ttf-sarasa-gothic
@@ -201,4 +213,4 @@ xorg-xwud
 xsecurelock
 xss-lock
 yacd
-youtube-dl
+yt-dlp

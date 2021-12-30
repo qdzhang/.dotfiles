@@ -16,3 +16,7 @@ alias magit='ec -e "(magit-status \"$(pwd)\")"'
 alias pmpv='prime-run mpv'
 
 alias px='proxychains'
+
+alias grep='grep --color'
+
+alias k='kak'
