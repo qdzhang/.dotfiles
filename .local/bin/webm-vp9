@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Use ffmpeg to compress webm video to minimal size with mid-term solution
+# https://www.draketo.de/software/ffmpeg-compression-vp9-av1.html
+
+Q=56; EXT="webm"
+time for i in *.${EXT}; do
+    nice ffmpeg -y -i "$i" -c:v libvpx-vp9 -b:v 0 -crf $Q \
+         -aq-mode 2 -an \
+         -tile-columns 0 -tile-rows 0 \
+         -frame-parallel 0 -cpu-used 8 \
+         -auto-alt-ref 1 -lag-in-frames 25 -g 999 \
+         -pass 1 -f webm -threads 8 \
+         "$(basename "$i" .${EXT})".temp;
+    nice ffmpeg -y -i "$i" -c:v libvpx-vp9 -b:v 0 -crf $Q \
+         -aq-mode 2 -c:a libopus -b:a 12k \
+         -tile-columns 2 -tile-rows 2 \
+         -frame-parallel 0 -cpu-used -5 \
+         -auto-alt-ref 1 -lag-in-frames 25 \
+         -pass 2 -g 999 -threads 8 \
+         "$(basename "$i" .${EXT})"-vp9-q${Q}.webm;
+done
