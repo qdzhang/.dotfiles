@@ -55,7 +55,8 @@ exec --no-startup-id fcitx5 &
 exec_always --no-startup-id ~/.config/i3/autostart/autostart-clipcat.sh
 
 exec --no-startup-id udiskie --tray &
-exec --no-startup-id feh --bg-max ~/Pictures/wallpaper/u49cjyw80ty61-scaled.jpg &
+# exec --no-startup-id feh --bg-max ~/Pictures/wallpaper/u49cjyw80ty61-scaled.jpg &
+exec --no-startup-id bing-random &
 exec --no-startup-id dunst &
 
 exec emacs-i3-scratchpad &
@@ -75,6 +76,11 @@ for_window [window_role="webconsole"] floating enable border normal 2  # firefox
 for_window [window_role=floating_term] floating enable
 for_window [class="mpv"] floating enable move position center
 for_window [class="qView"] floating enable resize set 50ppt 50ppt move position center
+for_window [instance="xfi"] floating enable move position center
+for_window [class="lazarus"] floating enable border normal 2
+for_window [class="Clash for Windows"] floating enable
+for_window [title="minibuf"] floating enable
+for_window [class="SimpleScreenRecorder"] floating enable border normal 2
 
 # Use pactl to adjust volume in PulseAudio.
 # set $refresh_i3status killall -SIGUSR1 i3status
@@ -109,6 +115,8 @@ bindsym $mod+m [con_mark="^emacsscratchpad$"] scratchpad show
 bindsym $mod+Shift+m exec emacs-i3-scratchpad
 # bindsym $mod+z exec gtk-launch emacsclient.desktop
 bindsym $mod+z exec ec
+
+bindsym $mod+k [class="SimpleScreenRecorder"] scratchpad show
 
 # kill focused window
 bindsym $mod+Shift+q kill
