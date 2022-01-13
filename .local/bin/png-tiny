@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Use pngquant and zopflipng to compress png images
+# The final result is similar to tinypng.com
+
+file_seed="$(date +%s)"
+pngquant --speed 1 --verbose $1 -o temp_$file_seed.png
+zopflipng temp_$file_seed.png compressed_$file_seed.png
+echo "Deleting temp file..."
+rm temp_$file_seed.png
+echo "Done."
