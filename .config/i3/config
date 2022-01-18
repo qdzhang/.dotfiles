@@ -158,7 +158,11 @@ bindsym $mod+o exec ~/.config/i3/scripts/powermenu
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # Use rofi and clipcat(https://github.com/xrelkd/clipcat) to manage X.org clipboard
-bindsym $mod+grave exec clipcat-menu
+# bindsym $mod+grave exec clipcat-menu
+
+# Use fzf as clipcat finder
+bindsym $mod+grave exec urxvt --title 'fzf-menu' -e sh -c 'clipcat-menu --finder=fzf'
+for_window [title="fzf-menu"] floating enable
 
 #===================
 # key bindings
