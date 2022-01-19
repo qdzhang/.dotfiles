@@ -1,0 +1,18 @@
+{
+    "window.zoomLevel": 1,
+    "window.titleBarStyle": "custom",
+    "editor.fontFamily": "'IBM Plex Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "workbench.iconTheme": "file-icons",
+    "editor.fontSize": 16,
+    "editor.formatOnSave": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.startupEditor": "none",
+    "open-in-browser.default": "firefox",
+    "workbench.colorTheme": "GitHub Light Default",
+    "breadcrumbs.symbolPath": "off",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "update.mode": "none"
+}
