@@ -16,7 +16,14 @@ drive_name=
 timezone_region=
 timezone_city=
 locale=en_US.UTF-8
-zh_locale=yes
+locale_full=$(
+	cat <<-EOF
+		en_US.UTF-8 UTF-8
+		zh_CN.UTF-8 UTF-8
+		zh_HK.UTF-8 UTF-8
+		zh_TW.UTF-8 UTF-8
+	EOF
+)
 hostname=
 mirrorlist_url="https://archlinux.org/mirrorlist/?country=CN&protocol=https&ip_version=4"
 priority_mirrorlist='Server = https://opentuna.cn/archlinux/$repo/os/$arch'
@@ -29,6 +36,8 @@ final_commands() {
 	#systemctl enable lightdm
 	#
 	# Don't leave the function empty!
+	config_archlinuxcn_mirror
+        pacman -Syu
 	pacman -S base-devel git
 	systemctl enable NetworkManager
 	echo 'Final commands..'
@@ -291,12 +300,7 @@ set_hardware_clock() {
 }
 
 set_locale() {
-	sed -i '0,/^\s*#\+\s*\('"$locale"'.*\)$/ s/^\s*#\+\s*\('"$locale"'.*\)$/\1/' /etc/locale.gen
-	if ask_yes_no "$zh_locale"; then
-		sed -i '0,/^#zh_CN.UTF-8/s/^#//' /etc/locale.gen
-		sed -i '0,/^#zh_HK.UTF-8/s/^#//' /etc/locale.gen
-		sed -i '0,/^#zh_TW.UTF-8/s/^#//' /etc/locale.gen
-	fi
+	echo "$locale_full" >>/etc/locale.gen
 	locale-gen
 	echo "LANG=${locale}" >/etc/locale.conf
 }
@@ -371,10 +375,11 @@ add_normal_user() {
 
 	# Make wheel group use sudo
 	echo 'Adding wheel group to sudoers...'
-	sed -i "s/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/" /etc/sudoers
-	echo 'Done.'
+	echo '%wheel ALL=(ALL) ALL' | EDITOR='tee -a' visudo
+
 	# Alternative
-	# echo '%wheel ALL=(ALL) ALL' | EDITOR='tee -a' visudo
+	# sed -i "s/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/" /etc/sudoers
+	echo 'Done.'
 	set -e
 }
 
@@ -408,7 +413,6 @@ run_part1() {
 	mount_file_system
 	change_pacman_mirrorlist
 	config_pacman
-	config_archlinuxcn_mirror
 	install_essential_packages
 	generate_fstab
 	copy_script_to_chroot
