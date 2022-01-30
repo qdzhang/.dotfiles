@@ -43,6 +43,7 @@ final_commands() {
 
 	pacman -S base-devel git
 	systemctl enable NetworkManager
+	set_ntp_server
 	echo 'Final commands..'
 }
 
@@ -96,6 +97,21 @@ verify_boot_mode() {
 	else
 		boot_mode='bios'
 	fi
+}
+
+set_ntp_server() {
+	if [ -f /etc/systemd/timesyncd.conf ]; then
+		mv /etc/systemd/timesyncd.conf /etc/systemd/timesyncd.conf.backup
+	fi
+	cat <<-EOF >/etc/systemd/timesyncd.conf
+		[Time]
+		NTP=ntp1.aliyun.com
+		FallbackNTP=ntp3.aliyun.com ntp2.aliyun.com 0.arch.pool.ntp.org 1.arch.pool.ntp.org 2.arch.pool.ntp.org 3.arch.pool.ntp.org
+		RootDistanceMaxSec=5
+		PollIntervalMinSec=32
+		PollIntervalMaxSec=2048
+	EOF
+	systemctl enable systemd-timesyncd.service --now
 }
 
 update_system_clock() {
