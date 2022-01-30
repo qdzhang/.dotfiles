@@ -3,15 +3,17 @@
 # Author:       Ahmed Elhori <dev@elhori.com>
 # License:      GNU GPLv3
 # Description:  Arch install script
+# Link:         https://github.com/ahmedelhori/install-arch
+
+# This script is forked from https://github.com/ahmedelhori/install-arch
 
 # ENV
 set -e
 NAME="$(basename "$0")"
-package_list='base linux linux-firmware vim networkmanager linux-headers'
+package_list='base linux linux-firmware sudo vim networkmanager linux-headers'
 keyboard_layout=
 want_clean_drive=
 want_encryption=
-want_swap=no
 drive_name=
 timezone_region=
 timezone_city=
@@ -37,7 +39,8 @@ final_commands() {
 	#
 	# Don't leave the function empty!
 	config_archlinuxcn_mirror
-        pacman -Syu
+	pacman -Sy && pacman -S archlinuxcn-keyring
+
 	pacman -S base-devel git
 	systemctl enable NetworkManager
 	echo 'Final commands..'
@@ -230,7 +233,7 @@ config_archlinuxcn_mirror() {
 		cat <<-EOF
 
 			[archlinuxcn]
-			Server = https://opentuna.cn/archlinuxcn/$arch
+			Server = https://opentuna.cn/archlinuxcn/\$arch
 		EOF
 	)
 	echo "$archlinuxcn_mirror" >>/etc/pacman.conf
