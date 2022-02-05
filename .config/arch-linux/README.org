@@ -1,4 +1,11 @@
-* Arch linux packages backup
+* Some scripts about Arch linux
+** Arch linux install
+#+begin_src bash
+curl -sL "https://yld.me/cBlA" > install.sh
+sh install.sh
+#+end_src
+
+** Arch linux packages backup
 
 Follow [[https://wiki.archlinux.org/title/Migrate_installation_to_new_hardware][Arch wiki]]
 
