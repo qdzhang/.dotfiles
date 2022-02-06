@@ -14,5 +14,8 @@
     "breadcrumbs.symbolPath": "off",
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
-    "update.mode": "none"
+    "update.mode": "none",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
