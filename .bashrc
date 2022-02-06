@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+	. ~/.bash_aliases
 fi
 
 # Show an ascii art when bash start
@@ -58,5 +58,8 @@ export EDITOR="vim"
 eval "$(rbenv init -)"
 
 if [ -f ~/.bash_functions ]; then
-    . ~/.bash_functions
+	. ~/.bash_functions
 fi
+
+export RUSTUP_DIST_SERVER="https://rsproxy.cn"
+export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
