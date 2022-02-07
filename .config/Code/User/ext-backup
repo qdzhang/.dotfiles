@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# This script backup all installed Code extensions into a file named `ext-install-cmd`.
+# Use `ext-install-cmd` to install backup extensions in a new machine.
+
+code --list-extensions | xargs -L 1 echo code --install-extension > ext-install-cmd

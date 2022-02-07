@@ -10,12 +10,13 @@
     },
     "workbench.startupEditor": "none",
     "open-in-browser.default": "firefox",
-    "workbench.colorTheme": "GitHub Light Default",
+    "workbench.colorTheme": "GitHub Light",
     "breadcrumbs.symbolPath": "off",
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "update.mode": "none",
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
-    }
+    },
+    "files.autoSave": "afterDelay"
 }

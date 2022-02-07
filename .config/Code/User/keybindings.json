@@ -16,5 +16,21 @@
         "key": "ctrl+shift+tab",
         "command": "workbench.action.quickOpenLeastRecentlyUsedEditor",
         "when": "!inEditorsPicker"
+    },
+    {
+        "key": "ctrl+s",
+        "command": "findJump.activate"
+    },
+    {
+        "key": "ctrl+;",
+        "command": "findJump.activateWithSelection"
+    },
+    {
+        "key": "ctrl+;",
+        "command": "-findJump.activate"
+    },
+    {
+        "key": "alt+g g",
+        "command": "extension.fuzzyGotoLine"
     }
 ]

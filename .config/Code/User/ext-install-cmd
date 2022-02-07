@@ -1,0 +1,12 @@
+code --install-extension bradlc.vscode-tailwindcss
+code --install-extension esbenp.prettier-vscode
+code --install-extension file-icons.file-icons
+code --install-extension GitHub.github-vscode-theme
+code --install-extension kylqin.fuzzy-goto-line
+code --install-extension ms-vscode-remote.remote-ssh
+code --install-extension ms-vscode-remote.remote-ssh-edit
+code --install-extension octref.vetur
+code --install-extension OnlyLys.leaper
+code --install-extension patbenatar.advanced-new-file
+code --install-extension techer.open-in-browser
+code --install-extension usernamehw.find-jump
