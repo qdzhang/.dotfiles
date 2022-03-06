@@ -18,16 +18,8 @@
         "when": "!inEditorsPicker"
     },
     {
-        "key": "ctrl+s",
-        "command": "findJump.activate"
-    },
-    {
-        "key": "ctrl+;",
+        "key": "ctrl+'",
         "command": "findJump.activateWithSelection"
-    },
-    {
-        "key": "ctrl+;",
-        "command": "-findJump.activate"
     },
     {
         "key": "alt+g g",

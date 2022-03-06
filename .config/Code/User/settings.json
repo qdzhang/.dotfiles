@@ -29,4 +29,12 @@
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.codeLens.enabled": false,
     "psalm.psalmScriptPath": "vendor/bin/psalm-language-server",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // On save, run both fixAll and organizeImports source actions
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.organizeImports": true,
+    }
 }
