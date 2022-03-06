@@ -81,6 +81,10 @@ for_window [class="lazarus"] floating enable border normal 2
 for_window [class="Clash for Windows"] floating enable
 for_window [title="minibuf"] floating enable
 for_window [class="SimpleScreenRecorder"] floating enable border normal 2
+for_window [title= "emacs-run-launcher"] floating enable
+for_window [class="Mysql-workbench-bin"] floating enable border normal 2
+for_window [class="Pqiv"] floating enable
+for_window [title="WebP viewer"] floating enable
 
 # Use pactl to adjust volume in PulseAudio.
 # set $refresh_i3status killall -SIGUSR1 i3status
@@ -149,7 +153,7 @@ bindsym $mod+w exec rofi -show window \
 bindsym $mod+F1 exec ~/.config/i3/scripts/keyhint-2
 
 # powermenu
-bindsym $mod+o exec ~/.config/i3/scripts/powermenu
+# bindsym $mod+o exec ~/.config/i3/scripts/powermenu
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec rofi -modi drun,run -show drun
