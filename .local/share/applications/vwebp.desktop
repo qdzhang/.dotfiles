@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=vwebp image viewer
+GenericName=Image viewer
+Comment=Image viewer and cataloguer
+MimeType=image/bmp;image/gif;image/jpeg;image/jpg;image/pjpeg;image/png;image/tiff;image/webp;image/x-bmp;image/x-pcx;image/x-png;image/x-portable-anymap;image/x-portable-bitmap;image/x-portable-graymap;image/x-portable-pixmap;image/x-tga;image/x-xbitmap;
+Exec=vwebp %F -mt -dither 0
+Type=Application
+Terminal=false
+Categories=Graphics;2DGraphics;Viewer;
+Keywords=Image;Viewer;
