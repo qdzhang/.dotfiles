@@ -172,8 +172,17 @@ for_window [title="fzf-menu"] floating enable
 # key bindings
 #===================
 
-bindsym $mod+d [class="GoldenDict"] scratchpad show
-bindsym $mod+Shift+d exec goldendict &
+# bindsym $mod+d [class="GoldenDict"] scratchpad show
+# bindsym $mod+Shift+d exec goldendict &
+
+# Replace Goldendict with sdcv
+for_window [title="sdcv-floating"] floating enable border normal 2
+for_window [title="sdcv-floating"] resize set 80ppt 80ppt, move absolute position center
+bindsym $mod+d exec urxvt --title 'sdcv-floating' -e sh -c 'sdcv'
+
+# Following code configure sdcv running in a urxvt in scratchpad, like preceding Goldendict config
+# bindsym $mod+Shift+d exec urxvt --title 'sdcv-floating' -e sh -c 'sdcv'
+# bindsym $mod+d [title="sdcv-floating"] scratchpad show
 
 # screenshot and screen record
 bindsym --release Print exec --no-startup-id shot-active
