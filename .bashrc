@@ -63,3 +63,5 @@ fi
 
 export RUSTUP_DIST_SERVER="https://rsproxy.cn"
 export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
+
+export SDCV_PAGER='less --quit-if-one-screen -RX'
