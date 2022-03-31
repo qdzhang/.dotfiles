@@ -62,7 +62,7 @@ exec --no-startup-id dunst &
 exec emacs-i3-scratchpad &
 
 # special programs settings
-for_window [class="GoldenDict"] floating enable border normal 2 move scratchpad
+for_window [class="GoldenDict"] floating enable border normal 2
 for_window [class="Xarchiver"] floating enable border normal 2
 for_window [instance="dosbox"] floating enable border normal 2
 for_window [instance="speedcrunch"] floating enable border normal 2
