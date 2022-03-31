@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# https://gist.github.com/CSaratakij/788261f1ebcf2aefa320255120f75efe
+xwinwrap -g 1920x1080 -ni -s -nf -b -un -ov -fdt -argb -- mpv --no-config --mute=yes --no-audio --no-osc --no-osd-bar --quiet --screen=0 --geometry=1920x1080+0+0 -wid WID --loop livewallpaper.mp4

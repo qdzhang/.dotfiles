@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# https://gist.github.com/CSaratakij/788261f1ebcf2aefa320255120f75efe
+
+# step1: scale video to exact monitor resolution (lossless)
+ffmpeg -i MyMovie.mp4 -vf scale=1920:-1 -c:v libx264 -crf 18 -preset veryslow -c:a copy MyMovie_1080p.mp4
+
+# step2: Set lowest acceptable fps for your video
+ffmpeg -i input.mp4 -filter:v "minterpolate='mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=18'" -tune fastdecode -profile:v main -preset veryslow -crf 18 -maxrate 8M -bufsize 4M -bf 0 ouput.mp4
