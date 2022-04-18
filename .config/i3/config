@@ -110,15 +110,7 @@ for_window [title="dropdown-terminal"] resize set 100ppt 50ppt, move position 0 
 bindsym $mod+u [instance=urxvt] scratchpad show
 bindsym $mod+Shift+u exec urxvt -bg rgba:0000/0000/0000/c800 --depth 32 --title 'dropdown-terminal'
 
-# Open an emacs instance and move it to scratchpad.
-# Use this method instead of opening emacs daemon in terminal
-exec --no-startup-id  "sleep 2; i3-msg '[instance=emacs] mark emacsscratchpad, move scratchpad'"
-bindsym $mod+m [con_mark="^emacsscratchpad$"] scratchpad show
-
-# `emacs-scratchpad` is a script than open an emacs instance and move it to scratchpad, like preceding emacs autostart command
-bindsym $mod+Shift+m exec emacs-i3-scratchpad
-# bindsym $mod+z exec gtk-launch emacsclient.desktop
-bindsym $mod+z exec ec
+bindsym $mod+m exec emacs
 
 bindsym $mod+k [class="SimpleScreenRecorder"] scratchpad show
 
