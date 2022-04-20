@@ -59,7 +59,6 @@ exec --no-startup-id udiskie --tray &
 exec --no-startup-id bing-random &
 exec --no-startup-id dunst &
 
-exec emacs-i3-scratchpad &
 
 # special programs settings
 for_window [class="GoldenDict"] floating enable border normal 2

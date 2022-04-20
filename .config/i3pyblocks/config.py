@@ -96,7 +96,7 @@ async def main():
     # Using `.format()` (https://pyformat.info/) to limit the number of
     # characters to 41
     await runner.register_block(i3ipc.WindowTitleBlock(format=" {window_title:.41s}"))
-    await runner.register_block(GetEmacsScratchpad(colors=[d_color_red,d_color_pink]))
+    # await runner.register_block(GetEmacsScratchpad(colors=[d_color_red,d_color_pink]))
 
     # Show the current network speed for either en* (ethernet) or wl* devices
     # Limiting the interface name to only 2 characters since it can get quite
