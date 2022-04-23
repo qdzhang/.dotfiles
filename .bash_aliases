@@ -20,3 +20,4 @@ alias px='proxychains'
 alias grep='grep --color'
 
 alias k='kak'
+alias ee='emacs -nw'
