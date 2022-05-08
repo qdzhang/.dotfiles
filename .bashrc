@@ -55,7 +55,9 @@ export HISTFILE=~/.bash_eternal_history
 shopt -s histappend
 
 export EDITOR="vim"
-eval "$(rbenv init -)"
+source /usr/share/chruby/chruby.sh
+source /usr/share/chruby/auto.sh
+chruby ruby-3.1.1
 
 if [ -f ~/.bash_functions ]; then
 	. ~/.bash_functions
