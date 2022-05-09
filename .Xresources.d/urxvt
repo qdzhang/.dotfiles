@@ -64,63 +64,63 @@ URxvt.allow_bold: true
 !! Colorscheme
 
 ! Dracula Xresources palette
-! *.foreground: #F8F8F2
-! *.background: #282A36
-! *.color0:     #000000
-! *.color8:     #4D4D4D
-! *.color1:     #FF5555
-! *.color9:     #FF6E67
-! *.color2:     #50FA7B
-! *.color10:    #5AF78E
-! *.color3:     #F1FA8C
-! *.color11:    #F4F99D
-! *.color4:     #BD93F9
-! *.color12:    #CAA9FA
-! *.color5:     #FF79C6
-! *.color13:    #FF92D0
-! *.color6:     #8BE9FD
-! *.color14:    #9AEDFE
-! *.color7:     #BFBFBF
-! *.color15:    #E6E6E6
+*.foreground: #F8F8F2
+*.background: #282A36
+*.color0:     #000000
+*.color8:     #4D4D4D
+*.color1:     #FF5555
+*.color9:     #FF6E67
+*.color2:     #50FA7B
+*.color10:    #5AF78E
+*.color3:     #F1FA8C
+*.color11:    #F4F99D
+*.color4:     #BD93F9
+*.color12:    #CAA9FA
+*.color5:     #FF79C6
+*.color13:    #FF92D0
+*.color6:     #8BE9FD
+*.color14:    #9AEDFE
+*.color7:     #BFBFBF
+*.color15:    #E6E6E6
 
 ! catppuccin theme
 ! https://github.com/catppuccin/urxvt
 ! special
-URxvt.foreground: #DADAE8
-URxvt.background: #1E1E29
-URxvt.cursorColor: #B1E3AD
+! URxvt.foreground: #DADAE8
+! URxvt.background: #1E1E29
+! URxvt.cursorColor: #B1E3AD
 
-! black
-URxvt.color0: #6E6C7E
-URxvt.color8: #6E6C7E
+! ! black
+! URxvt.color0: #6E6C7E
+! URxvt.color8: #6E6C7E
 
-! red
-URxvt.color1: #E38C8F
-URxvt.color9: #E38C8F
+! ! red
+! URxvt.color1: #E38C8F
+! URxvt.color9: #E38C8F
 
-! green
-URxvt.color2: #B1E3AD
-URxvt.color10: #B1E3AD
+! ! green
+! URxvt.color2: #B1E3AD
+! URxvt.color10: #B1E3AD
 
-! yellow
-URxvt.color3: #EBDDAA
-URxvt.color11: #EBDDAA
+! ! yellow
+! URxvt.color3: #EBDDAA
+! URxvt.color11: #EBDDAA
 
-! blue
-URxvt.color4: #A4B9EF
-URxvt.color12: #A4B9EF
+! ! blue
+! URxvt.color4: #A4B9EF
+! URxvt.color12: #A4B9EF
 
-! magenta
-URxvt.color5: #C6AAE8
-URxvt.color13: #C6AAE8
+! ! magenta
+! URxvt.color5: #C6AAE8
+! URxvt.color13: #C6AAE8
 
-! cyan
-URxvt.color6: #E5B4E2
-URxvt.color14: #E5B4E2
+! ! cyan
+! URxvt.color6: #E5B4E2
+! URxvt.color14: #E5B4E2
 
-! white
-URxvt.color7: #DADAE8
-URxvt.color15: #DADAE8
+! ! white
+! URxvt.color7: #DADAE8
+! URxvt.color15: #DADAE8
 
 !! URxvt Appearance
 ! URxvt.letterSpace: 0
