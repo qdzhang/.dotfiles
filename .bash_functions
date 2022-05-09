@@ -1,3 +1,5 @@
+#-*- mode: shell-script -*-
+
 # Use fzf to fuzzy find files in terminal
 # find-in-file - usage: fif <SEARCH_TERM>
 # from https://betterprogramming.pub/boost-your-command-line-productivity-with-fuzzy-finder-985aa162ba5d

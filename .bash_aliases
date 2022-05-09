@@ -1,3 +1,5 @@
+#-*- mode: shell-script -*-
+
 alias ls='ls --color=auto'
 alias la='ls -A'
 alias ll='ls -lA'
@@ -21,3 +23,4 @@ alias grep='grep --color'
 
 alias k='kak'
 alias ee='emacs -Q -nw --load "~/.nw_emacs"'
+alias j='jmacs'
