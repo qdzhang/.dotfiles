@@ -3,10 +3,14 @@
     email = qdzhangcn@gmail.com
     signingkey = 2EA64EA4323ED6CD
 [core]
-    editor = 'vim'
+    ; editor = 'vim'
+    editor = "emacs -Q -nw --load \"~/.nw_emacs\""
     pager = delta
 [diff]
-    tool = vimdiff
+    ; tool = vimdiff
+    tool = ediff
+[difftool "ediff"]
+    cmd = "~/.local/bin/ediff \"$LOCAL\" \"$REMOTE\""
 [alias]
     d = difftool
     ds = diff --staged
