@@ -1,0 +1,27 @@
+#-*- mode: conf-space -*-
+
+set adjust-open width
+set font "Sarasa Mono SC 16"
+
+# Hide status line default
+# Use `C-n` to toggle statusline
+set guioptions hv
+
+# when selecting text with mouse,
+# copy to clipboard
+set selection-clipboard clipboard
+
+# keep several lines of text when
+# scrolling a screenful
+set scroll-full-overlap 0.2
+
+# see documentation for details
+set scroll-page-aware true
+set window-title-basename true
+set statusbar-page-percent true
+set statusbar-home-tilde true
+set vertical-center true
+
+# Emacs-like keybindings
+map [normal] <C-g> abort
+map [insert] <C-g> abort
