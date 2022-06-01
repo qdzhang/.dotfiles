@@ -1,13 +1,5 @@
 [
     {
-        "key": "ctrl+p",
-        "command": "workbench.action.quickOpenPreviousEditor"
-    },
-    {
-        "key": "ctrl+p",
-        "command": "-workbench.action.quickOpen"
-    },
-    {
         "key": "ctrl+tab",
         "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor",
         "when": "!inEditorsPicker"
@@ -18,11 +10,27 @@
         "when": "!inEditorsPicker"
     },
     {
-        "key": "ctrl+'",
+        "key": "ctrl+;",
         "command": "findJump.activateWithSelection"
     },
     {
-        "key": "alt+g g",
-        "command": "extension.fuzzyGotoLine"
-    }
+        "key": "ctrl+,",
+        "command": "findJump.activate"
+    },
+    {
+        "key": "ctrl+;",
+        "command": "-findJump.activate"
+    },
+    {
+        "key": "ctrl+c 1",
+        "command": "extension.jumptotemplate"
+    },
+    {
+        "key": "ctrl+c 2",
+        "command": "extension.jumptoscript"
+    },
+    {
+        "key": "ctrl+c 3",
+        "command": "extension.jumptostyle"
+    },
 ]

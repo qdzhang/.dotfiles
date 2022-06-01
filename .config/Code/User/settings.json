@@ -36,5 +36,8 @@
     "editor.codeActionsOnSave": {
         "source.fixAll": true,
         "source.organizeImports": true,
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "Vue.volar"
     }
 }
