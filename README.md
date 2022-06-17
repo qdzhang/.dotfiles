@@ -20,6 +20,7 @@ Personal linux dotfiles
 - [delta](https://github.com/dandavison/delta): A viewer for git and diff output 
 - [gitstatus](https://github.com/romkatv/gitstatus): A fast shell git prompt
 - mpv & [mpv-iptv](https://github.com/gthreepw00d/mpv-iptv) & [mpv-image-viewer](https://github.com/occivink/mpv-image-viewer)
+- pqiv: Image viewer
 - rofi: Program launcher and some other usages
 - nm-applet: NetworkManager applet
 - blueman-applet: Bluetooth applet
