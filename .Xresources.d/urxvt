@@ -64,5 +64,5 @@ URxvt.allow_bold: true
 !! Colorscheme
 
 ! #include "themes/catppuccin.Xcolors"
-! #include "themes/dracula.Xcolors"
-#include "themes/paper-color.Xcolors"
+#include "themes/dracula.Xcolors"
+! #include "themes/paper-color.Xcolors"
