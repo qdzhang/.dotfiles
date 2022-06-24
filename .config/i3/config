@@ -84,6 +84,7 @@ for_window [title= "emacs-run-launcher"] floating enable
 for_window [class="Mysql-workbench-bin"] floating enable border normal 2
 for_window [class="Pqiv"] floating enable
 for_window [title="WebP viewer"] floating enable
+for_window [class="gogglesmm"] floating enable border normal 2
 
 # Use pactl to adjust volume in PulseAudio.
 # set $refresh_i3status killall -SIGUSR1 i3status
@@ -171,6 +172,8 @@ for_window [title="sdcv-floating"] floating enable border normal 2 move scratchp
 for_window [title="sdcv-floating"] resize set 80ppt 80ppt, move absolute position center
 bindsym $mod+Shift+d exec urxvt --title 'sdcv-floating' -e sh -c 'sdcv --utf8-output --color'
 bindsym $mod+d [title="sdcv-floating"] scratchpad show
+
+bindsym $mod+n [class="mpv"] scratchpad show
 
 # screenshot and screen record
 bindsym --release Print exec --no-startup-id shot-active
