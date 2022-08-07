@@ -169,8 +169,10 @@ for_window [title="fzf-menu"] floating enable
 
 # Replace Goldendict with sdcv
 for_window [title="sdcv-floating"] floating enable border normal 2 move scratchpad
-for_window [title="sdcv-floating"] resize set 80ppt 80ppt, move absolute position center
-bindsym $mod+Shift+d exec urxvt --title 'sdcv-floating' -e sh -c 'sdcv --utf8-output --color'
+for_window [title="sdcv-floating"] resize set 25 ppt 25 ppt, move position 20 ppt 15 ppt
+# bindsym $mod+Shift+d exec urxvt --title 'sdcv-floating' -e sh -c 'sdcv --utf8-output --color'
+bindsym $mod+Shift+d exec emacs -geometry 80x24 --eval "(progn (require 'init-sdcv) (sdcv-search-to-buffer))" --title 'sdcv-floating'
+
 bindsym $mod+d [title="sdcv-floating"] scratchpad show
 
 bindsym $mod+n [class="mpv"] scratchpad show
