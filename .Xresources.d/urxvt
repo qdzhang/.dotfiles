@@ -1,7 +1,7 @@
 ! URxvt
 
 ! General settings
-URxvt.saveLines: 2000
+URxvt.saveLines: 4096
 URxvt.scrollBar: False
 URxvt.scrollstyle: rxvt
 URxvt.termName: xterm-256color
@@ -54,15 +54,15 @@ URxvt.keysym.C-question:  resize-font:show
 #define font4         Noto Sans Mono CJK SC
 
 URxvt*letterSpace: -1
-URxvt*font:           xft:font1:size=15, xft:font2:size=15:minspace=false, xft:font3:size=15,xft:font4:size=15
-URxvt*boldFont:       xft:font1:bold:size=15, xft:font2:size=15:minspace=False,xft:font3:size=15,xft:font4:size=15
-URxvt*italicFont:     xft:font1:italic:size=15, xft:font2:size=15:minspace=False,xft:font3:size=15,xft:font4:size=15
-URxvt*boldItalicFont: xft:font1:bold:italic:size=15, xft:font2:size=15:minspace=False, xft:font3:size=15, xft:font4:size=15
+URxvt*font:           xft:font1:size=17, xft:font2:size=17:minspace=false, xft:font3:size=17,xft:font4:size=17
+URxvt*boldFont:       xft:font1:bold:size=17, xft:font2:size=17:minspace=False,xft:font3:size=17,xft:font4:size=17
+URxvt*italicFont:     xft:font1:italic:size=17, xft:font2:size=17:minspace=False,xft:font3:size=17,xft:font4:size=17
+URxvt*boldItalicFont: xft:font1:bold:italic:size=17, xft:font2:size=17:minspace=False, xft:font3:size=17, xft:font4:size=17
 
 URxvt.allow_bold: true
 
 !! Colorscheme
 
 ! #include "themes/catppuccin.Xcolors"
-#include "themes/dracula.Xcolors"
+#include "themes/tempus_night.Xcolors"
 ! #include "themes/paper-color.Xcolors"
