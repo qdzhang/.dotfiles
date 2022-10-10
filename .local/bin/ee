@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# A simple no-gui emacs used in terminal with minimal config file
+
+emacs -Q -nw --load "~/.nw_emacs"

@@ -12,9 +12,6 @@ alias aur='auracle'
 
 alias mptv='mpv --script-opts=iptv=1'
 alias nv='nvim'
-
-alias magit='ec -e "(magit-status \"$(pwd)\")"'
-
 alias pmpv='prime-run mpv'
 
 alias px='proxychains'
@@ -22,6 +19,7 @@ alias px='proxychains'
 alias grep='grep --color'
 
 alias k='kak'
-alias ee='emacs -Q -nw --load "~/.nw_emacs"'
+# Use a shell wrapper to use this ee command
+# alias ee='emacs -Q -nw --load "~/.nw_emacs"'
 alias j='jmacs'
 alias e='emacs'
