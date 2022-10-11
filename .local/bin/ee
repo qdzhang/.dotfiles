@@ -2,4 +2,4 @@
 
 # A simple no-gui emacs used in terminal with minimal config file
 
-emacs -Q -nw --load "~/.nw_emacs"
+emacs -Q -nw --load "~/.nw_emacs" "$@"
