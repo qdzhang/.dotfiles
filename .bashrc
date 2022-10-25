@@ -76,6 +76,20 @@ source /usr/share/chruby/chruby.sh
 source /usr/share/chruby/auto.sh
 chruby ruby-3.1.1
 
+# Hook direnv
+# TODO: lookup https://github.com/untitaker/quickenv
+# Not to add this hook but also use direnv
+eval "$(direnv hook bash)"
+
+# Show python venv in bash prompt
+show_virtual_env() {
+  if [[ -n "$VIRTUAL_ENV" && -n "$DIRENV_DIR" ]]; then
+    echo "($(basename $VIRTUAL_ENV))"
+  fi
+}
+export -f show_virtual_env
+PS1='$(show_virtual_env)'$PS1
+
 if [ -f ~/.bash_functions ]; then
 	. ~/.bash_functions
 fi
