@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# A clean emacs as common lisp IDE. Use slime and paredit.
+# Based on a simple emacs configuration
+# URL: https://github.com/susam/emacs4cl
+# Need with-emacs.sh
+
+with-emacs.sh --no-refresh-packages --dir ~/.ihsec/emacs4cl
