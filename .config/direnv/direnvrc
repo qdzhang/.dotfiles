@@ -7,3 +7,20 @@ use_ruby() {
   load_prefix $ruby_dir
   layout ruby
 }
+
+# https://github.com/direnv/direnv/issues/267
+layout_virtualenv() {
+  local venv_path="$1"
+  source ${venv_path}/bin/activate
+}
+
+layout_django() {
+  # source $HOME/.virtualenvs/djangodev/bin/activate
+  local django_path="${HOME}/.virtualenvs/djangodev"
+  layout_virtualenv $django_path
+}
+
+layout_pyplayground() {
+  local playground_path="${HOME}/.virtualenvs/playground"
+  layout_virtualenv $playground_path
+}
