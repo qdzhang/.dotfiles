@@ -113,7 +113,7 @@ for_window [title="dropdown-terminal"] border pixel 3
 # Use absolute position to put `dropdown-terminal` on the top of window, full width
 # for_window [title="dropdown-terminal"] move absolute position 0px 0px, resize set 1920px 500px
 # Use relative position to put `dropdown-terminal` on the top of window, full width, and more flexible
-for_window [title="dropdown-terminal"] resize set 100ppt 50ppt, move position 0 24
+for_window [title="dropdown-terminal"] resize set 100ppt 50ppt, move position 0 0
 bindsym $mod+u [title="dropdown-terminal"] scratchpad show
 bindsym $mod+Shift+u exec urxvt -bg rgba:0000/0000/0000/c800 --depth 32 --title 'dropdown-terminal'
 
