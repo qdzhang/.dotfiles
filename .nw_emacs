@@ -1,6 +1,9 @@
 (fido-vertical-mode)
 (load-theme 'modus-vivendi)
 
+;; no ---- on the mode-line right.
+(setq mode-line-end-spaces " ")
+
 ;;; Show tabs
 (defun my/show-tabs ()
   (setq whitespace-style
