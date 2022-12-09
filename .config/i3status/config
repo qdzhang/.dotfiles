@@ -8,61 +8,69 @@
 
 general {
         colors = true
-        interval = 3
-        #color_good = "#2AA198"
-        color_good = "#A3BE8C"
-        #color_bad = "#586E75"
-        color_bad = "#BF616A"
-        #color_degraded = "#DC322F"
-        color_degraded = "#B48EAD"
+        interval = 5
 }
 
-# order += "ipv6"
 order += "wireless _first_"
-# order += "ethernet _first_"
+order += "ethernet _first_"
+order += "volume"
 order += "battery all"
-order += "volume master"
-# order += "disk /"
-# order += "load"
+order += "cpu_usage"
 order += "memory"
+order += "cpu_temperature 0"
+order += "cpu_temperature 1"
 order += "tztime local"
 
 wireless _first_ {
-        # format_up = "W: (%quality at %essid) %ip"
-        format_up = "  %quality"
-        # format_down = "W: down"
-        format_down = " No WLAN"
+        format_up = "W: (%quality at %essid) %ip (%bitrate)"
+        format_down = "W: down"
+}
+
+cpu_temperature 0 {
+	format = "%degrees°"
+	path = "/sys/class/thermal/thermal_zone7/temp"
+	max_threshold = 95
+}
+
+cpu_temperature 1 {
+	format = "%degrees°"
+	path = "/sys/class/thermal/thermal_zone9/temp"
+	max_threshold = 95
+}
+
+memory {
+        format = "%used"
+        threshold_degraded = "10%"
+        format_degraded = "MEMORY: %free"
+}
+
+volume master {
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+    format = " %volume "
+    format_muted = "🔇 "
 }
 
 ethernet _first_ {
+        # if you use %speed, i3status requires root privileges
         format_up = "E: %ip (%speed)"
         format_down = "E: down"
 }
 
 battery all {
-        format = " %status %percentage %remaining"
+        format = "%status %percentage %remaining"
 }
 
-disk "/" {
-        format = "%avail"
+tztime local {
+        format = "%Y-%m-%d %H:%M"
 }
 
 load {
         format = "%1min"
 }
 
-memory {
-        format = "%used | %available"
-        threshold_degraded = "1G"
-        format_degraded = "MEMORY < %available"
+cpu_usage {
+	format = "%usage "
 }
 
-volume master {
-        format = " %volume"
-        format_muted = " muted (%volume)"
-        device = "default"
-}
-
-tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
-}

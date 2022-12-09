@@ -178,7 +178,7 @@ for_window [title="fzf-menu"] floating enable
 for_window [title="sdcv-floating"] floating enable border normal 2 move scratchpad
 for_window [title="sdcv-floating"] move position 20 ppt 15 ppt
 # bindsym $mod+Shift+d exec urxvt --title 'sdcv-floating' -e sh -c 'sdcv --utf8-output --color'
-bindsym $mod+Shift+d exec emacs -geometry 120x40 --eval "(progn (require 'init-sdcv) (sdcv-search))" --title 'sdcv-floating'
+bindsym $mod+Shift+d exec emacs -geometry 120x40 --eval "(progn (require 'inf-sdcv-mode) (inf-sdcv-search))" --title 'sdcv-floating'
 
 bindsym $mod+d [title="sdcv-floating"] scratchpad show
 
