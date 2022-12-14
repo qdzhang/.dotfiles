@@ -30,6 +30,7 @@ if [[ ":$SHELLOPTS:" =~ :(vi|emacs): ]]; then
 fi
 # export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!{node_modules/**,.git/**}"'
+export FZF_CTRL_R_OPTS='--no-unicode'
 
 # Use fd (https://github.com/sharkdp/fd) instead of the default find
 # command for listing path candidates.
