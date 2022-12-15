@@ -1,69 +1,129 @@
+/*** Compact style: https://github.com/davquar/tilefox ***/
+
+:root {
+    --tab-border-radius: 0 !important;
+    --tab-block-margin: 0 !important;
+}
+
+:root[uidensity="compact"] {
+    --tab-min-height: 20px !important;
+    --tab-border-radius: 0 !important;
+    --tab-block-margin: 0 !important;
+}
+
+#tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container {
+    height: initial !important;
+}
+
 /*** Tighten up drop-down/context/popup menu spacing ***/
 
 menupopup > menuitem, menupopup > menu {
-  padding-block: 4px !important;
+    padding-block: 4px !important;
 }
+
 :root {
-  --arrowpanel-menuitem-padding: 4px 8px !important;
+    --arrowpanel-menuitem-padding: 4px 8px !important;
 }
 
 /*** Proton Tabs Tweaks ***/
+/* https://www.userchrome.org/firefox-89-styling-proton-ui.html#compactmode */
 
 /* Adjust tab corner shape, optionally remove space below tabs */
 
 #tabbrowser-tabs {
-    --user-tab-rounding: 0px;
-}
-@media (-moz-proton) {
-    .tab-background {
-        border-radius: var(--user-tab-rounding) var(--user-tab-rounding) 0px 0px !important;
-        margin-block: 1px 0 !important;
-    }
+    --user-tab-rounding: 4px;
 }
 
-/* Inactive tabs: Separator line style */
-
-@media (-moz-proton) {
-    .tab-background:not([selected=true]):not([multiselected=true]):not([beforeselected-visible="true"]) {
-        border-right: 1px solid rgba(0, 0, 0, .20) !important;
-    }
-    /* For dark backgrounds */
-    [brighttext="true"] .tab-background:not([selected=true]):not([multiselected=true]):not([beforeselected-visible="true"]) {
-        border-right: 1px solid var(--lwt-selected-tab-background-color, rgba(255, 255, 255, .20)) !important;
-    }
-    .tab-background:not([selected=true]):not([multiselected=true]) {
-        border-radius: 0 !important;
-    }
-    /* Remove padding between tabs */
-    .tabbrowser-tab {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
+.tab-background {
+    border-radius: var(--user-tab-rounding) var(--user-tab-rounding) 0px 0px !important; /* Connected */
+    margin-block: 1px 0 !important; /* Connected */
+}
+#scrollbutton-up, #scrollbutton-down { /* 6/10/2021 */
+    border-top-width: 1px !important;
+    border-bottom-width: 0 !important;
 }
 
-/* TABS: height */
-:root {
- --tab-toolbar-navbar-overlap: 0px !important; /* fix for full screen mode */
- --tab-min-height: 30px !important;
+/* 1/16/2022 Tone down the Fx96 tab border with add-on themes in certain fallback situations */
+.tab-background:is([selected], [multiselected]):-moz-lwtheme {
+    --lwt-tabs-border-color: rgba(0, 0, 0, 0.5) !important;
+    border-bottom-color: transparent !important;
 }
-:root #tabbrowser-tabs {
- --tab-min-height: 30px !important;
+[brighttext="true"] .tab-background:is([selected], [multiselected]):-moz-lwtheme {
+    --lwt-tabs-border-color: rgba(255, 255, 255, 0.5) !important;
+    border-bottom-color: transparent !important;
 }
-#TabsToolbar {height: var(--tab-min-height) !important;}
-
-/* hide tabs tool bar, and open a tab as window, use rofi to fuzzy search all tabs*/
-/* #TabsToolbar { */
-/*   visibility: collapse !important; */
-/* } */
-
 
 /* Container color bar visibility */
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
     margin: 0px max(calc(var(--user-tab-rounding) - 3px), 0px) !important;
 }
 
-/* Move container color bar to bottom of tab */
+/* Override Normal Density height to Compact Density height only for tabs */
 
-/* .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line { */
-/*     margin-top: calc(var(--tab-min-height) - 2px) !important; */
-/* } */
+#TabsToolbar, #tabbrowser-tabs {
+    --tab-min-height: 29px !important;
+}
+/* Tweak for covering a line at the bottom of the active tab on some themes 8/11/2021 */
+#main-window[sizemode="normal"] #toolbar-menubar[autohide="true"] + #TabsToolbar,
+#main-window[sizemode="normal"] #toolbar-menubar[autohide="true"] + #TabsToolbar #tabbrowser-tabs {
+    --tab-min-height: 30px !important;
+}
+#scrollbutton-up,
+#scrollbutton-down {
+    border-top-width: 0 !important;
+    border-bottom-width: 0 !important;
+}
+
+/* [Connected Tabs] Set a max height based on min-height plus margin-block: 1px 0 */
+#TabsToolbar, #TabsToolbar > hbox, #TabsToolbar-customization-target, #tabbrowser-arrowscrollbox  {
+    max-height: calc(var(--tab-min-height) + 1px) !important;
+}
+/* [Connected Tabs] Adjust padding around icons on buttons to avoid crushed images */
+#TabsToolbar-customization-target toolbarbutton > .toolbarbutton-icon,
+#TabsToolbar-customization-target .toolbarbutton-text,
+#TabsToolbar-customization-target .toolbarbutton-badge-stack,
+#scrollbutton-up,#scrollbutton-down {
+    padding-top: 7px !important;
+    padding-bottom: 6px !important;
+}
+/* [Connected Tabs] Make sure tab attention dot isn't too high - 10 Dec 2022 */
+.tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected="true"]),
+.tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected="true"]),
+#firefox-view-button[attention], .webextension-browser-action[attention="true"] {
+  background-position-y: bottom 2px !important;
+}
+
+/* Inactive tabs: Separator line style */
+
+.tabbrowser-tab:not([selected=true]):not([multiselected=true]):not([beforeselected-visible="true"]) .tab-background {
+    border-right: 1px solid var(--lwt-background-tab-separator-color, rgba(0, 0, 0, .20)) !important;
+}
+/* For dark backgrounds */
+[brighttext="true"] .tabbrowser-tab:not([selected=true]):not([multiselected=true]):not([beforeselected-visible="true"]) .tab-background {
+    border-right: 1px solid var(--lwt-background-tab-separator-color, var(--lwt-selected-tab-background-color, rgba(255, 255, 255, .20))) !important;
+}
+.tabbrowser-tab:not([selected=true]):not([multiselected=true]) .tab-background {
+    border-radius: 0 !important;
+}
+/* Remove padding between tabs */
+.tabbrowser-tab {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Move container color bar to bottom of tab - updated 1/16/2022 */
+
+.tab-background {
+    --context-line-margin-adjust: 3px; /* 1/16/2022 */
+    --context-line-active-adjust: 1px; /* 1/16/2022 */
+}
+.tabbrowser-tab[usercontextid]:is([selected=true], [visuallyselected="true"], [multiselected]) .tab-background {
+    border-top: 1px solid transparent; /* 1/16/2022 Default border for consistency */
+}
+
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
+    margin-top: calc(var(--tab-min-height) - var(--context-line-margin-adjust)) !important;
+}
+.tabbrowser-tab[usercontextid]:is([selected=true], [visuallyselected="true"], [multiselected])  > .tab-stack > .tab-background > .tab-context-line {
+    margin-top: calc(var(--tab-min-height) - var(--context-line-margin-adjust) - var(--context-line-active-adjust)) !important;
+}
