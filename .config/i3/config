@@ -110,7 +110,8 @@ for_window [class="gogglesmm"] floating enable border normal 2
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec lxterminal
+bindsym $mod+Shift+Return exec urxvt
 
 # Dropdown Terminal
 for_window [title="dropdown-terminal"] floating enable
@@ -121,7 +122,7 @@ for_window [title="dropdown-terminal"] border pixel 3
 # Use relative position to put `dropdown-terminal` on the top of window, full width, and more flexible
 for_window [title="dropdown-terminal"] resize set 100ppt 50ppt, move position 0 0
 bindsym $mod+u [title="dropdown-terminal"] scratchpad show
-bindsym $mod+Shift+u exec urxvt -bg rgba:0000/0000/0000/c800 --depth 32 --title 'dropdown-terminal'
+bindsym $mod+Shift+u exec lxterminal --title 'dropdown-terminal'
 
 bindsym $mod+m exec emacs
 
