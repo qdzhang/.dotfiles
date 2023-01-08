@@ -37,7 +37,7 @@ font pango:Sarasa Mono SC 13
 font pango:Sarasa Mono SC 13
 
 # gaps settings
-# gaps inner 8
+gaps inner 8
 
 #=================
 # auto start
@@ -48,8 +48,14 @@ font pango:Sarasa Mono SC 13
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec xset s 300 5
-exec xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock
+
+# Use xscreensaver
+# autostart xscreensaver without splash screen
+exec --no-startup-id xscreensaver --no-splash &
+# Lock on suspend
+# handle other systemd signals such as `loginctl lock-session`
+exec xss-lock --ignore-sleep -- xscreensaver-command -lock
+
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -208,7 +214,7 @@ mode "Cycle scratchpad"{
   bindsym Escape mode "default"
 }
 
-set $Locker ~/.config/i3/autolock/xsetlock && sleep 1
+set $Locker xscreensaver-command -lock
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
