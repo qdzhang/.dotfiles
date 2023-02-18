@@ -1,0 +1,61 @@
+#!/usr/bin/env ruby
+
+# Download today's bing wallpaper
+
+# Brought to you by Ruby Starters - https://starters.wolfgangrittner.dev
+# Author: Wolfgang Rittner
+
+require "bundler/inline"
+
+gemfile do
+  source "https://gems.ruby-china.com/"
+  # add gems you need here
+  gem "down", "~> 5.0"
+end
+
+require 'uri'
+require 'net/http'
+require 'json'
+require 'down'
+require 'fileutils'
+require 'tempfile'
+require 'time'
+
+wallpaper_dir = "#{Dir.home}/Pictures/wallpaper/bing"
+
+if Dir.exist?(wallpaper_dir)
+  puts "Bing wallpaper directory exists."
+else
+  puts "Bing wallpaper directory does not exist. Creating..."
+  Dir.mkdir(wallpaper_dir)
+  puts "Done"
+end
+
+Dir.chdir(wallpaper_dir) do
+  # if the index_seed is 0, download the default bing wallpaper.
+  # index_seed = 0
+  index_seed = Random.new.rand(7)
+  url = "https://www.bing.com/HPImageArchive.aspx?format=js&idx=#{index_seed}&n=1&mkt=en-US"
+  bing_url = URI(url)
+  res = Net::HTTP.get_response(bing_url)
+  if res.is_a?(Net::HTTPSuccess)
+    res_json = JSON.parse(res.body)
+    image = res_json["images"]
+    image_url = "https://www.bing.com" + image[0]["url"]
+
+    pic_file_name = "wallpaper_" + Time.now.strftime("%s") + '.jpg'
+    tempfile = Down.download(image_url)
+    begin
+      FileUtils.mv(tempfile.path, pic_file_name)
+    ensure
+      tempfile.close
+      tempfile.unlink
+    end
+
+    system("notify-send 'Setting wallpaper ...'")
+    system("feh --bg-max #{pic_file_name}")
+    system("notify-send 'Done.'")
+  else
+    puts "Downloading wrong!!"
+  end
+end

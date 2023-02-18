@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+# Random selecting a wallpaper
+
+wallpaper_dir = "#{Dir.home}/Pictures/wallpaper/bing"
+
+selected_pic = Dir.glob("#{wallpaper_dir}/*.jpg").sample
+
+system("notify-send 'Random setting wallpaper ...'")
+system("feh --bg-max #{selected_pic}")
+system("notify-send 'Done.'")
