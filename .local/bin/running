@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Show running process with colored pid
+# https://gitlab.com/EvanHahn/dotfiles/-/blob/ece393e625bb8254fe05774df33bb5af8a73d7e7/home/bin/bin/running
+set -e
+set -u
+
+process_list="$(ps -eo 'pid command')"
+if [[ $# != 0 ]]; then
+  process_list="$(echo "$process_list" | grep -Fiw "$@")"
+fi
+
+echo "$process_list" |
+  grep -Fv "${BASH_SOURCE[0]}" |
+  grep -Fv grep |
+  GREP_COLORS='mt=00;35' grep -E --colour=auto '^\s*[[:digit:]]+'
