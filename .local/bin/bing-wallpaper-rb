@@ -33,8 +33,8 @@ end
 
 Dir.chdir(wallpaper_dir) do
   # if the index_seed is 0, download the default bing wallpaper.
-  # index_seed = 0
-  index_seed = Random.new.rand(7)
+  index_seed = 0
+  # index_seed = Random.new.rand(7)
   url = "https://www.bing.com/HPImageArchive.aspx?format=js&idx=#{index_seed}&n=1&mkt=en-US"
   bing_url = URI(url)
   res = Net::HTTP.get_response(bing_url)
