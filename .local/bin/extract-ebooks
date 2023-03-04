@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+# Extract ebooks into specify directory
+
+require 'bundler/inline'
+
+gemfile do
+  source 'https://gems.ruby-china.com/'
+  # add gems you need here
+  gem 'rubyzip'
+end
+
+require 'zip'
+require 'fileutils'
+
+Zip.unicode_names = true
+
+Dir.glob("*.zip") do |filename|
+  Zip::File.open(filename) do |zip_file|
+    zip_file.glob("*.azw3") do |entry|
+      puts "Extracting #{entry.name}"
+      entry.extract
+    end
+  end
+end
+
+if !Dir.exist?("output")
+  Dir.mkdir("output")
+end
+
+Dir.glob("*.azw3").each do |book|
+  FileUtils.mv(book, "output/" + book)
+end
