@@ -56,6 +56,9 @@ done
 #$FDISK -l 2>/dev/null
 #fi
 
+echo "========== Partitions =========="
+lsblk
+
 echo "============= CPUs ============="
 grep "model name" /proc/cpuinfo #show CPU(s) info
 
