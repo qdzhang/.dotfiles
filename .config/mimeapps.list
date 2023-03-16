@@ -10,3 +10,4 @@ image/jpeg=pqiv.desktop
 image/webp=vwebp.desktop
 image/gif=pqiv.desktop
 image/png=pqiv.desktop
+inode/directory=pcmanfm-qt.desktop
