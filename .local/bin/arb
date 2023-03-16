@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+
+# Unpack archives easily
+#
+# Usage:
+# arb <archive_file_name>
+#
+# Reference:
+# - https://github.com/mitsuhiko/unp
+# - https://github.com/xvoland/Extract
+
+require 'shellwords'
+
+file_name = ARGV.first
+escaped_file_name = Shellwords.escape(file_name)
+
+def get_mimetype(filename)
+  return `file --brief --mime-type #{filename}`
+end
+
+file_type = get_mimetype(escaped_file_name)
+
+case file_type
+when /application\/x-7z-compressed/
+  puts "Extract 7z..."
+  `7z x #{escaped_file_name}`
+when /application\/x-xz/
+  puts "Extract xz..."
+  `unxz #{escaped_file_name}`
+when /application\/gzip/, /application\/x-gzip/
+  puts "Extract gzip..."
+  `gzip -dc #{escaped_file_name}`
+when /application\/zstd/
+  puts "Extract zstd..."
+  `unzstd #{escaped_file_name}`
+when /application\/zip/
+  puts "Extract zip..."
+  `unzip -o #{escaped_file_name}`
+when /application\/x-rar/
+  puts "Extract rar..."
+  `unrar -idp x #{escaped_file_name}`
+else
+  puts "Can't extract the archive file."
+end
