@@ -1,0 +1,5 @@
+* RIME 输入法方案
+
+- [[https://github.com/Jackchows/Cangjie5/][倉頡五代補完計劃（简化字优先）]]：主要使用的输入法，可以很方便地输入简体字。
+- [[https://github.com/iDvel/rime-ice][雾凇拼音（带简体词库）]]：使用小鹤双拼，不使用音形方案，需要配合词库使用。
+- [[https://github.com/cangjie-system/rime-cangjie-integrated][RIME 倉頡輸入法方案集成]] ：含有傳統倉頡，倉頡輸入法的修訂版，以三代倉頡為基準。
