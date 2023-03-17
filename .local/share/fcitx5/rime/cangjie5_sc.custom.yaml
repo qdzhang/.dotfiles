@@ -1,0 +1,30 @@
+# Rime schema settings
+# encoding: utf-8
+
+patch:
+  translator/enable_user_dict: false
+  reverse_lookup: "`[a-z]*;?$"
+#  reverse_lookup/prefix: "`"
+#  menu/page_size: 8
+
+
+# 使用简体中文进行反查
+  "schema/dependencies": pinyin_simp
+  reverse_lookup:
+    dictionary: pinyin_simp
+    prefix: "`"
+    suffix: ";"
+    tips: 〔拼音〕
+    preedit_format:
+      - xform/([nl])v/$1ü/
+      - xform/([nl])ue/$1üe/
+      - xform/([jqxy])v/$1u/
+    comment_format:
+      - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜片|"
+
+  recognizer:
+    import_preset: default
+    patterns:
+      punct: '^/([0-9]0?|[A-Za-z]+)$'
+      reverse_lookup: "`[a-z]*;?$"
+  
