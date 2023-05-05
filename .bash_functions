@@ -48,3 +48,24 @@ defen() {
 		fold --width=$(tput cols) |
 		less --quit-if-one-screen -RX
 }
+
+proxyon() {
+	export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
+	export http_proxy=http://127.0.0.1:7890
+	export https_proxy=http://127.0.0.1:7890
+	export all_proxy=socks5://127.0.0.1:7890
+	export HTTP_PROXY=http://127.0.0.1:7890
+	export HTTPS_PROXY=http://127.0.0.1:7890
+	export ALL_PROXY=socks5://127.0.0.1:7890
+
+	echo -e "\033[0;32m Proxy on ...\033[0m"
+	# curl ifconfig.co/country
+	curl ipinfo.io
+}
+
+proxyoff() {
+	unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY all_proxy ALL_PROXY
+	echo -e "\033[0;32m Proxy off ...\033[0m"
+	# curl ifconfig.co/country
+	curl ipinfo.io
+}

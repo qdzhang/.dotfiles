@@ -2,4 +2,6 @@
 
 # A simple wrapper for yt-dlp to use aria2 to download videos
 
-yt-dlp --write-auto-sub --add-metadata --downloader aria2c $1
+# yt-dlp --write-auto-sub --add-metadata --downloader aria2c $1
+yt-dlp --write-auto-sub --add-metadata --proxy "socks5://127.0.0.1:7890/" $1
+

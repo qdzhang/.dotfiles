@@ -3,6 +3,8 @@
 alias ls='ls --color=auto'
 alias la='ls -A'
 alias ll='ls -lA'
+# show entry in reverse date order
+alias lsl='ls -lthra'
 alias rm='printf "Use 'trash-put' to delete file.\nUse \\\rm for real rm.\n" | boxes -d stone; false'
 
 alias dotfiles='/usr/bin/git --git-dir=/home/qdzhang/.dotfiles/ --work-tree=/home/qdzhang'
