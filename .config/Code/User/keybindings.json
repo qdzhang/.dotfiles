@@ -1,36 +1,40 @@
 [
-    {
-        "key": "ctrl+tab",
-        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor",
-        "when": "!inEditorsPicker"
-    },
-    {
-        "key": "ctrl+shift+tab",
-        "command": "workbench.action.quickOpenLeastRecentlyUsedEditor",
-        "when": "!inEditorsPicker"
-    },
-    {
-        "key": "ctrl+;",
-        "command": "findJump.activateWithSelection"
-    },
-    {
-        "key": "ctrl+,",
-        "command": "findJump.activate"
-    },
-    {
-        "key": "ctrl+;",
-        "command": "-findJump.activate"
-    },
-    {
-        "key": "ctrl+c 1",
-        "command": "extension.jumptotemplate"
-    },
-    {
-        "key": "ctrl+c 2",
-        "command": "extension.jumptoscript"
-    },
-    {
-        "key": "ctrl+c 3",
-        "command": "extension.jumptostyle"
-    },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor",
+    "when": "!inEditorsPicker"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.quickOpenLeastRecentlyUsedEditor",
+    "when": "!inEditorsPicker"
+  },
+  {
+    "key": "ctrl+;",
+    "command": "findJump.activateWithSelection"
+  },
+  {
+    "key": "ctrl+,",
+    "command": "findJump.activate"
+  },
+  {
+    "key": "ctrl+;",
+    "command": "-findJump.activate"
+  },
+  {
+    "key": "ctrl+c 1",
+    "command": "extension.jumptotemplate"
+  },
+  {
+    "key": "ctrl+c 2",
+    "command": "extension.jumptoscript"
+  },
+  {
+    "key": "ctrl+c 3",
+    "command": "extension.jumptostyle"
+  },
+  {
+    "key": "ctrl+c n",
+    "command": "extension.advancedNewFile"
+  },
 ]
