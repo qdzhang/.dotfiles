@@ -75,7 +75,7 @@ shopt -s histappend
 export EDITOR='emacs -Q -nw --load "~/.nw_emacs"'
 source /usr/share/chruby/chruby.sh
 source /usr/share/chruby/auto.sh
-chruby ruby-3.2.1
+chruby ruby-3.2.2
 
 
 # Hook direnv
