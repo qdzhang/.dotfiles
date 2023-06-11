@@ -1,5 +1,5 @@
 ---
-BUNDLE_MIRROR__HTTPS://RUBYGEMS__ORG/: "https://mirrors.bfsu.edu.cn/rubygems"
+BUNDLE_MIRROR__HTTPS://RUBYGEMS__ORG/: "https://rubygems.org/"
 BUNDLE_GEM__TEST: "minitest"
 BUNDLE_GEM__CI: "false"
 BUNDLE_GEM__MIT: "false"
