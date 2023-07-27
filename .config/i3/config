@@ -255,9 +255,9 @@ bindsym $mod+x mode "$mode_display"
 # Duplicate screen for external displays
 set $clone_display Clone Screen (d) DP-1 ON, (f) DP-2 ON, (g) DP-3 ON, (x) DP-1 OFF, (c) DP-2 OFF, (v) DP-3 OFF
 mode "$clone_display" {
-    bindsym d exec --no-startup-id xrandr --output DP-1 --auto --same-as eDP-1 --right-of eDP-1, mode "default"
-    bindsym f exec --no-startup-id xrandr --output DP-2 --auto --same-as eDP-1 --right-of eDP-1, mode "default"
-    bindsym g exec --no-startup-id xrandr --output DP-3 --auto --same-as eDP-1 --right-of eDP-1, mode "default"
+    bindsym d exec --no-startup-id xrandr --output DP-1 --auto --right-of eDP-1, mode "default"
+    bindsym f exec --no-startup-id xrandr --output DP-2 --auto --right-of eDP-1, mode "default"
+    bindsym g exec --no-startup-id xrandr --output DP-3 --auto --right-of eDP-1, mode "default"
 
     bindsym x exec --no-startup-id xrandr --output DP-1 --auto --off, mode "default"
     bindsym c exec --no-startup-id xrandr --output DP-2 --auto --off, mode "default"
@@ -270,7 +270,11 @@ mode "$clone_display" {
 bindsym $mod+c mode "$clone_display"
 
 # Move current workspace to right external output
-bindsym $mod+p move workspace to output right
+# bindsym $mod+p move workspace to output right
+
+# move focused workspace between monitors
+bindsym $mod+Ctrl+greater move workspace to output right
+bindsym $mod+Ctrl+less move workspace to output left
 
 # change focus
 # bindsym $mod+j focus left
