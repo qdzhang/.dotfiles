@@ -77,6 +77,9 @@ source /usr/share/chruby/chruby.sh
 source /usr/share/chruby/auto.sh
 chruby ruby-3.2.2
 
+# Node version
+eval "$(fnm env --use-on-cd)"
+
 
 # Hook direnv
 # TODO: lookup https://github.com/untitaker/quickenv
