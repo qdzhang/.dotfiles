@@ -1,6 +1,0 @@
-#!/bin/sh
-
-git clone git@github.com:lifepillar/vim-gruvbox8.git
-echo "========================gruvbox8 completed========================"
-git clone git@github.com:lifepillar/vim-solarized8.git
-echo "========================solarized8 completed========================"
