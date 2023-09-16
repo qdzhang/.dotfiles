@@ -1,0 +1,16 @@
+#!/bin/sh
+
+case "$(echo -e "Lock\nShutdown\nRestart\nLogout\nSuspend" | dmenu \
+	-nb "${COLOR_BACKGROUND:-#151515}" \
+	-nf "${COLOR_DEFAULT:-#aaaaaa}" \
+	-fn 'Noto Sans Mono SC:size=16' \
+	-sf "${COLOR_HIGHLIGHT:-#589cc5}" \
+	-sb "#1a1a1a" \
+	-b -i -p \
+	"Power:" -l 5)" in
+Lock) exec xscreensaver-command -lock ;;
+Shutdown) exec systemctl poweroff -i ;;
+Restart) exec systemctl reboot ;;
+Logout) exec killall -QUIT icewm-session ;;
+Suspend) exec xscreensaver-command -lock && systemctl suspend ;;
+esac

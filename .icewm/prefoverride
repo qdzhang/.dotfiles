@@ -1,0 +1,197 @@
+# Thin border
+#  Horizontal window border.
+BorderSizeX=2 # [0-128]
+
+#  Vertical window border.
+BorderSizeY=2 # [0-128]
+
+
+#  Name of the input field font.
+# InputFontName="-misc-dejavu sans mono-medium-r-normal--14-*-*-*-*-*-*-*"
+
+#  Name of the input field font.
+InputFontNameXft="Noto Sans CJK SC:size=14:bold"
+
+#  Name of the label font.
+# LabelFontName="-misc-dejavu sans-medium-r-normal--14-*-*-*-*-*-*-*"
+
+#  Name of the label font.
+LabelFontNameXft="Noto Sans CJK SC:size=14"
+
+#  Dimension of the large icons.
+LargeIconSize=32 # [8-128]
+
+#  Name of the menu font.
+# MenuFontName="-misc-dejavu sans-bold-r-normal--10-*-*-*-*-*-*-*"
+
+#  Name of the menu font.
+MenuFontNameXft="Noto Sans CJK SC:size=14:bold"
+
+#  Menu icon size.
+MenuIconSize=16 # [8-128]
+
+#  Name of the normal button font.
+# NormalButtonFontName="-misc-dejavu sans-medium-r-normal--12-*-*-*-*-*-*-*"
+
+#  Name of the normal button font.
+NormalButtonFontNameXft="Noto Sans CJK SC:size=14"
+
+#  Name of the normal task bar item font.
+# NormalTaskBarFontName="-misc-dejavu sans-medium-r-normal--12-*-*-*-*-*-*-*"
+
+#  Name of the normal task bar item font.
+NormalTaskBarFontNameXft="Noto Sans CJK SC:size=14"
+
+#  Name of the normal workspace button font (fallback: NormalButtonFontName).
+# NormalWorkspaceFontName="-misc-dejavu sans-medium-r-normal--12-*-*-*-*-*-*-*"
+
+#  Name of the normal workspace button font (fallback: NormalButtonFontName).
+NormalWorkspaceFontNameXft="Noto Sans CJK SC:size=14"
+
+
+#  Name of the window list font.
+# ListBoxFontName="-misc-dejavu sans-medium-r-normal--12-*-*-*-*-*-*-*"
+
+#  Name of the window list font.
+ListBoxFontNameXft="Noto Sans CJK SC:size=14"
+
+
+#  Name of the active button font.
+# ActiveButtonFontName="-misc-dejavu sans-bold-r-normal--12-*-*-*-*-*-*-*"
+
+#  Name of the active button font.
+ActiveButtonFontNameXft="Noto Sans CJK SC:size=14:bold"
+
+#  Name of the active task bar item font.
+# ActiveTaskBarFontName="-misc-dejavu sans-bold-r-normal--12-*-*-*-*-*-*-*"
+
+#  Name of the active task bar item font.
+ActiveTaskBarFontNameXft="Noto Sans CJK SC:size=14:bold"
+
+#  Name of the active workspace button font (fallback: ActiveButtonFontName).
+# ActiveWorkspaceFontName="-misc-dejavu sans-medium-r-normal--12-*-*-*-*-*-*-*"
+
+#  Name of the active workspace button font (fallback: ActiveButtonFontName).
+ActiveWorkspaceFontNameXft="Noto Sans CJK SC:size=14"
+
+#  Name of the task bar battery font.
+# ApmFontName="-misc-dejavu sans mono-medium-r-normal--14-*-*-*-*-*-*-*"
+
+#  Name of the task bar battery font.
+# ApmFontNameXft="DejaVu Sans Mono:monospace:size=12"
+
+#  Horizontal window border.
+# BorderSizeX=6 # [0-128]
+
+#  Vertical window border.
+# BorderSizeY=6 # [0-128]
+
+#  Name of the task bar clock font.
+# ClockFontName="-misc-dejavu sans mono-medium-r-normal--14-*-*-*-*-*-*-*"
+
+#  Name of the task bar clock font.
+ClockFontNameXft="DejaVu Sans Mono:monospace:size=14"
+
+
+#  Title bar height.
+TitleBarHeight=24 # [0-128]
+
+#  Horizontal offset for the window title text.
+# TitleBarHorzOffset=0 # [-128-128]
+
+#  Join title*S and title*T.
+# TitleBarJoinLeft=0 # 0/1
+
+#  Join title*T and title*B.
+# TitleBarJoinRight=0 # 0/1
+
+#  Justification of the window title.
+TitleBarJustify=50 # [0-100]
+
+#  Vertical offset for the window title text.
+# TitleBarVertOffset=0 # [-128-128]
+
+#  Titlebar buttons from left to right (x=close, m=max, i=min, h=hide, r=rollup, s=sysmenu, d=depth)
+TitleButtonsLeft="sr"
+
+#  Titlebar buttons from right to left (x=close, m=max, i=min, h=hide, r=rollup, s=sysmenu, d=depth)
+# TitleButtonsRight="xmir"
+
+#  Titlebar buttons supported by theme (x,m,i,r,h,s,d)
+# TitleButtonsSupported="xmis"
+
+#  Name of the title bar font.
+# TitleFontName="-misc-dejavu sans-medium-r-normal--12-*-*-*-*-*-*-*"
+
+#  Name of the title bar font.
+TitleFontNameXft="Noto Sans CJK SC:size=14"
+
+#  Name of the tool button font (fallback: NormalButtonFontName).
+# ToolButtonFontName="-misc-dejavu sans-medium-r-normal--12-*-*-*-*-*-*-*"
+
+#  Name of the tool button font (fallback: NormalButtonFontName).
+ToolButtonFontNameXft="Noto Sans CJK SC:size=16"
+
+#  Name of the tool tip font.
+# ToolTipFontName="-misc-dejavu sans-medium-r-normal--12-*-*-*-*-*-*-*"
+
+#  Name of the tool tip font.
+ToolTipFontNameXft="Noto Sans CJK SC:size=16"
+
+#  Surround the tray with plastic border.
+# TrayDrawBevel=0 # 0/1
+
+#  Maximum scaled height of tray icons.
+TrayIconMaxHeight=24 # [16-128]
+
+#  Maximum scaled width of tray icons.
+# TrayIconMaxWidth=32 # [16-128]
+
+#  Show mailbox status on task bar.
+TaskBarShowMailboxStatus=0 # 0/1
+
+#  Center maximized windows that can't fit the screen (like terminals)
+CenterMaximizedWindows=1 # 0/1
+
+#  Hide window borders if window is maximized.
+HideBordersMaximized=1 # 0/1
+
+#  Hide title bar when maximized.
+HideTitleBarWhenMaximized=1 # 0/1
+
+# Use my customized wallpaper
+DesktopBackgroundImage=""
+
+#  Clock Time format (strftime format string)
+# Use 24hr clock. For details about time format, see `man date`.
+TimeFormat="%T"
+
+## Keybindings
+# Unset some keys
+KeySysAddressBar = ""
+Win95Keys=0
+
+#  Closes the active window.
+KeyWinClose="Super+Shift+q"
+
+#  Starts movement of the active window.
+# origin key is Alt+F7, use this key to center a window
+KeyWinMove=""
+
+#  Goes to workspace
+KeySysWorkspace1="Super+1"
+KeySysWorkspace2="Super+2"
+KeySysWorkspace3="Super+3"
+KeySysWorkspace4="Super+4"
+KeySysWorkspace5="Super+5"
+KeySysWorkspace6="Super+6"
+KeySysWorkspace7="Super+7"
+
+# Move active window to workspace
+KeySysWorkspace1TakeWin="Super+Shift+1"
+KeySysWorkspace2TakeWin="Super+Shift+2"
+KeySysWorkspace3TakeWin="Super+Shift+3"
+KeySysWorkspace4TakeWin="Super+Shift+4"
+KeySysWorkspace5TakeWin="Super+Shift+5"
+KeySysWorkspace6TakeWin="Super+Shift+6"
+KeySysWorkspace7TakeWin="Super+Shift+7"

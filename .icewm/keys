@@ -1,0 +1,59 @@
+# This is an example for icewm 3.4.2 hotkey definition file.
+# It will be installed as /usr/share/icewm/keys.
+# Place your variants in /etc/icewm or in $HOME/.icewm since
+# modifications to this file will be overwritten when you reinstall icewm.
+#
+# A list of all valid keyboard symbols can be found in
+# /usr/include/X11/keysymdef.h, XF86keysym.h, ...
+# Omit the XK_ prefixs and replace XF86XK_ prefixes by XF86.
+# Valid modifiers are Alt, AltGr, Ctrl, Shift, Meta, Super and Hyper.
+#
+
+# "Multimedia key" bindings for Xorg. Gather the keycodes of your
+# advanced function keys by watching the output of the xev command
+# whilst pressing those keys and map those symbols using xmodmap.
+# Note that some of these may interfere with other listeners,
+# like systemd for the suspend key events.
+#
+# key "XF86Standby"         /bin/sh -c "{ test -e /run/systemd/system && systemctl suspend; } ||:"
+# key "XF86Sleep"           /bin/sh -c "{ test -e /run/systemd/system && systemctl suspend; } ||:"
+
+key "XF86AudioLowerVolume"  ~/.config/i3/i3-volume/volume -n down 5 -y -N dunst
+key "XF86AudioRaiseVolume"  ~/.config/i3/i3-volume/volume -n up 5 -y -N dunst
+key "XF86AudioMute"         ~/.config/i3/i3-volume/volume -n mute -y -N dunst
+
+key "XF86MonBrightnessDown"   ~/.config/i3/i3-backlight/backlight -n -d 5 -y
+key "XF86MonBrightnessUp"     ~/.config/i3/i3-backlight/backlight -n -i 5 -y
+
+switchkey "Super+p"         icewm-menu-xrandr
+
+
+## My keybindings like i3-wm
+
+key "Super+Shift+r"      icesh restart
+
+# windows management
+key "Super+Shift+Home"  icesh -f sizeto 49% 49% top left
+key "Super+Shift+Up"    icesh -f sizeto 100% 49% top left
+key "Super+Shift+Prior" icesh -f sizeto 49% 49% top right
+key "Super+Shift+Right" icesh -f sizeto 49% 100% top right
+key "Super+Shift+Next"  icesh -f sizeto 49% 49% bottom right
+key "Super+Shift+Down"  icesh -f sizeto 100% 49% bottom left
+key "Super+Shift+End"   icesh -f sizeto 49% 49% bottom left
+key "Super+Shift+Left"  icesh -f sizeto 49% 100% top left
+key "Alt+F7" icesh -f center
+
+key "Super+BackSpace" dmenu-power
+
+# Launch apps
+key "Super+Enter" lxterminal
+key "Super+g" rofi -show drun
+key "Super+m" emacs
+key "Super+grave" urxvt --title 'fzf-menu' -e sh -c 'clipcat-menu --finder=fzf'
+
+# screenshot and screen record
+key "Print" shot-active
+key "Ctrl+Print" shot-select
+key "Super+Print" shot-fullscreen
+key "Shift+Print" record
+key "Ctrl+Shift+Print" exec killall ffmpeg

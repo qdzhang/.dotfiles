@@ -1,0 +1,34 @@
+#!/bin/sh
+
+pkill picom
+picom --config ~/.config/picom/picom.conf --xrender-sync --xrender-sync-fence &
+
+# start clipcat
+# see ~/.config/i3/autostart/autostart-clipcat.sh
+if [[ ! $(pgrep -u $UID -x clipcatd) ]]; then
+    clipcatd &
+else
+    killall clipcatd
+    sleep 2
+    clipcatd &
+fi
+
+
+xscreensaver --no-splash &
+xss-lock --ignore-sleep -- xscreensaver-command -lock &
+
+# PulseAudio system tray
+pasystray &
+
+# start network manager
+nm-applet &
+
+# enable bluetooth applet
+blueman-applet &
+
+fcitx5 &
+
+udiskie --tray &
+bing-random-rb &
+dunst &
+

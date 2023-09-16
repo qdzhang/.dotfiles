@@ -54,4 +54,5 @@ fi
 if [ -f "~/.Xmodmap" ]; then
     xmodmap ~/.Xmodmap
 fi
-exec i3
+# exec i3
+exec icewm-session
