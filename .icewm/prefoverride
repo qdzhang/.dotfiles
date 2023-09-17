@@ -80,6 +80,15 @@ ActiveWorkspaceFontNameXft="Noto Sans CJK SC:size=14"
 #  Name of the task bar battery font.
 # ApmFontNameXft="DejaVu Sans Mono:monospace:size=12"
 
+#  Name of the font for Alt+Tab switcher window.
+QuickSwitchFontNameXft="Noto Sans Mono CJK SC:size=14:bold"
+
+#  Disable Alt+Tab to hidden windows.
+QuickSwitchToHidden=0 # 0/1
+
+#  Rectangle arround the active icon in the quick switch window.
+# ColorQuickSwitchActive="rgb:EC/EC/EC"
+
 #  Horizontal window border.
 # BorderSizeX=6 # [0-128]
 
@@ -94,7 +103,7 @@ ClockFontNameXft="DejaVu Sans Mono:monospace:size=14"
 
 
 #  Title bar height.
-TitleBarHeight=24 # [0-128]
+TitleBarHeight=27 # [0-128]
 
 #  Horizontal offset for the window title text.
 # TitleBarHorzOffset=0 # [-128-128]
@@ -147,8 +156,21 @@ TrayIconMaxHeight=24 # [16-128]
 #  Maximum scaled width of tray icons.
 # TrayIconMaxWidth=32 # [16-128]
 
-#  Show mailbox status on task bar.
+# Don't show mailbox status on task bar.
 TaskBarShowMailboxStatus=0 # 0/1
+
+# Don't show 'show desktop' button on taskbar (value of 2 to put after the clock)
+TaskBarShowShowDesktopButton=0 # [0-2]
+
+# Don't show 'Start' menu on task bar.
+TaskBarShowStartMenu=0 # 0/1
+
+# Don't show 'window list' menu on task bar.
+TaskBarShowWindowListMenu=0 # 0/1
+
+#  Task bar at top of the screen.
+TaskBarAtTop=0 # 0/1
+
 
 #  Center maximized windows that can't fit the screen (like terminals)
 CenterMaximizedWindows=1 # 0/1
@@ -171,12 +193,20 @@ TimeFormat="%T"
 KeySysAddressBar = ""
 Win95Keys=0
 
-#  Closes the active window.
-KeyWinClose="Super+Shift+q"
-
 #  Starts movement of the active window.
 # origin key is Alt+F7, use this key to center a window
 KeyWinMove=""
+
+
+# Some Keybindings like i3-wm
+#
+#  Toggles displaying the task bar.
+KeySysCollapseTaskBar="Super+b"
+
+#  Closes the active window.
+KeyWinClose="Super+Shift+q"
+
+
 
 #  Goes to workspace
 KeySysWorkspace1="Super+1"

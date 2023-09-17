@@ -3,5 +3,5 @@
 # Place your variants in /etc/icewm or in $HOME/.icewm since
 # modifications to this file will be overwritten when you reinstall icewm.
 #
-prog "Web browser" web-browser firefox
+# prog "Web browser" web-browser firefox
 

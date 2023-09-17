@@ -57,3 +57,10 @@ key "Ctrl+Print" shot-select
 key "Super+Print" shot-fullscreen
 key "Shift+Print" record
 key "Ctrl+Shift+Print" exec killall ffmpeg
+
+# open emacs sdcv-mode
+
+key "Super+Shift+d" emacs -geometry 120x40 --eval "(progn (require 'inf-sdcv-mode) (inf-sdcv-search))" --title 'sdcv-floating'
+# Show sdcv-floating window on all workspaces by using `sticky`
+key "Super+d" icesh -n "sdcv-floating" unhide activate center sticky
+key "Ctrl+Super+d" icesh -n "sdcv-floating" hide

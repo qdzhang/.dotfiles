@@ -136,7 +136,8 @@ bindsym $mod+Shift+q kill
 ## My old rofi config
 # bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+g exec --no-startup-id rofi -show drun
-bindsym $mod+w exec --no-startup-id rofi -show window
+# Ctrl+Alt+Escape to show all windows, like ice-wm
+bindsym Control+$mod2+Escape exec --no-startup-id rofi -show window
 
 # bindsym $mod+o exec --no-startup-id rofi -show power-menu -modi "power-menu:rofi-power-menu --no-symbols" -lines 6
 
