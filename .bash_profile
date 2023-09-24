@@ -18,6 +18,12 @@ append_path () {
 [[ -f ~/.profile ]] && . ~/.profile
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
+# if login in tty1, enter default wm (icewm)
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx
+fi
+
+# if login in tty2, enter i3wm
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 2 ]; then
+  exec startx /usr/bin/i3
 fi

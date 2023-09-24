@@ -139,6 +139,9 @@ bindsym $mod+g exec --no-startup-id rofi -show drun
 # Ctrl+Alt+Escape to show all windows, like ice-wm
 bindsym Control+$mod2+Escape exec --no-startup-id rofi -show window
 
+# Alt+Tab to switch windows on current workspace
+bindsym $mod2+Tab exec perl ~/.local/bin/i3_cycle_windows
+
 # bindsym $mod+o exec --no-startup-id rofi -show power-menu -modi "power-menu:rofi-power-menu --no-symbols" -lines 6
 
 # Replace rofi with fzf launching in a floating terminal window

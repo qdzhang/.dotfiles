@@ -186,7 +186,9 @@ DesktopBackgroundImage=""
 
 #  Clock Time format (strftime format string)
 # Use 24hr clock. For details about time format, see `man date`.
-TimeFormat="%T"
+#TimeFormat="%T"
+# Show time with date
+TimeFormat="%m-%d-%a %H:%M:%S"
 
 ## Keybindings
 # Unset some keys
