@@ -103,3 +103,15 @@ export RUSTUP_DIST_SERVER="https://rsproxy.cn"
 export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
 
 export SDCV_PAGER='less --quit-if-one-screen -RX'
+
+PATH="/home/qdzhang/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/qdzhang/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/qdzhang/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/qdzhang/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/qdzhang/perl5"; export PERL_MM_OPT;
+
+# config rakubrew
+eval "$(/usr/bin/rakubrew init Bash)"
+
+# Dart mirror
+export PUB_HOSTED_URL="https://mirrors.tuna.tsinghua.edu.cn/dart-pub"
