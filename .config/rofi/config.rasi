@@ -1,7 +1,7 @@
 configuration{
     modi: "run,drun,window";
     lines: 5;
-    font: "JetBrainsMono Nerd Font 14";
+    font: "JetBrainsMono NF 14";
     show-icons: true;
     terminal: "urxvt";
     drun-display-format: "{icon} {name}";
