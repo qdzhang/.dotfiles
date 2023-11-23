@@ -46,7 +46,7 @@ URxvt.keysym.C-question:  resize-font:show
 ! Fonts
 ! https://github.com/powerline/fonts/issues/176
 
-#define font1         JetBrainsMono Nerd Font Mono
+#define font1         JetBrainsMono NF
 ! #define font1         xos4 Terminus
 ! #define font1         IBM Plex Mono
 #define font2         Sarasa Mono SC
