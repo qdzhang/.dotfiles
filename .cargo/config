@@ -2,7 +2,7 @@
 registry = "https://github.com/rust-lang/crates.io-index"
 
 # 替换成你偏好的镜像源
-replace-with = 'rustcc'
+replace-with = 'rsproxy-sparse'
 
 # rustcc 1号源
 [source.rustcc]
@@ -26,3 +26,12 @@ registry = "https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index"
 
 [source.rsproxy]
 registry = "https://rsproxy.cn/crates.io-index"
+
+[source.rsproxy-sparse]
+registry = "sparse+https://rsproxy.cn/index/"
+
+[registries.rsproxy]
+index = "https://rsproxy.cn/crates.io-index"
+
+[net]
+git-fetch-with-cli = true
