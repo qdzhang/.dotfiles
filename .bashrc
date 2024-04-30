@@ -117,3 +117,5 @@ eval "$(/usr/bin/rakubrew init Bash)"
 
 # Dart mirror
 export PUB_HOSTED_URL="https://mirrors.tuna.tsinghua.edu.cn/dart-pub"
+
+systemctl --user import-environment PATH
