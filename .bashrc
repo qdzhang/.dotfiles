@@ -119,3 +119,6 @@ eval "$(/usr/bin/rakubrew init Bash)"
 export PUB_HOSTED_URL="https://mirrors.tuna.tsinghua.edu.cn/dart-pub"
 
 systemctl --user import-environment PATH
+
+complete -f -d -W "runserver createsuperuser test shell dbshell \
+migrate makemigrations loaddata dumpdata startapp" ./manage.py
