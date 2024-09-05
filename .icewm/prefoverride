@@ -227,3 +227,8 @@ KeySysWorkspace4TakeWin="Super+Shift+4"
 KeySysWorkspace5TakeWin="Super+Shift+5"
 KeySysWorkspace6TakeWin="Super+Shift+6"
 KeySysWorkspace7TakeWin="Super+Shift+7"
+
+
+# Unset Alt+Space, make emacs use this keybinding
+KeyWinMenu=""
+
