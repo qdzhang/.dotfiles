@@ -5,7 +5,7 @@
 [core]
     ; editor = 'vim'
     editor = "emacs -Q -nw --load \"~/.nw_emacs\""
-    pager = delta
+    ; pager = delta
 [diff]
     ; tool = vimdiff
     tool = ediff
