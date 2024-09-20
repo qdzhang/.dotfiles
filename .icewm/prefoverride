@@ -231,4 +231,5 @@ KeySysWorkspace7TakeWin="Super+Shift+7"
 
 # Unset Alt+Space, make emacs use this keybinding
 KeyWinMenu=""
-
+# Unset Alt+Ctrl+d, make emacs use this keybinding
+KeySysShowDesktop=""
