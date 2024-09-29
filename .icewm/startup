@@ -3,17 +3,6 @@
 pkill picom
 picom --config ~/.config/picom/picom.conf &
 
-# start clipcat
-# see ~/.config/i3/autostart/autostart-clipcat.sh
-if [[ ! $(pgrep -u $UID -x clipcatd) ]]; then
-    clipcatd &
-else
-    killall clipcatd
-    sleep 2
-    clipcatd &
-fi
-
-
 xscreensaver --no-splash &
 xss-lock --ignore-sleep -- xscreensaver-command -lock &
 
@@ -31,4 +20,4 @@ fcitx5 &
 udiskie --tray &
 bing-random-rb &
 dunst &
-
+copyq &

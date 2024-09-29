@@ -49,7 +49,6 @@ key "Super+BackSpace" dmenu-power
 key "Super+Enter" lxterminal
 key "Super+g" rofi -show drun
 key "Super+m" emacs
-key "Super+grave" urxvt --title 'fzf-menu' -e sh -c 'clipcat-menu --finder=fzf'
 
 # screenshot and screen record
 key "Print" shot-active
