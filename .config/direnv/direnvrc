@@ -24,3 +24,9 @@ layout_pyplayground() {
   local playground_path="${HOME}/.virtualenvs/playground"
   layout_virtualenv $playground_path
 }
+
+layout_django5() {
+  # source $HOME/.virtualenvs/django5/bin/activate
+  local django_path="${HOME}/.virtualenvs/django5"
+  layout_virtualenv $django_path
+}
