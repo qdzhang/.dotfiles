@@ -1,0 +1,14 @@
+summary: Wakapi
+
+description: |
+    Startup Wakapi
+
+services:
+    wakapi:
+        override: replace
+        summary: start wakapi server
+        working-dir: /home/qdzhang/self-host/
+        command: wakapi -config wakapi.yml
+        startup: enabled
+
+

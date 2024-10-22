@@ -1,0 +1,12 @@
+summary: Simple layer
+
+description: |
+    A simple layer.
+
+services:
+    http-server:
+        override: replace
+        summary: demo http server
+        command: python3 -m http.server 8080
+        startup: disabled
+

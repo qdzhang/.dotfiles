@@ -122,3 +122,4 @@ systemctl --user import-environment PATH
 
 complete -f -d -W "runserver createsuperuser test shell dbshell \
 migrate makemigrations loaddata dumpdata startapp" ./manage.py
+export PEBBLE=/home/qdzhang/.config/pebble
