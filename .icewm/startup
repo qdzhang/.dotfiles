@@ -21,3 +21,4 @@ udiskie --tray &
 bing-random-rb &
 dunst &
 copyq &
+pebble run &
