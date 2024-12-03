@@ -49,6 +49,8 @@ key "Super+BackSpace" dmenu-power
 key "Super+Enter" lxterminal
 key "Super+g" rofi -show drun
 key "Super+m" emacs
+key "Super+a" anki
+key "Super+c" record-audio
 
 # screenshot and screen record
 key "Print" shot-active
