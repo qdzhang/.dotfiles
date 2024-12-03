@@ -1,0 +1,12 @@
+# GTK-3 Scaling
+export GDK_SCALE=1.5
+export GDK_DPI_SCALE=1.5
+
+# Qt5 Scaling
+# Ref:
+# https://doc.qt.io/qt-6/highdpi.html
+# https://wiki.archlinux.org/title/HiDPI#Qt_5
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
+export QT_ENABLE_HIGHDPI_SCALING=0
+export QT_SCREEN_SCALE_FACTOR=1.5
+export QT_SCALE_FACTOR=1.5

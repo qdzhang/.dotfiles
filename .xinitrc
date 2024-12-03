@@ -54,5 +54,9 @@ fi
 if [ -f "~/.Xmodmap" ]; then
     xmodmap ~/.Xmodmap
 fi
+
+[ -f /etc/xprofile ] && . /etc/xprofile
+[ -f ~/.xprofile ] && . ~/.xprofile
+
 # exec i3
 exec icewm-session
