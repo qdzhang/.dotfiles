@@ -50,7 +50,7 @@ key "Super+Enter" lxterminal
 key "Super+g" rofi -show drun
 key "Super+m" emacs
 key "Super+a" anki
-key "Super+c" record-audio
+key "Super+c" record-audio-ff
 
 # screenshot and screen record
 key "Print" shot-active

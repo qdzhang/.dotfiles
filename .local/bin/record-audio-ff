@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Record internal audio using ffmpeg
+#
 # Bind this script to a key.
 # 1. Press the key, start recording.
 # 2. Press the key again, finish recording, and the audio file gets copied to
@@ -9,15 +11,12 @@
 # https://superuser.com/a/1570367
 # https://github.com/JayXT/RecordAudioOutput
 
-notify-send 'Start recording...🌟'
-if pgrep sox; then
+notify-send 'Start recording with ffmpeg...🌟'
+if pgrep ffmpeg; then
 	# Stop recording audio
-	pkill sox
+	pkill -n ffmpeg
 	notify-send 'Finished!✅'
 else
-	# Output device (the default one)
-	# For more use "pacmd list-sinks | grep -e 'name:' -e 'index' -e 'Speakers'" command
-	targetSink="@DEFAULT_MONITOR@"
 
 	# 5-character random string
 	rand=$(cat /dev/urandom | tr -dc 'A-Za-z0-9' | fold -w 7 | head -n 1)
@@ -26,9 +25,8 @@ else
 	filename="$(xdg-user-dir)/Music/anki/out_${rand}.ogg"
 
 	# Record audio to the file
-	sox -t pulseaudio $targetSink -t ogg $filename
-        # parec -d $targetSink | lame -r -V0 - $filename
+	ffmpeg -f pulse -i 0 -acodec libopus -ac 1 $filename
 
-        # Copy the file to the clipboard
+	# Copy the file to the clipboard
 	echo "file://${filename}" | xclip -i -sel c -t text/uri-list
 fi

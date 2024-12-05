@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Use ffmpeg to record sounds from microphone
+
+filename="audio-$(date +%F_%H%M%S_%N).mp3"
+file="$HOME/Videos/record/${filename}"
+output="output-${filename}"
+
+notify-send 'Audio recording...'
+ffmpeg -f pulse -i 2 -acodec libmp3lame -ac 1 $file
+notify-send 'Record saved'
+

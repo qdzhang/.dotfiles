@@ -134,6 +134,7 @@ load-module module-role-cork
 ### loading modules and rerouting streams.
 load-module module-filter-heuristics
 load-module module-filter-apply
+load-module module-echo-cancel
 
 ### Make some devices default
 #set-default-sink output

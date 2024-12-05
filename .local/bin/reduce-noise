@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Use ffmpeg to deal with noise background
+
+output="output-${1}"
+rnnpath="$HOME/.local/share/sh.rnnn"
+notify-send 'Reducing noise...'
+
+# There are two filters can be used
+# 1. afftdn
+# ffmpeg -i $1 -af "highpass=f=200,lowpass=f=3000,afftdn=nf=-25" $output
+
+# 2. arnndn
+ffmpeg -i $1 -af arnndn=m=$rnnpath $output
+
+notify-send "Done."
