@@ -8,8 +8,8 @@ options = require 'mp.options'
 
 local opts = {
 	hour = '%I',
-	time = 'c',
-	key  = 'C'
+	time = 't',
+	key  = 'T'
 }
 options.read_options(opts)
 hour = string.gsub(opts.hour, '"', "")
