@@ -8,6 +8,29 @@ use_ruby() {
   layout ruby
 }
 
+# Usage: use python <version>
+# Can be used with the `layout` function
+# An `.envrc` sample:
+#   use python 3.10.16
+#   layout py10
+# to use python 3.10.16 with layout py10
+#
+# use a certain pyenv version
+use_python() {
+    if [ -n "$(which pyenv)" ]; then
+        local pyversion=$1
+        pyenv local ${pyversion}
+    fi
+}
+
+# use a certain plenv version
+use_perl() {
+    if [ -n "$(which plenv)" ]; then
+        local plversion=$1
+        plenv local ${plversion}
+    fi
+}
+
 # https://github.com/direnv/direnv/issues/267
 layout_virtualenv() {
   local venv_path="$1"
@@ -29,4 +52,16 @@ layout_django5() {
   # source $HOME/.virtualenvs/django5/bin/activate
   local django_path="${HOME}/.virtualenvs/django5"
   layout_virtualenv $django_path
+}
+
+layout_utils() {
+  # source $HOME/.virtualenvs/utils/bin/activate
+  local django_path="${HOME}/.virtualenvs/utils"
+  layout_virtualenv $django_path
+}
+
+layout_py10() {
+  # source $HOME/.virtualenvs/utils/bin/activate
+  local py10_path="${HOME}/.virtualenvs/py10"
+  layout_virtualenv $py10_path
 }
