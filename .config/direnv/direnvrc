@@ -31,6 +31,14 @@ use_perl() {
     fi
 }
 
+# Use a certain node version
+use_node() {
+    if [ -n "$(which nodenv)" ]; then
+        local nodeversion=$1
+        nodenv local ${nodeversion}
+    fi
+}
+
 # https://github.com/direnv/direnv/issues/267
 layout_virtualenv() {
   local venv_path="$1"

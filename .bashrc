@@ -79,10 +79,6 @@ source /usr/share/chruby/chruby.sh
 source /usr/share/chruby/auto.sh
 chruby ruby-3.2.2
 
-# Node version
-eval "$(fnm env --use-on-cd)"
-
-
 # Hook direnv
 # TODO: lookup https://github.com/untitaker/quickenv
 # Not to add this hook but also use direnv
@@ -117,6 +113,10 @@ eval "$(/usr/bin/rakubrew init Bash)"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - bash)"
+
+# Node version with nodenv
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init - bash)"
 
 # Dart mirror
 export PUB_HOSTED_URL="https://mirrors.tuna.tsinghua.edu.cn/dart-pub"
