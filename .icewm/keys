@@ -18,12 +18,12 @@
 # key "XF86Standby"         /bin/sh -c "{ test -e /run/systemd/system && systemctl suspend; } ||:"
 # key "XF86Sleep"           /bin/sh -c "{ test -e /run/systemd/system && systemctl suspend; } ||:"
 
-key "XF86AudioLowerVolume"  ~/.config/i3/i3-volume/volume -n down 5 -y -N dunst
-key "XF86AudioRaiseVolume"  ~/.config/i3/i3-volume/volume -n up 5 -y -N dunst
-key "XF86AudioMute"         ~/.config/i3/i3-volume/volume -n mute -y -N dunst
+key "XF86AudioLowerVolume"  ~/.config/i3/i3-volume/volume -n down 5 -N dunst
+key "XF86AudioRaiseVolume"  ~/.config/i3/i3-volume/volume -n up 5 -N dunst
+key "XF86AudioMute"         ~/.config/i3/i3-volume/volume -n mute -N dunst
 
-key "XF86MonBrightnessDown"   ~/.config/i3/i3-backlight/backlight -n -d 5 -y
-key "XF86MonBrightnessUp"     ~/.config/i3/i3-backlight/backlight -n -i 5 -y
+key "XF86MonBrightnessDown"   ~/.config/i3/i3-backlight/backlight -n -d 5
+key "XF86MonBrightnessUp"     ~/.config/i3/i3-backlight/backlight -n -i 5
 
 switchkey "Super+p"         icewm-menu-xrandr
 
