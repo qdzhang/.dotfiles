@@ -1,2 +1,3 @@
 # See https://ice-wm.org/man/icewm-winoptions for details.
+lxterminal.Lxterminal.appTakesFocus: 1
 lxterminal.Lxterminal.startMaximized: 1
