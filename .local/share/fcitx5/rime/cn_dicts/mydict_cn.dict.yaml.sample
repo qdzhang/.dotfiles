@@ -1,0 +1,16 @@
+# Rime dictionary
+# encoding: utf-8
+#
+#
+# https://github.com/iDvel/rime-ice
+# ------- 扩展词库 -------
+#
+# 我的词库
+#
+---
+name: mydict_cn
+version: "2025-03-26"
+sort: by_weight
+...
+# +_+
+卓里奇
