@@ -4,6 +4,12 @@
 - [[https://github.com/iDvel/rime-ice][雾凇拼音（带简体词库）]]：使用小鹤双拼，不使用音形方案，需要配合词库使用。
 - [[https://github.com/cangjie-system/rime-cangjie-integrated][RIME 倉頡輸入法方案集成]] ：含有傳統倉頡，倉頡輸入法的修訂版，以三代倉頡為基準。
 
+** 小鹤双拼（雾凇拼音）快速使用指南
+
+*** 安装
+把雾凇拼音[[https://github.com/iDvel/rime-ice][仓库]]的所有文件放到 fcitx 或者 emacs-rime 的配置文件夹（ =<path>/rime/=
+）下，添加默认的 patch 文件 =default.custom.yaml= 即可。再参考下面挂载词库。
+
 *** 如何挂载自己的词库？
 
 使用雾凇拼音的时候，如何挂载自己的词库？
