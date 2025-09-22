@@ -51,6 +51,7 @@ key "Super+g" rofi -show drun
 key "Super+m" emacs
 key "Super+a" anki
 key "Super+c" record-audio-ff
+key "Super+s" goldendict
 
 # screenshot and screen record
 key "Print" shot-active
