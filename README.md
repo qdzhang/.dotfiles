@@ -1,6 +1,6 @@
 # .dotfiles
 
-Personal linux dotfiles
+Personal linux dotfiles. Store dotfiles in a [bare git repository](https://www.atlassian.com/git/tutorials/dotfiles)
 
 ## Dependencies
 

@@ -52,6 +52,7 @@ key "Super+m" emacs
 key "Super+a" anki
 key "Super+c" record-audio-ff
 key "Super+s" goldendict
+key "Super+`" copyq toggle
 
 # screenshot and screen record
 key "Print" shot-active
