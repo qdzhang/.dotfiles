@@ -1,6 +1,6 @@
 #!/bin/sh
 
-case "$(echo -e "Lock\nShutdown\nRestart\nLogout\nSuspend" | dmenu \
+case "$(echo -e "Lock\nShutdown\nRestart\nLogout\nSuspend" | rofi -dmenu \
 	-nb "${COLOR_BACKGROUND:-#151515}" \
 	-nf "${COLOR_DEFAULT:-#aaaaaa}" \
 	-fn 'Noto Sans Mono SC:size=16' \
