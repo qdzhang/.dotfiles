@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Use xtrlock to lock the screen, then turn off the monitor.
+#
+# XScreensaver version 6.13 has some bugs, so I’m using xtrlock as a temporary
+# replacement.
+# See https://gitlab.archlinux.org/archlinux/packaging/packages/xscreensaver/-/issues/5#top
+
+xtrlock -b &
+sleep 1; xset dpms force off

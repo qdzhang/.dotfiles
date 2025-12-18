@@ -8,9 +8,9 @@ case "$(echo -e "Lock\nShutdown\nRestart\nLogout\nSuspend" | rofi -dmenu \
 	-sb "#1a1a1a" \
 	-b -i -p \
 	"Power:" -l 5)" in
-Lock) exec xscreensaver-command -lock ;;
+Lock) exec mylock ;;
 Shutdown) exec systemctl poweroff -i ;;
 Restart) exec systemctl reboot ;;
 Logout) exec killall -QUIT icewm-session ;;
-Suspend) exec xscreensaver-command -lock && systemctl suspend ;;
+Suspend) exec mylock && systemctl suspend ;;
 esac

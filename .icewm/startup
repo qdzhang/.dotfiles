@@ -3,8 +3,10 @@
 pkill picom
 picom --config ~/.config/picom/picom.conf &
 
-xscreensaver --no-splash &
-xss-lock --ignore-sleep -- xscreensaver-command -lock &
+# xscreensaver --no-splash &
+# xss-lock --ignore-sleep -- xscreensaver-command -lock &
+xset s 180 120 &
+xss-lock --ignore-sleep -- mylock &
 
 # PulseAudio system tray
 pasystray &
