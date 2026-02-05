@@ -1,0 +1,24 @@
+#!/bin/sh
+
+FILE="/run/user/`id -u`/caffeine.txt"
+
+if [ "$1" = "status" ]; then
+    if [ -f "$FILE" ]; then
+        echo "Caffeine Status: on"
+        cat $FILE
+    else
+        echo "Caffeine Status: off"
+    fi
+else
+    if [ -f "$FILE" ]; then
+        xset +dpms
+        xset s 180 120
+        rm -f /run/user/`id -u`/caffeine.txt
+        echo "Caffeine disabled."
+    else
+        xset s off
+        xset -dpms
+        echo "Caffeine enabled."
+        echo "enabled" > /run/user/`id -u`/caffeine.txt
+    fi
+fi
