@@ -1,8 +1,0 @@
-# encoding: utf-8
-
-patch:
-  schema_list:
-    - schema: xqzm
-    - schema: double_pinyin_flypy
-    - schema: xqjz
-    - schema: zm66

@@ -55,9 +55,15 @@ key "Super+s" goldendict
 key "Super+`" copyq toggle
 
 # screenshot and screen record
-key "Print" shot-active
-key "Ctrl+Print" shot-select
-key "Super+Print" shot-fullscreen
+# key "Print" shot-active
+# key "Ctrl+Print" shot-select
+# key "Super+Print" shot-fullscreen
+
+# If keyboard doesn't have screenprint key, use Home key instead.
+key "Super+Shift+s" shot-active
+key "Super+Home" shot-select
+key "Ctrl+Super+Home" shot-fullscreen
+
 key "Shift+Print" record
 key "Ctrl+Shift+Print" exec killall ffmpeg
 
