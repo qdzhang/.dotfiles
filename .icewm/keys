@@ -53,6 +53,7 @@ key "Super+a" anki
 key "Super+c" record-audio-ff
 key "Super+s" goldendict
 key "Super+`" copyq toggle
+key "Super+z" zotero
 
 # screenshot and screen record
 # key "Print" shot-active
